@@ -1,0 +1,1194 @@
+{
+    "version": "0.4",
+    "title": "Collection",
+    "type": "page",
+    "metadata": {
+        "template_type": "single-page",
+        "include_in_zip": "1",
+        "elementor_pro_required": "1",
+        "wp_page_template": "elementor_header_footer"
+    },
+    "content": [
+        {
+            "id": "d4a5823",
+            "settings": {
+                "background_background": "classic",
+                "background_image": {
+                    "url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/hanger-with-blank-gray-t-shirt-on-wooden-background-space-for-text.jpg",
+                    "id": 161,
+                    "alt": "Hanger with blank gray t-shirt on wooden background, space for text",
+                    "source": "library"
+                },
+                "background_position": "center center",
+                "background_repeat": "no-repeat",
+                "background_size": "cover",
+                "padding": {
+                    "unit": "em",
+                    "top": "7",
+                    "right": "1",
+                    "bottom": "6",
+                    "left": "1",
+                    "isLinked": false
+                },
+                "padding_tablet": {
+                    "unit": "em",
+                    "top": "6",
+                    "right": "1",
+                    "bottom": "4",
+                    "left": "1",
+                    "isLinked": false
+                },
+                "padding_mobile": {
+                    "unit": "em",
+                    "top": "7",
+                    "right": "1",
+                    "bottom": "5",
+                    "left": "1",
+                    "isLinked": false
+                },
+                "pa_condition_repeater": [
+                    {
+                        "_id": "26fab50",
+                        "pa_condition_date": "2022\/05\/12",
+                        "pa_condition_date_range": "2022\/05\/12"
+                    }
+                ],
+                "content_width": {
+                    "unit": "px",
+                    "size": 1200,
+                    "sizes": []
+                },
+                "box_shadow_box_shadow": {
+                    "horizontal": 0,
+                    "vertical": 10,
+                    "blur": 30,
+                    "spread": 0,
+                    "color": "rgba(0, 0, 0, 0.25)"
+                },
+                "z_index": 10,
+                "content_width_tablet": {
+                    "unit": "px",
+                    "size": 650,
+                    "sizes": []
+                },
+                "background_overlay_background": "gradient",
+                "background_overlay_color": "#3F2C6B59",
+                "background_overlay_color_b": "#333333",
+                "background_overlay_opacity": {
+                    "unit": "px",
+                    "size": 0.59999999999999997779553950749686919152736663818359375,
+                    "sizes": []
+                },
+                "__globals__": {
+                    "background_overlay_color": "",
+                    "background_overlay_color_b": "globals\/colors?id=secondary"
+                }
+            },
+            "elements": [
+                {
+                    "id": "6ddc4b",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "pa_condition_repeater": [
+                            {
+                                "_id": "5f7a1ee",
+                                "pa_condition_date": "2022\/05\/12",
+                                "pa_condition_date_range": "2022\/05\/12"
+                            }
+                        ],
+                        "align": "center"
+                    },
+                    "elements": [
+                        {
+                            "id": "1ba7076",
+                            "settings": {
+                                "title": "Our Collection",
+                                "align": "center",
+                                "pa_condition_repeater": [
+                                    {
+                                        "_id": "43013c1",
+                                        "pa_condition_date": "2022\/05\/12",
+                                        "pa_condition_date_range": "2022\/05\/12"
+                                    }
+                                ],
+                                "__globals__": {
+                                    "title_color": "globals\/colors?id=71abd25",
+                                    "typography_typography": "globals\/typography?id=583e54c"
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "heading",
+                            "elType": "widget"
+                        },
+                        {
+                            "id": "708ce5be",
+                            "settings": {
+                                "title": "For clothing as exclusive as you are",
+                                "align": "center",
+                                "pa_condition_repeater": [
+                                    {
+                                        "_id": "815ecee"
+                                    }
+                                ],
+                                "__globals__": {
+                                    "typography_typography": "globals\/typography?id=83682a1",
+                                    "title_color": "globals\/colors?id=secondary"
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "heading",
+                            "elType": "widget"
+                        },
+                        {
+                            "id": "2b5905ae",
+                            "settings": {
+                                "align": "center",
+                                "_padding": {
+                                    "unit": "em",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "1",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "_padding_tablet": {
+                                    "unit": "em",
+                                    "top": "",
+                                    "right": "",
+                                    "bottom": "",
+                                    "left": "",
+                                    "isLinked": true
+                                },
+                                "_padding_mobile": {
+                                    "unit": "em",
+                                    "top": "",
+                                    "right": "",
+                                    "bottom": "",
+                                    "left": "",
+                                    "isLinked": true
+                                },
+                                "_element_width": "initial",
+                                "_element_custom_width": {
+                                    "unit": "px",
+                                    "size": 600,
+                                    "sizes": []
+                                },
+                                "pa_condition_repeater": [
+                                    {
+                                        "_id": "f657929"
+                                    }
+                                ],
+                                "__globals__": {
+                                    "typography_typography": "globals\/typography?id=b2ce6af",
+                                    "text_color": "globals\/colors?id=a1e80d7"
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "text-editor",
+                            "elType": "widget"
+                        },
+                        {
+                            "id": "57cbfd83",
+                            "settings": {
+                                "text": "Contact Our Sales",
+                                "align": "center",
+                                "border_border": "solid",
+                                "border_width": {
+                                    "unit": "px",
+                                    "top": "2",
+                                    "right": "2",
+                                    "bottom": "2",
+                                    "left": "2",
+                                    "isLinked": true
+                                },
+                                "pa_condition_repeater": [
+                                    {
+                                        "_id": "a1d95d7"
+                                    }
+                                ],
+                                "__globals__": {
+                                    "border_color": "globals\/colors?id=dea41e4",
+                                    "button_text_color": "globals\/colors?id=dea41e4",
+                                    "button_background_hover_color": "globals\/colors?id=a291686",
+                                    "button_hover_border_color": "globals\/colors?id=a291686",
+                                    "hover_color": "globals\/colors?id=71abd25"
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "button",
+                            "elType": "widget"
+                        }
+                    ],
+                    "isInner": false,
+                    "elType": "column"
+                }
+            ],
+            "isInner": false,
+            "elType": "section"
+        },
+        {
+            "id": "4b42e309",
+            "settings": {
+                "structure": "20",
+                "background_background": "classic",
+                "background_image": {
+                    "url": "",
+                    "id": "",
+                    "alt": "",
+                    "source": "library"
+                },
+                "background_position": "center center",
+                "background_repeat": "no-repeat",
+                "background_size": "cover",
+                "background_overlay_background": "classic",
+                "background_overlay_image": {
+                    "url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/43.jpg",
+                    "id": 542,
+                    "alt": "",
+                    "source": "library"
+                },
+                "background_overlay_position": "center center",
+                "background_overlay_repeat": "no-repeat",
+                "background_overlay_size": "cover",
+                "background_overlay_opacity": {
+                    "unit": "px",
+                    "size": 0.200000000000000011102230246251565404236316680908203125,
+                    "sizes": []
+                },
+                "padding": {
+                    "unit": "em",
+                    "top": "6",
+                    "right": "1",
+                    "bottom": "4",
+                    "left": "1",
+                    "isLinked": false
+                },
+                "padding_tablet": {
+                    "unit": "em",
+                    "top": "4",
+                    "right": "1",
+                    "bottom": "2",
+                    "left": "1",
+                    "isLinked": false
+                },
+                "padding_mobile": {
+                    "unit": "em",
+                    "top": "2",
+                    "right": "1",
+                    "bottom": "2",
+                    "left": "1",
+                    "isLinked": false
+                },
+                "pa_condition_repeater": [
+                    {
+                        "_id": "f3bc667"
+                    }
+                ]
+            },
+            "elements": [
+                {
+                    "id": "5cf46d98",
+                    "settings": {
+                        "_column_size": 50,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "em",
+                            "top": "3",
+                            "right": "3",
+                            "bottom": "0.6",
+                            "left": "0.6",
+                            "isLinked": false
+                        },
+                        "padding_tablet": {
+                            "unit": "em",
+                            "top": "0.6",
+                            "right": "4",
+                            "bottom": "0.6",
+                            "left": "0.6",
+                            "isLinked": false
+                        },
+                        "padding_mobile": {
+                            "unit": "em",
+                            "top": "1",
+                            "right": "1",
+                            "bottom": "1",
+                            "left": "1",
+                            "isLinked": true
+                        },
+                        "pa_condition_repeater": [
+                            {
+                                "_id": "c54e5e3"
+                            }
+                        ]
+                    },
+                    "elements": [
+                        {
+                            "id": "7998de7",
+                            "settings": {
+                                "title": "Our T-shirt Collection",
+                                "align": "left",
+                                "pa_condition_repeater": [
+                                    {
+                                        "_id": "c9026f6",
+                                        "pa_condition_date": "2022\/05\/13",
+                                        "pa_condition_date_range": "2022\/05\/13"
+                                    }
+                                ],
+                                "__globals__": {
+                                    "typography_typography": "globals\/typography?id=84ca66e",
+                                    "title_color": "globals\/colors?id=a185853"
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "heading",
+                            "elType": "widget"
+                        },
+                        {
+                            "id": "2550594a",
+                            "settings": {
+                                "title": "We believe in customer satisfaction",
+                                "align": "left",
+                                "pa_condition_repeater": [
+                                    {
+                                        "_id": "bfb2183"
+                                    }
+                                ],
+                                "__globals__": {
+                                    "typography_typography": "globals\/typography?id=5d167aa",
+                                    "title_color": "globals\/colors?id=primary"
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "heading",
+                            "elType": "widget"
+                        },
+                        {
+                            "id": "a7aae8a",
+                            "settings": {
+                                "align": "left",
+                                "_margin": {
+                                    "unit": "em",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "-1",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "_margin_tablet": {
+                                    "unit": "em",
+                                    "top": "",
+                                    "right": "",
+                                    "bottom": "",
+                                    "left": "",
+                                    "isLinked": true
+                                },
+                                "_margin_mobile": {
+                                    "unit": "em",
+                                    "top": "",
+                                    "right": "",
+                                    "bottom": "",
+                                    "left": "",
+                                    "isLinked": true
+                                },
+                                "pa_condition_repeater": [
+                                    {
+                                        "_id": "88645ff"
+                                    }
+                                ],
+                                "__globals__": {
+                                    "typography_typography": "globals\/typography?id=b2ce6af",
+                                    "text_color": "globals\/colors?id=secondary"
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "text-editor",
+                            "elType": "widget"
+                        },
+                        {
+                            "id": "48fe910f",
+                            "settings": {
+                                "selected_icon": {
+                                    "value": "icon icon-quote2",
+                                    "library": "ekiticons"
+                                },
+                                "align": "left",
+                                "primary_color": "#7A7A7A47",
+                                "_margin": {
+                                    "unit": "em",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "-4",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "_margin_tablet": {
+                                    "unit": "em",
+                                    "top": "",
+                                    "right": "",
+                                    "bottom": "",
+                                    "left": "",
+                                    "isLinked": true
+                                },
+                                "_margin_mobile": {
+                                    "unit": "em",
+                                    "top": "",
+                                    "right": "",
+                                    "bottom": "",
+                                    "left": "",
+                                    "isLinked": true
+                                },
+                                "pa_condition_repeater": [
+                                    {
+                                        "_id": "8ad52c6"
+                                    }
+                                ],
+                                "__globals__": {
+                                    "primary_color": ""
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "icon",
+                            "elType": "widget"
+                        },
+                        {
+                            "id": "66361ec",
+                            "settings": {
+                                "editor": "<p>Aenean a natoque semper nec potenti dapibus pellentesque ultricies risus aliquet. Malesuada ipsum dictum sed morbi adipiscing ullamcorper ac pharetra quam.<\/p>",
+                                "align": "left",
+                                "_padding": {
+                                    "unit": "em",
+                                    "top": "0",
+                                    "right": "4",
+                                    "bottom": "1",
+                                    "left": "2",
+                                    "isLinked": false
+                                },
+                                "_padding_tablet": {
+                                    "unit": "em",
+                                    "top": "",
+                                    "right": "",
+                                    "bottom": "",
+                                    "left": "",
+                                    "isLinked": true
+                                },
+                                "_padding_mobile": {
+                                    "unit": "em",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "0",
+                                    "left": "2",
+                                    "isLinked": false
+                                },
+                                "_z_index": 2,
+                                "pa_condition_repeater": [
+                                    {
+                                        "_id": "1513afe"
+                                    }
+                                ],
+                                "__globals__": {
+                                    "typography_typography": "globals\/typography?id=520c191",
+                                    "text_color": "globals\/colors?id=308e809"
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "text-editor",
+                            "elType": "widget"
+                        }
+                    ],
+                    "isInner": false,
+                    "elType": "column"
+                },
+                {
+                    "id": "665daa86",
+                    "settings": {
+                        "_column_size": 50,
+                        "_inline_size": null,
+                        "pa_condition_repeater": [
+                            {
+                                "_id": "d5f4efd"
+                            }
+                        ]
+                    },
+                    "elements": [
+                        {
+                            "id": "300f136",
+                            "settings": {
+                                "image": {
+                                    "url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/male-worker-using-a-drying-oven-for-t-shirt-in-a-workshop.jpg",
+                                    "id": 67,
+                                    "alt": "Male worker using a drying oven for t-shirt in a workshop",
+                                    "source": "library"
+                                },
+                                "image_size": "full",
+                                "width": {
+                                    "unit": "%",
+                                    "size": 100,
+                                    "sizes": []
+                                },
+                                "height": {
+                                    "unit": "px",
+                                    "size": 450,
+                                    "sizes": []
+                                },
+                                "object-fit": "cover",
+                                "image_border_border": "solid",
+                                "image_border_width": {
+                                    "unit": "px",
+                                    "top": "12",
+                                    "right": "12",
+                                    "bottom": "12",
+                                    "left": "12",
+                                    "isLinked": true
+                                },
+                                "image_box_shadow_box_shadow_type": "yes",
+                                "image_box_shadow_box_shadow": {
+                                    "horizontal": 0,
+                                    "vertical": 7,
+                                    "blur": 20,
+                                    "spread": 0,
+                                    "color": "rgba(0, 0, 0, 0.25)"
+                                },
+                                "pa_condition_repeater": [
+                                    {
+                                        "_id": "d8cc0db"
+                                    }
+                                ],
+                                "_background_background": "classic",
+                                "_box_shadow_box_shadow": {
+                                    "horizontal": 0,
+                                    "vertical": 10,
+                                    "blur": 30,
+                                    "spread": 0,
+                                    "color": "rgba(0, 0, 0, 0.25)"
+                                },
+                                "__globals__": {
+                                    "_border_color": "",
+                                    "_background_color": "globals\/colors?id=71abd25",
+                                    "image_border_color": "globals\/colors?id=71abd25"
+                                },
+                                "height_mobile": {
+                                    "unit": "px",
+                                    "size": 350,
+                                    "sizes": []
+                                },
+                                "object-fit_mobile": "cover"
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "image",
+                            "elType": "widget"
+                        },
+                        {
+                            "id": "2293de95",
+                            "settings": {
+                                "image": {
+                                    "url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Gallery-1.jpg",
+                                    "id": 528,
+                                    "alt": "",
+                                    "source": "library"
+                                },
+                                "image_size": "full",
+                                "image_border_border": "solid",
+                                "image_border_width": {
+                                    "unit": "px",
+                                    "top": "10",
+                                    "right": "10",
+                                    "bottom": "10",
+                                    "left": "10",
+                                    "isLinked": true
+                                },
+                                "image_box_shadow_box_shadow_type": "yes",
+                                "image_box_shadow_box_shadow": {
+                                    "horizontal": 0,
+                                    "vertical": 10,
+                                    "blur": 30,
+                                    "spread": 0,
+                                    "color": "rgba(0, 0, 0, 0.25)"
+                                },
+                                "_margin": {
+                                    "unit": "em",
+                                    "top": "-12",
+                                    "right": "6",
+                                    "bottom": "0",
+                                    "left": "-6",
+                                    "isLinked": false
+                                },
+                                "_margin_tablet": {
+                                    "unit": "em",
+                                    "top": "",
+                                    "right": "",
+                                    "bottom": "",
+                                    "left": "",
+                                    "isLinked": true
+                                },
+                                "_margin_mobile": {
+                                    "unit": "em",
+                                    "top": "-9",
+                                    "right": "0",
+                                    "bottom": "0",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "_element_width": "initial",
+                                "_element_custom_width": {
+                                    "unit": "px",
+                                    "size": 250,
+                                    "sizes": []
+                                },
+                                "pa_condition_repeater": [
+                                    {
+                                        "_id": "1de9784"
+                                    }
+                                ],
+                                "_transform_rotate_popover": "transform",
+                                "_transform_rotateZ_effect": {
+                                    "unit": "px",
+                                    "size": -10,
+                                    "sizes": []
+                                },
+                                "_background_background": "classic",
+                                "_box_shadow_box_shadow": {
+                                    "horizontal": 0,
+                                    "vertical": 10,
+                                    "blur": 30,
+                                    "spread": 0,
+                                    "color": "rgba(0, 0, 0, 0.25)"
+                                },
+                                "__globals__": {
+                                    "_border_color": "globals\/colors?id=accent",
+                                    "image_border_color": "globals\/colors?id=71abd25",
+                                    "_background_color": "globals\/colors?id=71abd25"
+                                },
+                                "_element_width_mobile": "initial",
+                                "_element_custom_width_mobile": {
+                                    "unit": "px",
+                                    "size": 180,
+                                    "sizes": []
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "image",
+                            "elType": "widget"
+                        }
+                    ],
+                    "isInner": false,
+                    "elType": "column"
+                }
+            ],
+            "isInner": false,
+            "elType": "section"
+        },
+        {
+            "id": "4bab0bf",
+            "settings": {
+                "padding": {
+                    "unit": "em",
+                    "top": "4",
+                    "right": "1",
+                    "bottom": "8",
+                    "left": "1",
+                    "isLinked": false
+                },
+                "padding_tablet": {
+                    "unit": "em",
+                    "top": "2",
+                    "right": "1",
+                    "bottom": "4",
+                    "left": "1",
+                    "isLinked": false
+                },
+                "padding_mobile": {
+                    "unit": "em",
+                    "top": "1",
+                    "right": "1",
+                    "bottom": "3",
+                    "left": "1",
+                    "isLinked": false
+                },
+                "pa_condition_repeater": [
+                    {
+                        "_id": "66bef61"
+                    }
+                ]
+            },
+            "elements": [
+                {
+                    "id": "2094956b",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "pa_condition_repeater": [
+                            {
+                                "_id": "2a51551"
+                            }
+                        ]
+                    },
+                    "elements": [
+                        {
+                            "id": "a0921f4",
+                            "settings": {
+                                "ekit_heading_title": "Featured Project",
+                                "ekit_heading_sub_title": "Time has changed",
+                                "shadow_text_content": "bussiness",
+                                "ekit_heading_seperator_style": "elementskit-border-divider elementskit-style-long",
+                                "ekit_heading_title_align": "text_center",
+                                "ekit_heading_seperator_height": {
+                                    "unit": "px",
+                                    "size": 3,
+                                    "sizes": []
+                                },
+                                "_padding": {
+                                    "unit": "em",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "1",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "_padding_tablet": {
+                                    "unit": "em",
+                                    "top": "",
+                                    "right": "",
+                                    "bottom": "",
+                                    "left": "",
+                                    "isLinked": true
+                                },
+                                "_padding_mobile": {
+                                    "unit": "em",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "0",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "pa_condition_repeater": [
+                                    {
+                                        "_id": "c360944"
+                                    }
+                                ],
+                                "_animation": "fadeInDown",
+                                "__globals__": {
+                                    "ekit_heading_seperator_color": "globals\/colors?id=a291686",
+                                    "ekit_heading_title_typography_typography": "globals\/typography?id=5d167aa",
+                                    "ekit_heading_title_color": "globals\/colors?id=primary"
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "elementskit-heading",
+                            "elType": "widget"
+                        },
+                        {
+                            "id": "6ac8e5fb",
+                            "settings": {
+                                "gallery": [
+                                    {
+                                        "id": 551,
+                                        "url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Gallery-3.jpg"
+                                    },
+                                    {
+                                        "id": 550,
+                                        "url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Gallery-2.jpg"
+                                    },
+                                    {
+                                        "id": 453,
+                                        "url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/portrait-of-fashionable-young-girl-wearing-a-unicorn-t-shirt-.jpg"
+                                    }
+                                ],
+                                "galleries": [
+                                    {
+                                        "gallery_title": "New Gallery",
+                                        "_id": "8249d70"
+                                    }
+                                ],
+                                "columns": 3,
+                                "aspect_ratio": "9:16",
+                                "thumbnail_image_size": "full",
+                                "show_all_galleries_label": "All",
+                                "pa_condition_repeater": [
+                                    {
+                                        "_id": "0b60d9e"
+                                    }
+                                ],
+                                "columns_tablet": 3,
+                                "overlay_title": "title",
+                                "overlay_description": "caption",
+                                "__globals__": {
+                                    "title_typography_typography": "globals\/typography?id=7044a64",
+                                    "title_color": "globals\/colors?id=71abd25",
+                                    "description_typography_typography": "globals\/typography?id=69c152f",
+                                    "description_color": "globals\/colors?id=91455cb"
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "gallery",
+                            "elType": "widget"
+                        },
+                        {
+                            "id": "f63ca80",
+                            "settings": {
+                                "gallery": [
+                                    {
+                                        "id": 528,
+                                        "url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Gallery-1.jpg"
+                                    },
+                                    {
+                                        "id": 78,
+                                        "url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/male-worker-preparing-screen-printing-film-in-workshop.jpg"
+                                    },
+                                    {
+                                        "id": 552,
+                                        "url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Gallery-4.jpg"
+                                    }
+                                ],
+                                "galleries": [
+                                    {
+                                        "gallery_title": "New Gallery",
+                                        "_id": "8249d70"
+                                    }
+                                ],
+                                "columns": 3,
+                                "aspect_ratio": "4:3",
+                                "thumbnail_image_size": "full",
+                                "show_all_galleries_label": "All",
+                                "pa_condition_repeater": [
+                                    {
+                                        "_id": "0b60d9e"
+                                    }
+                                ],
+                                "columns_tablet": 3,
+                                "overlay_title": "title",
+                                "overlay_description": "caption",
+                                "__globals__": {
+                                    "title_typography_typography": "globals\/typography?id=7044a64",
+                                    "title_color": "globals\/colors?id=71abd25",
+                                    "description_typography_typography": "globals\/typography?id=69c152f",
+                                    "description_color": "globals\/colors?id=91455cb"
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "gallery",
+                            "elType": "widget"
+                        },
+                        {
+                            "id": "2189cd19",
+                            "settings": {
+                                "gallery": [
+                                    {
+                                        "id": 555,
+                                        "url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Gallery-6.jpg"
+                                    },
+                                    {
+                                        "id": 554,
+                                        "url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Gallery-5.jpg"
+                                    }
+                                ],
+                                "galleries": [
+                                    {
+                                        "gallery_title": "New Gallery",
+                                        "_id": "8249d70"
+                                    }
+                                ],
+                                "columns": 2,
+                                "aspect_ratio": "4:3",
+                                "thumbnail_image_size": "full",
+                                "show_all_galleries_label": "All",
+                                "overlay_title": "title",
+                                "overlay_description": "caption",
+                                "pa_condition_repeater": [
+                                    {
+                                        "_id": "0b60d9e"
+                                    }
+                                ],
+                                "__globals__": {
+                                    "title_typography_typography": "globals\/typography?id=7044a64",
+                                    "title_color": "globals\/colors?id=71abd25",
+                                    "description_typography_typography": "globals\/typography?id=69c152f",
+                                    "description_color": "globals\/colors?id=91455cb"
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "gallery",
+                            "elType": "widget"
+                        }
+                    ],
+                    "isInner": false,
+                    "elType": "column"
+                }
+            ],
+            "isInner": false,
+            "elType": "section"
+        },
+        {
+            "id": "66bfc251",
+            "settings": {
+                "background_background": "classic",
+                "background_image": {
+                    "url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/woman-wearing-a-white-t-shirt-mockup.jpg",
+                    "id": 216,
+                    "alt": "Woman wearing a white T-shirt mockup",
+                    "source": "library"
+                },
+                "background_position": "top center",
+                "background_repeat": "no-repeat",
+                "background_size": "cover",
+                "padding": {
+                    "unit": "em",
+                    "top": "4",
+                    "right": "1",
+                    "bottom": "4",
+                    "left": "1",
+                    "isLinked": false
+                },
+                "padding_tablet": {
+                    "unit": "em",
+                    "top": "3",
+                    "right": "1",
+                    "bottom": "3",
+                    "left": "1",
+                    "isLinked": false
+                },
+                "padding_mobile": {
+                    "unit": "em",
+                    "top": "5",
+                    "right": "1",
+                    "bottom": "2",
+                    "left": "1",
+                    "isLinked": false
+                },
+                "pa_condition_repeater": [
+                    {
+                        "_id": "47dba7b"
+                    }
+                ]
+            },
+            "elements": [
+                {
+                    "id": "f40487e",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "pa_condition_repeater": [
+                            {
+                                "_id": "66fbedb"
+                            }
+                        ]
+                    },
+                    "elements": [
+                        {
+                            "id": "51a286bc",
+                            "settings": {
+                                "padding": {
+                                    "unit": "%",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "0",
+                                    "left": "50",
+                                    "isLinked": false
+                                },
+                                "padding_tablet": {
+                                    "unit": "%",
+                                    "top": "",
+                                    "right": "",
+                                    "bottom": "",
+                                    "left": "",
+                                    "isLinked": true
+                                },
+                                "padding_mobile": {
+                                    "unit": "%",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "0",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "pa_condition_repeater": [
+                                    {
+                                        "_id": "64d4f5a"
+                                    }
+                                ]
+                            },
+                            "elements": [
+                                {
+                                    "id": "54a68dc6",
+                                    "settings": {
+                                        "_column_size": 100,
+                                        "_inline_size": null,
+                                        "padding": {
+                                            "unit": "em",
+                                            "top": "3",
+                                            "right": "3",
+                                            "bottom": "3",
+                                            "left": "3",
+                                            "isLinked": true
+                                        },
+                                        "padding_tablet": {
+                                            "unit": "em",
+                                            "top": "2",
+                                            "right": "2",
+                                            "bottom": "2",
+                                            "left": "2",
+                                            "isLinked": true
+                                        },
+                                        "padding_mobile": {
+                                            "unit": "em",
+                                            "top": "1",
+                                            "right": "1",
+                                            "bottom": "1",
+                                            "left": "1",
+                                            "isLinked": true
+                                        },
+                                        "pa_condition_repeater": [
+                                            {
+                                                "_id": "76b926e"
+                                            }
+                                        ]
+                                    },
+                                    "elements": [
+                                        {
+                                            "id": "9abb69",
+                                            "settings": {
+                                                "title": "Testimonials",
+                                                "align": "center",
+                                                "pa_condition_repeater": [
+                                                    {
+                                                        "_id": "c9026f6",
+                                                        "pa_condition_date": "2022\/05\/13",
+                                                        "pa_condition_date_range": "2022\/05\/13"
+                                                    }
+                                                ],
+                                                "__globals__": {
+                                                    "typography_typography": "globals\/typography?id=84ca66e",
+                                                    "title_color": "globals\/colors?id=dea41e4"
+                                                }
+                                            },
+                                            "elements": [],
+                                            "isInner": false,
+                                            "widgetType": "heading",
+                                            "elType": "widget"
+                                        },
+                                        {
+                                            "id": "4efb85ef",
+                                            "settings": {
+                                                "title": "What they say",
+                                                "align": "center",
+                                                "pa_condition_repeater": [
+                                                    {
+                                                        "_id": "b4fba9f"
+                                                    }
+                                                ],
+                                                "__globals__": {
+                                                    "title_color": "globals\/colors?id=71abd25",
+                                                    "typography_typography": "globals\/typography?id=5d167aa"
+                                                }
+                                            },
+                                            "elements": [],
+                                            "isInner": false,
+                                            "widgetType": "heading",
+                                            "elType": "widget"
+                                        },
+                                        {
+                                            "id": "424c34e5",
+                                            "settings": {
+                                                "slides": [
+                                                    {
+                                                        "content": "Camisseta is both attractive and highly adaptable. Camisseta was the best investment I ever made.",
+                                                        "name": "Thomas B. McDonald",
+                                                        "title": "Skater",
+                                                        "image": {
+                                                            "url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Author.jpg",
+                                                            "id": 620,
+                                                            "alt": "",
+                                                            "source": "library"
+                                                        },
+                                                        "_id": "c4c5bf3"
+                                                    },
+                                                    {
+                                                        "content": "Wow what great service, I love it! I am completely blown away. Just what I was looking for. I couldn't have asked for more than this.",
+                                                        "name": "Fred Charlie",
+                                                        "title": "Employee",
+                                                        "image": {
+                                                            "url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/C3.jpg",
+                                                            "id": 622,
+                                                            "alt": "",
+                                                            "source": "library"
+                                                        },
+                                                        "_id": "bc52de5"
+                                                    },
+                                                    {
+                                                        "content": "I'd be lost without Camisseta. I would also like to say thank you to all your staff. Dude, your stuff is the bomb! Thanks Camisseta!",
+                                                        "name": "Erlinda Vaughan",
+                                                        "title": "CEO of Realmaya",
+                                                        "image": {
+                                                            "url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/C2.jpg",
+                                                            "id": 621,
+                                                            "alt": "",
+                                                            "source": "library"
+                                                        },
+                                                        "_id": "649d683"
+                                                    }
+                                                ],
+                                                "slides_per_view_mobile": "1",
+                                                "show_arrows": "",
+                                                "slide_padding": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                },
+                                                "pa_condition_repeater": [
+                                                    {
+                                                        "_id": "f867704"
+                                                    }
+                                                ],
+                                                "__globals__": {
+                                                    "content_color": "globals\/colors?id=71abd25",
+                                                    "title_color": "globals\/colors?id=a1e80d7",
+                                                    "name_color": "globals\/colors?id=91455cb",
+                                                    "title_typography_typography": "globals\/typography?id=69c152f",
+                                                    "name_typography_typography": "globals\/typography?id=520c191"
+                                                }
+                                            },
+                                            "elements": [],
+                                            "isInner": false,
+                                            "widgetType": "testimonial-carousel",
+                                            "elType": "widget"
+                                        }
+                                    ],
+                                    "isInner": true,
+                                    "elType": "column"
+                                }
+                            ],
+                            "isInner": true,
+                            "elType": "section"
+                        }
+                    ],
+                    "isInner": false,
+                    "elType": "column"
+                }
+            ],
+            "isInner": false,
+            "elType": "section"
+        }
+    ],
+    "page_settings": {
+        "eael_ext_toc_title": "Table of Contents",
+        "template": "elementor_header_footer"
+    }
+}

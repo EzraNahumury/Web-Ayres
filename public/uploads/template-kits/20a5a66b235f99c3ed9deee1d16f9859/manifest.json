@@ -1,0 +1,1331 @@
+{
+    "manifest_version": "1.0.21",
+    "title": "Camisseta \u2013 Template Kit for Custom T-Shirt",
+    "page_builder": "elementor",
+    "kit_version": "1.0.0",
+    "templates": [
+        {
+            "name": "Global Kit Styles",
+            "screenshot": "screenshots\/global-kit-styles.jpg",
+            "source": "templates\/global.json",
+            "preview_url": "https:\/\/point.moxcreative.com",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "global-styles",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1",
+                "additional_template_information": [
+                    "These are the global theme styles configured through the Elementor Theme Styles area."
+                ]
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Homepage",
+            "screenshot": "screenshots\/homepage.jpg",
+            "source": "templates\/homepage.json",
+            "preview_url": "https:\/\/point.moxcreative.com\/camisseta\/template-kit\/homepage\/",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-home",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "About Us",
+            "screenshot": "screenshots\/about-us.jpg",
+            "source": "templates\/about-us.json",
+            "preview_url": "https:\/\/point.moxcreative.com\/camisseta\/template-kit\/about-us\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Single Service",
+            "screenshot": "screenshots\/single-service.jpg",
+            "source": "templates\/single-service.json",
+            "preview_url": "https:\/\/point.moxcreative.com\/camisseta\/template-kit\/single-service\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Services",
+            "screenshot": "screenshots\/services.jpg",
+            "source": "templates\/services.json",
+            "preview_url": "https:\/\/point.moxcreative.com\/camisseta\/template-kit\/services\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Our Team",
+            "screenshot": "screenshots\/our-team.jpg",
+            "source": "templates\/our-team.json",
+            "preview_url": "https:\/\/point.moxcreative.com\/camisseta\/template-kit\/our-team\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Collection",
+            "screenshot": "screenshots\/collection.jpg",
+            "source": "templates\/collection.json",
+            "preview_url": "https:\/\/point.moxcreative.com\/camisseta\/template-kit\/collection\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Pricing",
+            "screenshot": "screenshots\/pricing.jpg",
+            "source": "templates\/pricing.json",
+            "preview_url": "https:\/\/point.moxcreative.com\/camisseta\/template-kit\/pricing\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "FAQ",
+            "screenshot": "screenshots\/faq.jpg",
+            "source": "templates\/faq.json",
+            "preview_url": "https:\/\/point.moxcreative.com\/camisseta\/template-kit\/faq\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Contact Us",
+            "screenshot": "screenshots\/contact-us.jpg",
+            "source": "templates\/contact-us.json",
+            "preview_url": "https:\/\/point.moxcreative.com\/camisseta\/template-kit\/contact-us\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Camisseta V1 - 404 Page",
+            "screenshot": "screenshots\/camisseta-v1-404-page.jpg",
+            "source": "templates\/camisseta-v1-404-page.json",
+            "preview_url": "https:\/\/point.moxcreative.com\/camisseta\/?elementor_library=camisseta-v1-404-page",
+            "type": "error-404",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-404",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1",
+                "elementor_library_type": "error-404",
+                "elementor_pro_conditions": [
+                    "include\/singular\/not_found404"
+                ],
+                "additional_template_information": [
+                    "This is a \"Error 404\" template for Elementor Pro.",
+                    "This template will display on: 404 Page."
+                ]
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Camisseta V1 - Single Post",
+            "screenshot": "screenshots\/camisseta-v1-single-post.jpg",
+            "source": "templates\/camisseta-v1-single-post.json",
+            "preview_url": "https:\/\/point.moxcreative.com\/camisseta\/?elementor_library=camisseta-v1-single-post",
+            "type": "single-post",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-post",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1",
+                "elementor_library_type": "single-post",
+                "elementor_pro_conditions": [
+                    "include\/singular\/post"
+                ],
+                "additional_template_information": [
+                    "This is a \"Single Post\" template for Elementor Pro.",
+                    "This template will display on: Posts."
+                ]
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Camisseta V1 - Blog",
+            "screenshot": "screenshots\/camisseta-v1-blog.jpg",
+            "source": "templates\/camisseta-v1-blog.json",
+            "preview_url": "https:\/\/point.moxcreative.com\/camisseta\/?elementor_library=camisseta-v1-blog",
+            "type": "archive",
+            "category": "page",
+            "metadata": {
+                "template_type": "archive-blog",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1",
+                "elementor_library_type": "archive",
+                "elementor_pro_conditions": [
+                    "include\/archive"
+                ],
+                "additional_template_information": [
+                    "This is a \"Archive\" template for Elementor Pro.",
+                    "This template will display on: All Archives."
+                ]
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Camisseta V1 - Footer",
+            "screenshot": "screenshots\/camisseta-v1-footer.jpg",
+            "source": "templates\/camisseta-v1-footer.json",
+            "preview_url": "https:\/\/point.moxcreative.com\/camisseta\/?elementor_library=camisseta-v1-footer",
+            "type": "footer",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-footer",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1",
+                "elementor_library_type": "footer",
+                "elementor_pro_conditions": [
+                    "include\/general"
+                ],
+                "additional_template_information": [
+                    "This is a \"Footer\" template for Elementor Pro.",
+                    "This template will display on: Entire Site."
+                ]
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Camisseta V1 - Header",
+            "screenshot": "screenshots\/camisseta-v1-header.jpg",
+            "source": "templates\/camisseta-v1-header.json",
+            "preview_url": "https:\/\/point.moxcreative.com\/camisseta\/?elementor_library=camisseta-v1-header",
+            "type": "header",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-header",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1",
+                "elementor_library_type": "header",
+                "elementor_pro_conditions": [
+                    "include\/general"
+                ],
+                "additional_template_information": [
+                    "This is a \"Header\" template for Elementor Pro.",
+                    "This template will display on: Entire Site."
+                ]
+            },
+            "elementor_pro_required": true
+        }
+    ],
+    "required_plugins": [
+        {
+            "name": "Envato Elements",
+            "version": "2.0.11",
+            "file": "envato-elements\/envato-elements.php",
+            "author": "Envato"
+        },
+        {
+            "name": "Elementor Pro",
+            "version": "3.7.0",
+            "file": "elementor-pro\/elementor-pro.php",
+            "author": "Elementor.com"
+        },
+        {
+            "name": "ElementsKit Lite",
+            "version": "2.6.0",
+            "file": "elementskit-lite\/elementskit-lite.php",
+            "author": "Wpmet"
+        }
+    ],
+    "images": [
+        {
+            "filename": "BG4.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/BG4-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 285474,
+            "dimensions": [
+                4500,
+                3000
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/t-shirt-mockups-K6DACR5"
+        },
+        {
+            "filename": "male-worker-preparing-screen-printing-film-in-workshop.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/male-worker-preparing-screen-printing-film-in-workshop-800x532.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/single-service.json",
+                    "name": "Single Service"
+                },
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                },
+                {
+                    "source": "templates\/collection.json",
+                    "name": "Collection"
+                }
+            ],
+            "filesize": 66555,
+            "dimensions": [
+                1080,
+                719
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-FN8PEZD"
+        },
+        {
+            "filename": "portrait-of-young-beautiful-woman-posing-in-studio.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/portrait-of-young-beautiful-woman-posing-in-studio-800x600.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 146521,
+            "dimensions": [
+                1080,
+                810
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-93KNWNJ"
+        },
+        {
+            "filename": "43.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/43-800x600.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/collection.json",
+                    "name": "Collection"
+                }
+            ],
+            "filesize": 100562,
+            "dimensions": [
+                1080,
+                810
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/bundle-white-textures-vol1-x50-N8Q28SJ"
+        },
+        {
+            "filename": "Gallery-4.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Gallery-4-800x578.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/collection.json",
+                    "name": "Collection"
+                }
+            ],
+            "filesize": 73003,
+            "dimensions": [
+                1080,
+                781
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/hiphop-old-school-style-vector-illustration-PDZPVGR https:\/\/elements.envato.com\/t-shirt-mock-up-vol-03-SNUYFG"
+        },
+        {
+            "filename": "Gallery-5.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Gallery-5-800x543.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/collection.json",
+                    "name": "Collection"
+                }
+            ],
+            "filesize": 88422,
+            "dimensions": [
+                1080,
+                733
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/t-shirt-mock-up-music-edition-PRLFNRH"
+        },
+        {
+            "filename": "portrait-of-two-young-funny-women-posing-in-studio.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/portrait-of-two-young-funny-women-posing-in-studio-800x600.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 79827,
+            "dimensions": [
+                1080,
+                810
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-VK5K3MM"
+        },
+        {
+            "filename": "Sponsor1.png",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Sponsor1.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 2721,
+            "dimensions": [
+                179,
+                35
+            ],
+            "image_source": "cc0",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/logoipsum.com\/"
+        },
+        {
+            "filename": "Sponsor2.png",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Sponsor2.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 2220,
+            "dimensions": [
+                149,
+                35
+            ],
+            "image_source": "cc0",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/logoipsum.com\/"
+        },
+        {
+            "filename": "Sponsor3.png",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Sponsor3.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 2101,
+            "dimensions": [
+                183,
+                30
+            ],
+            "image_source": "cc0",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/logoipsum.com\/"
+        },
+        {
+            "filename": "Sponsor4.png",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Sponsor4.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 2118,
+            "dimensions": [
+                151,
+                35
+            ],
+            "image_source": "cc0",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/logoipsum.com\/"
+        },
+        {
+            "filename": "Sponsor5.png",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Sponsor5.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 1978,
+            "dimensions": [
+                134,
+                30
+            ],
+            "image_source": "cc0",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/logoipsum.com\/"
+        },
+        {
+            "filename": "Sponsor6.png",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Sponsor6.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 2272,
+            "dimensions": [
+                162,
+                30
+            ],
+            "image_source": "cc0",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/logoipsum.com\/"
+        },
+        {
+            "filename": "handsome-man-posing-outdoors.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/handsome-man-posing-outdoors-800x600.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 130705,
+            "dimensions": [
+                1080,
+                810
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-UZGE54X"
+        },
+        {
+            "filename": "male-worker-using-printing-machine-in-a-workshop.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/male-worker-using-printing-machine-in-a-workshop-800x532.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/single-service.json",
+                    "name": "Single Service"
+                },
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                }
+            ],
+            "filesize": 110196,
+            "dimensions": [
+                1080,
+                719
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-MU7E4GG"
+        },
+        {
+            "filename": "worker-preparing-embroidery-machine-in-t-shirt-printing-workshop.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/worker-preparing-embroidery-machine-in-t-shirt-printing-workshop-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                }
+            ],
+            "filesize": 112442,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-HFDWEC9"
+        },
+        {
+            "filename": "close-up-of-young-woman-tailor-with-not-pad-is-making-sketches.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/close-up-of-young-woman-tailor-with-not-pad-is-making-sketches-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                }
+            ],
+            "filesize": 94844,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-FLCCVRN"
+        },
+        {
+            "filename": "printing-t-shirts.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/printing-t-shirts-800x543.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                }
+            ],
+            "filesize": 134154,
+            "dimensions": [
+                1080,
+                733
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-FGSAGB2"
+        },
+        {
+            "filename": "fashion-designers-holding-color-swatches.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/fashion-designers-holding-color-swatches-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                }
+            ],
+            "filesize": 90767,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-TDA7CR4"
+        },
+        {
+            "filename": "delivery-man-bringing-goods-home-for-a-woman-client.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/delivery-man-bringing-goods-home-for-a-woman-client-800x534.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                }
+            ],
+            "filesize": 125992,
+            "dimensions": [
+                1080,
+                721
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-72LY395"
+        },
+        {
+            "filename": "happy-brunette-weoman-posing-outdoor-stylish-hat-sunglasses-and-green-jacket-.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/happy-brunette-weoman-posing-outdoor-stylish-hat-sunglasses-and-green-jacket--800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/single-service.json",
+                    "name": "Single Service"
+                },
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                }
+            ],
+            "filesize": 91714,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-4CVGEEA"
+        },
+        {
+            "filename": "Gallery-3-e1652632379894.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Gallery-3-800x1200.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/collection.json",
+                    "name": "Collection"
+                }
+            ],
+            "filesize": 210521,
+            "dimensions": [
+                940,
+                1410
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/graffiti-coronavirus-ncov-and-medical-mask-7A23NMF https:\/\/elements.envato.com\/t-shirt-mockups-outdoor-edition-vol-1-88R5E7Q"
+        },
+        {
+            "filename": "Gallery-2-e1652632406246.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Gallery-2-800x1200.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/collection.json",
+                    "name": "Collection"
+                }
+            ],
+            "filesize": 255196,
+            "dimensions": [
+                940,
+                1410
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/hiphop-old-school-style-vector-illustration-PDZPVGR https:\/\/elements.envato.com\/t-shirt-mockups-outdoor-edition-vol-1-88R5E7Q"
+        },
+        {
+            "filename": "portrait-of-fashionable-young-girl-wearing-a-unicorn-t-shirt-.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/portrait-of-fashionable-young-girl-wearing-a-unicorn-t-shirt--800x1067.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/collection.json",
+                    "name": "Collection"
+                }
+            ],
+            "filesize": 175990,
+            "dimensions": [
+                1080,
+                1440
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-9EWUJN9"
+        },
+        {
+            "filename": "Gallery-6.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Gallery-6-800x534.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/collection.json",
+                    "name": "Collection"
+                }
+            ],
+            "filesize": 91023,
+            "dimensions": [
+                1080,
+                721
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/t-shirt-mock-up-music-edition-PRLFNRH https:\/\/elements.envato.com\/insect-bug-illustration-with-sacred-geometry-FQ4HBRQ"
+        },
+        {
+            "filename": "beautiful-woman-with-brunette-hair-posing-at-street-short-haired-girl-in-beige-jacket-t-shirt-and.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/beautiful-woman-with-brunette-hair-posing-at-street-short-haired-girl-in-beige-jacket-t-shirt-and-800x1200.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                }
+            ],
+            "filesize": 150114,
+            "dimensions": [
+                1080,
+                1620
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-ZPDS4SN"
+        },
+        {
+            "filename": "hanger-with-blank-gray-t-shirt-on-wooden-background-space-for-text.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/hanger-with-blank-gray-t-shirt-on-wooden-background-space-for-text-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/collection.json",
+                    "name": "Collection"
+                },
+                {
+                    "source": "templates\/camisseta-v1-single-post.json",
+                    "name": "Camisseta V1 - Single Post"
+                },
+                {
+                    "source": "templates\/camisseta-v1-blog.json",
+                    "name": "Camisseta V1 - Blog"
+                }
+            ],
+            "filesize": 158087,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-M72XB8Q"
+        },
+        {
+            "filename": "woman-wearing-a-white-t-shirt-mockup.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/woman-wearing-a-white-t-shirt-mockup-800x534.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                },
+                {
+                    "source": "templates\/collection.json",
+                    "name": "Collection"
+                }
+            ],
+            "filesize": 147571,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-WY3TJG8"
+        },
+        {
+            "filename": "Author.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Author-800x800.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                },
+                {
+                    "source": "templates\/collection.json",
+                    "name": "Collection"
+                }
+            ],
+            "filesize": 71859,
+            "dimensions": [
+                1080,
+                1080
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-LFRCLML"
+        },
+        {
+            "filename": "C3.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/C3.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                },
+                {
+                    "source": "templates\/collection.json",
+                    "name": "Collection"
+                }
+            ],
+            "filesize": 84935,
+            "dimensions": [
+                323,
+                323
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/waist-up-portrait-of-calm-and-successful-young-bus-W5FWBWU"
+        },
+        {
+            "filename": "C2.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/C2.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                },
+                {
+                    "source": "templates\/collection.json",
+                    "name": "Collection"
+                }
+            ],
+            "filesize": 65478,
+            "dimensions": [
+                323,
+                323
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/pretty-mixed-race-businesswoman-standing-with-hand-X3W5HP6"
+        },
+        {
+            "filename": "BG1-e1652632251297.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/BG1-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                },
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                },
+                {
+                    "source": "templates\/pricing.json",
+                    "name": "Pricing"
+                },
+                {
+                    "source": "templates\/faq.json",
+                    "name": "FAQ"
+                },
+                {
+                    "source": "templates\/camisseta-v1-blog.json",
+                    "name": "Camisseta V1 - Blog"
+                }
+            ],
+            "filesize": 83854,
+            "dimensions": [
+                940,
+                627
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/men-in-blank-grey-t-shirt-against-blue-background--EQS4HAH"
+        },
+        {
+            "filename": "beautiful-girl-with-braids-in-pink-leather-jacket-and-white-t-shirt-dreamily-looking-in-camera.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/beautiful-girl-with-braids-in-pink-leather-jacket-and-white-t-shirt-dreamily-looking-in-camera-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 42623,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-JVTVJVX"
+        },
+        {
+            "filename": "image-9.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/image-9.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                }
+            ],
+            "filesize": 169508,
+            "dimensions": [
+                600,
+                800
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/pleased-cheerful-redhaired-male-with-pleasant-smil-CCXAYZL"
+        },
+        {
+            "filename": "img_4.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/img_4.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                }
+            ],
+            "filesize": 71472,
+            "dimensions": [
+                600,
+                800
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/horizontal-shot-of-pleasant-looking-ginger-young-e-F9MBGAR"
+        },
+        {
+            "filename": "image-10.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/image-10.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                }
+            ],
+            "filesize": 178215,
+            "dimensions": [
+                600,
+                800
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/waist-up-shot-of-handsome-self-confident-cheerful--BUTM9PX"
+        },
+        {
+            "filename": "portrait-of-boy-in-white-t-shirt-and-down-jacket-standing-with-bicycle-on-street.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/portrait-of-boy-in-white-t-shirt-and-down-jacket-standing-with-bicycle-on-street-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/services.json",
+                    "name": "Services"
+                }
+            ],
+            "filesize": 77624,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-YSUAT7H"
+        },
+        {
+            "filename": "img_5.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/img_5.jpg",
+            "templates": [
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                }
+            ],
+            "filesize": 111607,
+            "dimensions": [
+                600,
+                800
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/indoor-shot-of-satisfied-brunette-woman-wirh-dark--Y427P53"
+        },
+        {
+            "filename": "img_9.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/img_9.jpg",
+            "templates": [
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                }
+            ],
+            "filesize": 95843,
+            "dimensions": [
+                600,
+                800
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/portrait-of-cheerful-european-female-with-satisfie-W73EUUE"
+        },
+        {
+            "filename": "img_3.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/img_3.jpg",
+            "templates": [
+                {
+                    "source": "templates\/our-team.json",
+                    "name": "Our Team"
+                }
+            ],
+            "filesize": 70638,
+            "dimensions": [
+                600,
+                800
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/happy-confident-male-entrepreneur-with-postive-smi-BDAU9DK"
+        },
+        {
+            "filename": "male-worker-using-a-drying-oven-for-t-shirt-in-a-workshop.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/male-worker-using-a-drying-oven-for-t-shirt-in-a-workshop-800x532.jpg",
+            "templates": [
+                {
+                    "source": "templates\/collection.json",
+                    "name": "Collection"
+                },
+                {
+                    "source": "templates\/contact-us.json",
+                    "name": "Contact Us"
+                }
+            ],
+            "filesize": 120185,
+            "dimensions": [
+                1080,
+                719
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-R4CLSLV"
+        },
+        {
+            "filename": "Gallery-1-e1652632446571.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Gallery-1-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/collection.json",
+                    "name": "Collection"
+                }
+            ],
+            "filesize": 137194,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/folded-t-shirt-mockup-NE27MHE https:\/\/elements.envato.com\/graffiti-coronavirus-ncov-and-medical-mask-7A23NMF"
+        },
+        {
+            "filename": "placeit-t-shirt-mockup-with-summer-hat.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/placeit-t-shirt-mockup-with-summer-hat-800x533.jpg",
+            "templates": [
+                {
+                    "source": "templates\/pricing.json",
+                    "name": "Pricing"
+                }
+            ],
+            "filesize": 91411,
+            "dimensions": [
+                1080,
+                720
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/image-3MU8Z64"
+        },
+        {
+            "filename": "panoramic-shot-of-stylish-young-man-posing-in-shorts-summer-t-shirt-and-sunglasses-on-beige.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/panoramic-shot-of-stylish-young-man-posing-in-shorts-summer-t-shirt-and-sunglasses-on-beige-800x248.jpg",
+            "templates": [
+                {
+                    "source": "templates\/faq.json",
+                    "name": "FAQ"
+                }
+            ],
+            "filesize": 32314,
+            "dimensions": [
+                1080,
+                335
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-8A2EL4R"
+        },
+        {
+            "filename": "BG2-1.jpg",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/BG2-1-800x478.jpg",
+            "templates": [
+                {
+                    "source": "templates\/camisseta-v1-404-page.json",
+                    "name": "Camisseta V1 - 404 Page"
+                }
+            ],
+            "filesize": 374646,
+            "dimensions": [
+                1080,
+                645
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/young-girl-wearing-blank-wthite-t-shirt-wall-backg-VZ7KJWK"
+        },
+        {
+            "filename": "Logo_Camisseta.png",
+            "thumbnail_url": "http:\/\/point.moxcreative.com\/camisseta\/wp-content\/uploads\/sites\/11\/2022\/05\/Logo_Camisseta-800x184.png",
+            "templates": [
+                {
+                    "source": "templates\/camisseta-v1-footer.json",
+                    "name": "Camisseta V1 - Footer"
+                },
+                {
+                    "source": "templates\/camisseta-v1-header.json",
+                    "name": "Camisseta V1 - Header"
+                }
+            ],
+            "filesize": 250398,
+            "dimensions": [
+                1173,
+                270
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        }
+    ]
+}
