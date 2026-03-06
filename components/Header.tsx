@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "Company", href: "/company" },
   { label: "Order", href: "/order" },
-  { label: "News", href: "/news" },
+  { label: "Product", href: "/product" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -22,12 +22,12 @@ export default function Header() {
         {/* Logo — kiri */}
         <Link href="/" className="shrink-0">
           <Image
-            src="/uploads/2024/07/logo-panjang.png"
+            src="/gambar/logo-panjang.png"
             alt="Ayres Apparel"
-            width={130}
-            height={42}
+            width={120}
+            height={36}
             priority
-            className="object-contain"
+            className="object-contain brightness-0 invert"
           />
         </Link>
 
@@ -44,15 +44,6 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* CTA — kanan (desktop) */}
-        <a
-          href="https://wa.me/6287818310416"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden lg:inline-block border border-[#5b58ff] text-[#5b58ff] text-[11px] font-bold tracking-wider px-5 py-2 hover:bg-[#5b58ff] hover:text-white transition-colors shrink-0 whitespace-nowrap"
-        >
-          MAKE MY DESIGN
-        </a>
 
         {/* Hamburger — mobile */}
         <button
@@ -79,14 +70,6 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <a
-            href="https://wa.me/6287818310416"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-[#5b58ff] text-[#5b58ff] text-xs font-bold tracking-wider px-5 py-2 text-center hover:bg-[#5b58ff] hover:text-white transition-colors"
-          >
-            MAKE MY DESIGN
-          </a>
         </div>
       )}
     </header>

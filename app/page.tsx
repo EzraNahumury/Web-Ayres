@@ -5,27 +5,32 @@ import GlareHover from "@/components/GlareHover";
 import GradientText from "@/components/GradientText";
 import CircularGallery from "@/components/CircularGallery";
 import FeaturesStrip from "@/components/FeaturesStrip";
+import TrustSection from "@/components/TrustSection";
+import ReviewSlider from "@/components/ReviewSlider";
+import YoutubePlayer from "@/components/YoutubePlayer";
+import FAQ from "@/components/FAQ";
+import BrandPartners from "@/components/BrandPartners";
 
 export const metadata: Metadata = {
   title: "Ayres Apparel – Tempatnya Custom Jersey Yang Indonesia Banget",
 };
 
 const partners = [
-  { name: "Pertamina", src: "/uploads/2024/07/Pertamina.png" },
-  { name: "Bank BNI", src: "/uploads/2024/07/Bank-BNI.png" },
-  { name: "Honda", src: "/uploads/2024/07/Honda.png" },
-  { name: "BRIMOB", src: "/uploads/2024/07/BRIMOB.png" },
-  { name: "Satpol PP", src: "/uploads/2024/07/Satpol-PP.png" },
-  { name: "Mitra Surabaya", src: "/uploads/2024/07/Mitra-Surabaya-Liga-3.png" },
-  { name: "Biak United", src: "/uploads/2024/07/Biak-United-Liga3.png" },
-  { name: "Jonnie Bodega", src: "/uploads/2024/07/Jonnie-Bodega-Malaysia.png" },
-  { name: "Wirasada Pratista", src: "/uploads/2024/07/Wirasada-Pratista.png" },
-  { name: "AAU", src: "/uploads/2024/07/AAU.png" },
-  { name: "UGM", src: "/uploads/2024/07/UGM.png" },
-  { name: "UNY", src: "/uploads/2024/07/UNY.png" },
-  { name: "UNNES", src: "/uploads/2024/07/UNNES.png" },
-  { name: "UPN Veteran", src: "/uploads/2024/07/UPN.png" },
-  { name: "USD", src: "/uploads/2024/07/USD.png" },
+  { name: "Pertamina", src: "/gambar/Pertamina.png" },
+  { name: "Bank BNI", src: "/gambar/Bank-BNI.png" },
+  { name: "Honda", src: "/gambar/Honda.png" },
+  { name: "Korps Brimob", src: "/gambar/BRIMOB.png" },
+  { name: "TNI Angkatan Udara", src: "/gambar/AAU.png" },
+  { name: "Mitra Surabaya FC", src: "/gambar/Mitra-Surabaya-Liga-3.png" },
+  { name: "Biak United", src: "/gambar/Biak-United-Liga3.png" },
+  { name: "Jonnie's Bodega", src: "/gambar/Jonnie-Bodega-Malaysia.png" },
+  { name: "Wirasada Pratista", src: "/gambar/Wirasada-Pratista.png" },
+  { name: "Praja Wibawa 1950", src: "/gambar/Satpol-PP.png" },
+  { name: "Universitas Gadjah Mada", src: "/gambar/UGM.png" },
+  { name: "Universitas Negeri Yogyakarta", src: "/gambar/UNY.png" },
+  { name: "UNNES", src: "/gambar/UNNES.png" },
+  { name: "UPN Veteran", src: "/gambar/UPN.png" },
+  { name: "Universitas Sanata Dharma", src: "/gambar/USD.png" },
 ];
 
 const galleryImages = [
@@ -104,9 +109,9 @@ export default function HomePage() {
               <div className="flex items-center gap-3 pt-1">
                 <div className="flex -space-x-2">
                   {[
-                    "/uploads/2024/07/Jersey-3-768x960.png",
-                    "/uploads/2024/07/Jersey-4.png",
-                    "/uploads/2024/07/Jersey-7.png",
+                    "/gambar/Jersey-3.png",
+                    "/gambar/Jersey-5.png",
+                    "/gambar/Jersey-7.png",
                   ].map((src, i) => (
                     <div key={i} className="w-8 h-8 rounded-full border-2 border-[#0a0a0a] overflow-hidden bg-[#1a1a1a]">
                       <Image src={src} alt="jersey" width={32} height={32} className="object-cover w-full h-full" />
@@ -134,7 +139,7 @@ export default function HomePage() {
                   glareColor="#ffffff" glareOpacity={0.3} glareAngle={-30}
                   glareSize={300} transitionDuration={700}>
                   <Image
-                    src="/uploads/2024/07/Jersey-3-768x960.png"
+                    src="/gambar/Jersey-1.png"
                     alt="Custom Jersey Ayres"
                     fill className="object-contain" priority
                     sizes="230px"
@@ -151,7 +156,7 @@ export default function HomePage() {
                   glareColor="#ffffff" glareOpacity={0.2} glareAngle={-30}
                   glareSize={300} transitionDuration={700}>
                   <Image
-                    src="/uploads/2024/07/Jersey-4.png"
+                    src="/gambar/Jersey-2.png"
                     alt="Custom Jersey Ayres 2"
                     fill className="object-contain"
                     sizes="175px"
@@ -168,7 +173,7 @@ export default function HomePage() {
                   glareColor="#ffffff" glareOpacity={0.2} glareAngle={-30}
                   glareSize={300} transitionDuration={700}>
                   <Image
-                    src="/uploads/2024/07/Jersey-7.png"
+                    src="/gambar/Jersey-3.png"
                     alt="Custom Jersey Ayres 3"
                     fill className="object-contain"
                     sizes="175px"
@@ -193,92 +198,153 @@ export default function HomePage() {
       <FeaturesStrip />
 
       {/* ── WHO WE ARE ──────────────────────────────────────────── */}
-      <section id="gallery" className="py-20">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-[#5b58ff] text-xs font-bold uppercase tracking-[0.25em] mb-4">
-            Who We Are
-          </p>
-          <h2 className="text-4xl md:text-5xl font-black text-white leading-tight mb-4">
-            ORIGINAL gak harus<br />MAHAL
-          </h2>
-          <p className="text-[#5b58ff] font-black text-lg tracking-widest mb-6">
-            #BIKINJERSEY1HARIJADI
-          </p>
-          <p className="text-[#888] text-sm leading-relaxed max-w-2xl mx-auto mb-2">
-            <strong className="text-white">Ayres Apparel</strong> adalah tempat custom jersey yang mengusung tema dan value nusantara pada jersey yang dibuatnya.
-            <br />Kami menawarkan produksi Jersey di <strong className="text-white">AYRES</strong> dengan harga sangat terjangkau.
-            <br />Kecepatan produksi yang bisa mencapai ribuan jersey perbulannya dan tentu saja dengan jaminan kualitas internasional.
-            <br />Kami juga menawarkan <strong className="text-white">jersey 1 hari jadi</strong> untuk kamu yang gak suka menunggu.
-          </p>
-          {/* underline decoration */}
-          <div className="flex justify-center mt-6 mb-14">
-            <div className="w-16 h-0.5 bg-[#5b58ff]" />
+      <section id="gallery" className="pt-20 pb-0 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+
+          {/* Split layout */}
+          <div className="grid md:grid-cols-[1fr_1.2fr] gap-12 items-center mb-10">
+
+            {/* Kiri */}
+            <div>
+              <p className="text-[#5b58ff] text-[10px] font-bold uppercase tracking-[0.35em] mb-6">Who We Are</p>
+              <h2 className="font-black text-white leading-[0.95] tracking-tight mb-8"
+                style={{ fontSize: 'clamp(3rem, 6vw, 5.5rem)' }}>
+                ORIGINAL<br />
+                <em className="not-italic text-[#5b58ff]">gak harus</em><br />
+                MAHAL.
+              </h2>
+              <a
+                href="https://wa.me/6287818310416"
+                target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-white text-xs font-bold px-6 py-3 rounded-full transition-all hover:opacity-80"
+                style={{ background: 'linear-gradient(135deg,#5b58ff,#a78bfa)' }}
+              >
+                Bikin Jersey Sekarang →
+              </a>
+            </div>
+
+            {/* Kanan: poin */}
+            <div className="flex flex-col divide-y divide-[#1a1a1a]">
+              {[
+                { tag: "01", label: "Harga Mulai", text: "Rp 70.000 per jersey tanpa biaya setup dan tanpa minimum order." },
+                { tag: "02", label: "1 Hari Jadi", text: "Pesan hari ini, besok sudah di tangan kamu. Produksi tercepat se-Indonesia." },
+                { tag: "03", label: "Kualitas Internasional", text: "Ribuan jersey per bulan, setiap helai dijahit dengan standar premium." },
+              ].map((item) => (
+                <div key={item.tag} className="group grid grid-cols-[2rem_1fr] gap-4 py-5">
+                  <span className="text-[#2a2a2a] text-xs font-bold pt-0.5 group-hover:text-[#5b58ff] transition-colors">{item.tag}</span>
+                  <div>
+                    <p className="text-white text-sm font-bold mb-1">{item.label}</p>
+                    <p className="text-[#555] text-xs leading-relaxed group-hover:text-[#777] transition-colors">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Gallery — full bleed, naik ke atas */}
+        <div className="w-full -mt-4" style={{ height: '460px' }}>
+          <CircularGallery
+            items={[
+              { image: '/gambar/Jersey-1.png', text: 'Jersey Custom' },
+              { image: '/gambar/Jersey-2.png', text: 'Full Color' },
+              { image: '/gambar/Jersey-3.png', text: 'Premium Quality' },
+              { image: '/gambar/Jersey-4.png', text: 'Ayres Apparel' },
+              { image: '/gambar/Jersey-5.png', text: 'Custom Jersey' },
+              { image: '/gambar/Jersey-6.png', text: 'Original Desain' },
+              { image: '/gambar/Jersey-7.png', text: 'Jersey Nusantara' },
+              { image: '/gambar/WhatsApp-Image-2024-07-22-at-08.13.26-4.jpeg', text: 'Jersey Timnas' },
+            ]}
+            bend={2}
+            textColor="#ffffff"
+            borderRadius={0.05}
+            scrollSpeed={2}
+            scrollEase={0.05}
+          />
+        </div>
+      </section>
+
+      {/* ── STATS + KATEGORI ────────────────────────────────────── */}
+      <section className="relative overflow-hidden mt-16">
+        {/* Background */}
+        <div className="absolute inset-0 z-0"
+          style={{ background: 'linear-gradient(135deg, #0d0d1a 0%, #0a0a0a 40%, #0f0a1a 100%)' }} />
+        <div className="absolute inset-0 z-0 opacity-30"
+          style={{ background: 'radial-gradient(ellipse at 70% 50%, #5b58ff22 0%, transparent 60%)' }} />
+        <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-16 items-center">
+
+          {/* Kiri: stats */}
+          <div>
+            <p className="text-[#888] text-sm leading-relaxed mb-10 max-w-xs">
+              Kami telah menjadi kepercayaan banyak tim profesional, instansi pemerintahan dan swasta di Indonesia dan ASEAN.
+            </p>
+            <div className="flex flex-col gap-6">
+              {[
+                { num: "2.600+", label: "team sudah custom jersey" },
+                { num: "35.000+", label: "pcs jersey sudah di produksi" },
+              ].map((s) => (
+                <div key={s.num}>
+                  <p className="text-5xl font-black text-white leading-none tracking-tight">{s.num}</p>
+                  <p className="text-[#666] text-sm mt-1">{s.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Circular Gallery */}
-          <div className="w-full" style={{ height: '500px' }}>
-            <CircularGallery
-              items={[
-                { image: '/uploads/2024/07/Gallery-1-1024x683.jpg', text: 'Ayres Apparel' },
-                { image: '/uploads/2024/07/Gallery-2.jpg', text: 'Custom Jersey' },
-                { image: '/uploads/2024/07/Jersey-3-768x960.png', text: 'Jersey Custom' },
-                { image: '/uploads/2024/07/Jersey-4.png', text: 'Full Color' },
-                { image: '/uploads/2024/07/Jersey-7.png', text: 'Premium Quality' },
-                { image: '/uploads/2024/07/Review-2-1024x569.png', text: 'Biak United' },
-                { image: '/uploads/2024/07/Review-4-1024x569.png', text: 'Tim Nasional' },
-                { image: '/uploads/2024/07/Review-7-768x427.png', text: 'Partner Kami' },
-              ]}
-              bend={2}
-              textColor="#ffffff"
-              borderRadius={0.05}
-              scrollSpeed={2}
-              scrollEase={0.05}
-            />
+          {/* Kanan: kategori */}
+          <div>
+            <h3 className="text-white font-black text-2xl leading-snug mb-6">
+              Pilih Kategori Jersey<br />Sesuai Kebutuhanmu
+            </h3>
+            <ul className="grid grid-cols-2 gap-x-6 gap-y-2 mb-6">
+              {["Jersey Bola & Futsal","Jersey Volley","Jersey Sepeda","Jersey Basket","Jersey Badminton","Jersey e-Sport","Jersey Mancing","dan lainnya"].map((k) => (
+                <li key={k} className="text-[#888] text-sm flex items-center gap-2">
+                  <span className="w-1 h-1 rounded-full bg-[#5b58ff] shrink-0" />
+                  {k}
+                </li>
+              ))}
+            </ul>
+            <p className="text-[#5b58ff] text-xs font-bold tracking-[0.2em] uppercase">#BIKINJERSEY1HARIJADI</p>
+          </div>
+        </div>
+      </section>
+
+      <TrustSection />
+
+      {/* ── OUR HAPPY CUSTOMER ──────────────────────────────────── */}
+      <section className="py-24 border-t border-[#1a1a1a]">
+        <div className="max-w-6xl mx-auto px-6">
+
+          {/* Header */}
+          <div className="mb-14 text-center">
+            <p className="text-[#5b58ff] text-[10px] font-bold uppercase tracking-[0.35em] mb-3">Testimoni</p>
+            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">Our Happy Customer</h2>
+            <p className="text-[#555] text-sm max-w-xl mx-auto leading-relaxed">
+              Alhamdulillah. Kami telah membantu ribuan customer mendapatkan jersey dengan kualitas dan hasil yang memuaskan. Berikut review jujur dari sebagian customer Ayres Apparel.
+            </p>
+          </div>
+
+          {/* Video + scrollable reviews side by side */}
+          <div className="flex gap-6 items-stretch">
+
+            {/* YouTube embed — fixed kiri */}
+            <div className="shrink-0 relative rounded-xl overflow-hidden" style={{ width: 480, aspectRatio: '16/9' }}>
+              <YoutubePlayer videoId="Rh99xrExmxA" />
+            </div>
+
+            {/* Review slider — kanan */}
+            <ReviewSlider />
+
           </div>
         </div>
       </section>
 
       {/* ── BRAND PARTNERS ──────────────────────────────────────── */}
-      <section className="py-16 border-y border-[#1f1f1f]">
-        <div className="max-w-4xl mx-auto px-6">
-          <p className="text-[#5b58ff] text-xs font-bold uppercase tracking-[0.2em] mb-10 text-center">
-            Our Brand Partner :
-          </p>
-          <div className="grid grid-cols-5 gap-8 place-items-center">
-            {partners.map((p) => (
-              <div key={p.name} className="flex items-center justify-center">
-                <Image
-                  src={p.src}
-                  alt={p.name}
-                  width={100}
-                  height={70}
-                  className="object-contain max-h-[70px] w-auto brightness-0 invert opacity-60 hover:opacity-100 transition-opacity"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <BrandPartners />
 
-      {/* ── CTA ─────────────────────────────────────────────────── */}
-      <section className="py-20 text-white text-center">
-        <div className="max-w-2xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-black uppercase mb-4">
-            Siap Bikin Jersey Impian Kamu?
-          </h2>
-          <p className="text-white/60 mb-8">
-            Hubungi kami sekarang dan dapatkan konsultasi desain gratis!
-          </p>
-          <a
-            href="https://wa.me/6287818310416"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-[#5b58ff] text-white font-bold text-sm px-10 py-4 uppercase tracking-wider rounded-full hover:bg-[#4845dd] transition-colors"
-          >
-            Chat WhatsApp Sekarang
-          </a>
-        </div>
-      </section>
+      {/* ── FAQ ─────────────────────────────────────────────────── */}
+      <FAQ />
+
     </>
   );
 }
