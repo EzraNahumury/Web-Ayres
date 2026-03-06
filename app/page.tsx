@@ -48,7 +48,7 @@ export default function HomePage() {
         {/* Ambient glow blobs */}
         <div className="absolute inset-0 pointer-events-none z-0">
           <div className="absolute top-[-10%] left-[-5%] w-[500px] h-[500px] rounded-full opacity-20"
-            style={{ background: 'radial-gradient(circle, #5b58ff 0%, transparent 70%)', filter: 'blur(60px)' }} />
+            style={{ background: 'radial-gradient(circle, #e03030 0%, transparent 70%)', filter: 'blur(60px)' }} />
           <div className="absolute bottom-[-10%] right-[-5%] w-[400px] h-[400px] rounded-full opacity-15"
             style={{ background: 'radial-gradient(circle, #a78bfa 0%, transparent 70%)', filter: 'blur(60px)' }} />
         </div>
@@ -61,11 +61,11 @@ export default function HomePage() {
 
               {/* Headline */}
               <div className="flex flex-col gap-4">
-                <p className="text-[#5b58ff] text-xs font-bold tracking-[0.2em] uppercase">Custom Jersey &amp; Apparel</p>
+                <p className="text-[#e03030] text-xs font-bold tracking-[0.2em] uppercase">Custom Jersey &amp; Apparel</p>
                 <h1 className="text-white font-black flex flex-col" style={{ lineHeight: 1.05, fontSize: 'clamp(2.8rem, 5vw, 4.2rem)' }}>
                   <span>Tempatnya</span>
                   <GradientText
-                    colors={["#5b58ff", "#a78bfa", "#c4b5fd", "#5b58ff"]}
+                    colors={["#e03030", "#a78bfa", "#c4b5fd", "#e03030"]}
                     animationSpeed={4}
                     showBorder={false}
                     className="!mx-0 !rounded-none !p-0 font-black"
@@ -79,7 +79,7 @@ export default function HomePage() {
 
               {/* Desc */}
               <p className="text-[#888] text-base leading-relaxed max-w-md">
-                Produksi <span className="text-white font-semibold">1 hari jadi</span>, mulai <span className="text-white font-semibold">Rp 70.000</span>, tanpa minimum order. Sudah dipercaya Pertamina, BNI, Honda, dan ratusan tim se-Indonesia.
+                Mulai <span className="text-white font-semibold">Rp 70.000</span>, tanpa minimum order, deadline aman. Sudah dipercaya Pertamina, BNI, Honda, dan ratusan tim se-Indonesia.
               </p>
 
               {/* CTA Buttons */}
@@ -89,7 +89,7 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-white text-sm font-bold px-7 py-3.5 rounded-full transition-all hover:opacity-90"
-                  style={{ background: 'linear-gradient(135deg, #5b58ff, #a78bfa)' }}
+                  style={{ background: 'linear-gradient(135deg, #e03030, #a78bfa)' }}
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
@@ -128,14 +128,14 @@ export default function HomePage() {
             <div className="hidden md:flex items-center justify-center relative h-[520px]">
               {/* Glow halo di belakang kartu tengah */}
               <div className="absolute z-0 w-64 h-64 rounded-full opacity-40"
-                style={{ background: 'radial-gradient(circle, #5b58ff 0%, transparent 70%)', filter: 'blur(40px)', left: '50%', top: '50%', transform: 'translate(-50%,-50%)' }} />
+                style={{ background: 'radial-gradient(circle, #e03030 0%, transparent 70%)', filter: 'blur(40px)', left: '50%', top: '50%', transform: 'translate(-50%,-50%)' }} />
 
               {/* Jersey utama - tengah */}
               <div className="absolute z-20"
                 style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)', filter: 'drop-shadow(0 25px 50px rgba(91,88,255,0.35))' }}>
                 <GlareHover
                   width="230px" height="290px"
-                  background="#141414" borderRadius="20px" borderColor="#5b58ff55"
+                  background="#141414" borderRadius="20px" borderColor="#e0303055"
                   glareColor="#ffffff" glareOpacity={0.3} glareAngle={-30}
                   glareSize={300} transitionDuration={700}>
                   <Image
@@ -186,7 +186,7 @@ export default function HomePage() {
                 style={{ bottom: '8%', left: '50%', transform: 'translateX(-50%)' }}>
                 <div className="text-[#666] text-[10px] tracking-widest uppercase font-medium">mulai dari</div>
                 <div className="text-white text-lg font-black tracking-tight">Rp 70.000</div>
-                <div className="h-px w-8 bg-[#5b58ff] rounded-full" />
+                <div className="h-px w-8 bg-[#e03030] rounded-full" />
               </div>
 
             </div>
@@ -206,18 +206,18 @@ export default function HomePage() {
 
             {/* Kiri */}
             <div>
-              <p className="text-[#5b58ff] text-[10px] font-bold uppercase tracking-[0.35em] mb-6">Who We Are</p>
+              <p className="text-[#e03030] text-[10px] font-bold uppercase tracking-[0.35em] mb-6">Who We Are</p>
               <h2 className="font-black text-white leading-[0.95] tracking-tight mb-8"
                 style={{ fontSize: 'clamp(3rem, 6vw, 5.5rem)' }}>
-                ORIGINAL<br />
-                <em className="not-italic text-[#5b58ff]">gak harus</em><br />
-                MAHAL.
+                DEADLINE AMAN!<br />
+                <em className="not-italic text-[#e03030]">POLA AYRES</em><br />
+                BEDA KELAS.
               </h2>
               <a
                 href="https://wa.me/6287818310416"
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-white text-xs font-bold px-6 py-3 rounded-full transition-all hover:opacity-80"
-                style={{ background: 'linear-gradient(135deg,#5b58ff,#a78bfa)' }}
+                style={{ background: 'linear-gradient(135deg,#e03030,#a78bfa)' }}
               >
                 Bikin Jersey Sekarang →
               </a>
@@ -227,11 +227,11 @@ export default function HomePage() {
             <div className="flex flex-col divide-y divide-[#1a1a1a]">
               {[
                 { tag: "01", label: "Harga Mulai", text: "Rp 70.000 per jersey tanpa biaya setup dan tanpa minimum order." },
-                { tag: "02", label: "1 Hari Jadi", text: "Pesan hari ini, besok sudah di tangan kamu. Produksi tercepat se-Indonesia." },
+                { tag: "02", label: "Patren Lab Technology", text: "Pola dirancang menggunakan teknologi lab khusus — presisi tinggi, nyaman dipakai, hasil beda kelas." },
                 { tag: "03", label: "Kualitas Internasional", text: "Ribuan jersey per bulan, setiap helai dijahit dengan standar premium." },
               ].map((item) => (
                 <div key={item.tag} className="group grid grid-cols-[2rem_1fr] gap-4 py-5">
-                  <span className="text-[#2a2a2a] text-xs font-bold pt-0.5 group-hover:text-[#5b58ff] transition-colors">{item.tag}</span>
+                  <span className="text-[#2a2a2a] text-xs font-bold pt-0.5 group-hover:text-[#e03030] transition-colors">{item.tag}</span>
                   <div>
                     <p className="text-white text-sm font-bold mb-1">{item.label}</p>
                     <p className="text-[#555] text-xs leading-relaxed group-hover:text-[#777] transition-colors">{item.text}</p>
@@ -270,7 +270,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0"
           style={{ background: 'linear-gradient(135deg, #0d0d1a 0%, #0a0a0a 40%, #0f0a1a 100%)' }} />
         <div className="absolute inset-0 z-0 opacity-30"
-          style={{ background: 'radial-gradient(ellipse at 70% 50%, #5b58ff22 0%, transparent 60%)' }} />
+          style={{ background: 'radial-gradient(ellipse at 70% 50%, #e0303022 0%, transparent 60%)' }} />
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-16 items-center">
 
           {/* Kiri: stats */}
@@ -299,12 +299,12 @@ export default function HomePage() {
             <ul className="grid grid-cols-2 gap-x-6 gap-y-2 mb-6">
               {["Jersey Bola & Futsal","Jersey Volley","Jersey Sepeda","Jersey Basket","Jersey Badminton","Jersey e-Sport","Jersey Mancing","dan lainnya"].map((k) => (
                 <li key={k} className="text-[#888] text-sm flex items-center gap-2">
-                  <span className="w-1 h-1 rounded-full bg-[#5b58ff] shrink-0" />
+                  <span className="w-1 h-1 rounded-full bg-[#e03030] shrink-0" />
                   {k}
                 </li>
               ))}
             </ul>
-            <p className="text-[#5b58ff] text-xs font-bold tracking-[0.2em] uppercase">#BIKINJERSEY1HARIJADI</p>
+            <p className="text-[#e03030] text-xs font-bold tracking-[0.2em] uppercase">#BIKINJERSEY1HARIJADI</p>
           </div>
         </div>
       </section>
@@ -317,7 +317,7 @@ export default function HomePage() {
 
           {/* Header */}
           <div className="mb-14 text-center">
-            <p className="text-[#5b58ff] text-[10px] font-bold uppercase tracking-[0.35em] mb-3">Testimoni</p>
+            <p className="text-[#e03030] text-[10px] font-bold uppercase tracking-[0.35em] mb-3">Testimoni</p>
             <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">Our Happy Customer</h2>
             <p className="text-[#555] text-sm max-w-xl mx-auto leading-relaxed">
               Alhamdulillah. Kami telah membantu ribuan customer mendapatkan jersey dengan kualitas dan hasil yang memuaskan. Berikut review jujur dari sebagian customer Ayres Apparel.

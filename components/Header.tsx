@@ -20,15 +20,17 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between gap-8">
 
         {/* Logo — kiri */}
-        <Link href="/" className="shrink-0">
-          <Image
-            src="/gambar/logo-panjang.png"
-            alt="Ayres Apparel"
-            width={120}
-            height={36}
-            priority
-            className="object-contain brightness-0 invert"
-          />
+        <Link href="/" className="shrink-0 flex items-center self-center">
+          <div className="relative flex items-center justify-center" style={{ width: 180, height: 48 }}>
+            <Image
+              src="/gambar/new logo.png"
+              alt="Ayres Apparel"
+              fill
+              priority
+              className="object-contain brightness-0 invert"
+              style={{ objectPosition: 'center center' }}
+            />
+          </div>
         </Link>
 
         {/* Nav — tengah (desktop) */}

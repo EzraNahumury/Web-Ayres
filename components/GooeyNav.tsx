@@ -136,7 +136,7 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
     <>
       <style>{`
         :root {
-          --color-1: #5b58ff;
+          --color-1: #e03030;
           --color-2: #a78bfa;
           --color-3: #818cf8;
           --color-4: #ffffff;
@@ -176,7 +176,7 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
           content: "";
           position: absolute;
           inset: 0;
-          background: #5b58ff;
+          background: #e03030;
           transform: scale(0);
           opacity: 0;
           z-index: -1;

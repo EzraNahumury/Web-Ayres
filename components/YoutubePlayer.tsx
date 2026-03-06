@@ -30,7 +30,7 @@ export default function YoutubePlayer({ videoId }: { videoId: string }) {
       {/* Logo */}
       <div className="relative z-10 flex flex-col items-center gap-6">
         <Image
-          src="/gambar/logo-panjang.png"
+          src="/gambar/new logo.png"
           alt="Ayres Apparel"
           width={180}
           height={54}
@@ -47,7 +47,7 @@ export default function YoutubePlayer({ videoId }: { videoId: string }) {
       </div>
 
       {/* Subtle border on hover */}
-      <div className="absolute inset-0 border border-[#1f1f1f] group-hover:border-[#5b58ff]/40 transition-colors rounded-xl" />
+      <div className="absolute inset-0 border border-[#1f1f1f] group-hover:border-[#e03030]/40 transition-colors rounded-xl" />
     </button>
   );
 }

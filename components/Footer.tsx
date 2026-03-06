@@ -64,7 +64,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="flex flex-col gap-5">
           <Image
-            src="/gambar/logo-panjang.png"
+            src="/gambar/new logo.png"
             alt="Ayres Apparel"
             width={130}
             height={40}
@@ -73,8 +73,8 @@ export default function Footer() {
           <p className="text-[#444] text-sm leading-relaxed max-w-[220px]">
             Tempatnya Custom Jersey Yang Indonesia Banget.
           </p>
-          <p className="text-[#5b58ff] text-[10px] font-bold uppercase tracking-[0.2em]">
-            #BIKINJERSEY1HARIJADI
+          <p className="text-[#e03030] text-[10px] font-bold uppercase tracking-[0.2em]">
+            POLA AYRES BEDA KELAS
           </p>
           <div className="flex gap-3 mt-1">
             {socials.map((s) => (
@@ -84,7 +84,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                className="w-8 h-8 border border-[#222] flex items-center justify-center text-[#555] hover:border-[#5b58ff] hover:text-white transition-all duration-200"
+                className="w-8 h-8 border border-[#222] flex items-center justify-center text-[#555] hover:border-[#e03030] hover:text-white transition-all duration-200"
               >
                 {s.icon}
               </a>

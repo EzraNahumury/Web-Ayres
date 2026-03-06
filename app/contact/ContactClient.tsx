@@ -52,12 +52,12 @@ export default function ContactClient() {
         <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div style={{ animation: 'fadeUp 0.7s ease both' }}>
             <div className="inline-flex items-center gap-2 mb-8">
-              <span className="w-8 h-px bg-[#5b58ff]" />
-              <span className="text-[#5b58ff] text-[10px] font-bold uppercase tracking-[0.3em]">Hubungi Kami</span>
+              <span className="w-8 h-px bg-[#e03030]" />
+              <span className="text-[#e03030] text-[10px] font-bold uppercase tracking-[0.3em]">Hubungi Kami</span>
             </div>
             <h1 className="text-[clamp(3.5rem,9vw,6rem)] font-black uppercase leading-[0.88] mb-8">
               Let's<br />
-              <span className="relative">Talk<span className="text-[#5b58ff]">.</span></span>
+              <span className="relative">Talk<span className="text-[#e03030]">.</span></span>
             </h1>
             <p className="text-[#666] text-sm leading-relaxed mb-10 max-w-xs">
               Konsultasi desain gratis, respon cepat. Tim kami siap membantu dari desain hingga pengiriman ke seluruh Indonesia.
@@ -67,7 +67,7 @@ export default function ContactClient() {
                 <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
                   aria-label={s.label}
                   style={{ animation: `fadeUp 0.5s ease ${0.3 + i * 0.08}s both` }}
-                  className="w-10 h-10 border border-[#1e1e1e] flex items-center justify-center text-[#444] hover:text-white hover:border-[#5b58ff] transition-all duration-300">
+                  className="w-10 h-10 border border-[#1e1e1e] flex items-center justify-center text-[#444] hover:text-white hover:border-[#e03030] transition-all duration-300">
                   {s.icon}
                 </a>
               ))}
@@ -76,14 +76,14 @@ export default function ContactClient() {
 
           <div className="flex flex-col gap-3" style={{ animation: 'fadeUp 0.7s ease 0.2s both' }}>
             <a href="https://wa.me/6287818310416" target="_blank" rel="noopener noreferrer"
-              className="group relative overflow-hidden flex items-center justify-between px-7 py-7 border border-[#5b58ff]/30 hover:border-[#5b58ff]/60 transition-all duration-300"
+              className="group relative overflow-hidden flex items-center justify-between px-7 py-7 border border-[#e03030]/30 hover:border-[#e03030]/60 transition-all duration-300"
               style={{ background: 'linear-gradient(135deg, #0f0e1e 0%, #13114a 50%, #0d0d20 100%)' }}>
               {/* Glow top-left */}
               <div className="absolute -left-6 -top-6 w-32 h-32 opacity-30 pointer-events-none rounded-full"
-                style={{ background: 'radial-gradient(circle, #5b58ff, transparent 70%)' }} />
+                style={{ background: 'radial-gradient(circle, #e03030, transparent 70%)' }} />
               {/* Glow bottom-right */}
               <div className="absolute right-0 bottom-0 w-24 h-24 opacity-10 pointer-events-none rounded-full"
-                style={{ background: 'radial-gradient(circle, #a5a3ff, transparent 70%)' }} />
+                style={{ background: 'radial-gradient(circle, #f5a0a0, transparent 70%)' }} />
               <div className="flex items-center gap-5">
                 {/* WA Icon */}
                 <div className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center shrink-0">
@@ -138,34 +138,34 @@ export default function ContactClient() {
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex flex-col gap-2">
-                  <label className="text-xs font-semibold text-[#888]">Nama <span className="text-[#5b58ff]">*</span></label>
+                  <label className="text-xs font-semibold text-[#888]">Nama <span className="text-[#e03030]">*</span></label>
                   <input name="name" type="text" required placeholder="Nama kamu"
-                    className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#5b58ff] placeholder:text-[#2d2d2d] transition-colors" />
+                    className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#e03030] placeholder:text-[#2d2d2d] transition-colors" />
                 </div>
                 <div className="flex flex-col gap-2">
                   <label className="text-xs font-semibold text-[#888]">No. WA</label>
                   <input name="phone" type="tel" placeholder="08xx-xxxx-xxxx"
-                    className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#5b58ff] placeholder:text-[#2d2d2d] transition-colors" />
+                    className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#e03030] placeholder:text-[#2d2d2d] transition-colors" />
                 </div>
               </div>
               <div className="flex flex-col gap-2">
                 <label className="text-xs font-semibold text-[#888]">Email</label>
                 <input name="email" type="email" placeholder="email@kamu.com"
-                  className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#5b58ff] placeholder:text-[#2d2d2d] transition-colors" />
+                  className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#e03030] placeholder:text-[#2d2d2d] transition-colors" />
               </div>
               <div className="flex flex-col gap-2">
-                <label className="text-xs font-semibold text-[#888]">Subjek <span className="text-[#5b58ff]">*</span></label>
+                <label className="text-xs font-semibold text-[#888]">Subjek <span className="text-[#e03030]">*</span></label>
                 <input name="subject" type="text" required placeholder="Pesan jersey, konsultasi desain, dll."
-                  className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#5b58ff] placeholder:text-[#2d2d2d] transition-colors" />
+                  className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#e03030] placeholder:text-[#2d2d2d] transition-colors" />
               </div>
               <div className="flex flex-col gap-2">
-                <label className="text-xs font-semibold text-[#888]">Pesan <span className="text-[#5b58ff]">*</span></label>
+                <label className="text-xs font-semibold text-[#888]">Pesan <span className="text-[#e03030]">*</span></label>
                 <textarea name="message" required rows={5}
                   placeholder="Ceritakan kebutuhanmu — jumlah, bahan, desain, deadline..."
-                  className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#5b58ff] placeholder:text-[#2d2d2d] transition-colors resize-none" />
+                  className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#e03030] placeholder:text-[#2d2d2d] transition-colors resize-none" />
               </div>
               <button type="submit"
-                className="group relative overflow-hidden w-full text-white font-bold text-xs uppercase tracking-widest py-4 transition-all duration-300 flex items-center justify-center gap-3 border border-[#5b58ff]/30 hover:border-[#5b58ff]/60"
+                className="group relative overflow-hidden w-full text-white font-bold text-xs uppercase tracking-widest py-4 transition-all duration-300 flex items-center justify-center gap-3 border border-[#e03030]/30 hover:border-[#e03030]/60"
                 style={{ background: 'linear-gradient(135deg, #0f0e1e 0%, #13114a 50%, #0d0d20 100%)' }}>
                 Kirim ke Email
                 <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -190,7 +190,7 @@ export default function ContactClient() {
               />
             </div>
             <a href="https://www.google.com/maps/place/AYRES+APPAREL/@-7.806712,110.403107,17z" target="_blank" rel="noopener noreferrer"
-              className="group flex items-center justify-center gap-2 border border-[#1a1a1a] py-3.5 text-[#666] text-xs font-semibold hover:border-[#5b58ff] hover:text-white transition-all duration-200">
+              className="group flex items-center justify-center gap-2 border border-[#1a1a1a] py-3.5 text-[#666] text-xs font-semibold hover:border-[#e03030] hover:text-white transition-all duration-200">
               Buka di Google Maps
               <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>

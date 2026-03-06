@@ -26,7 +26,7 @@ export default function FAQ() {
 
         {/* Header */}
         <div className="mb-12 text-center">
-          <p className="text-[#5b58ff] text-[11px] font-bold uppercase tracking-[0.2em] mb-3">FAQ</p>
+          <p className="text-[#e03030] text-[11px] font-bold uppercase tracking-[0.2em] mb-3">FAQ</p>
           <h2 className="text-white text-3xl font-black uppercase">Pertanyaan yang Sering Ditanya</h2>
         </div>
 
@@ -41,7 +41,7 @@ export default function FAQ() {
                 <span className={`text-sm font-semibold transition-colors duration-200 ${open === i ? 'text-white' : 'text-[#888] group-hover:text-[#ccc]'}`}>
                   {faq.q}
                 </span>
-                <span className={`shrink-0 w-5 h-5 rounded-full border flex items-center justify-center transition-all duration-200 ${open === i ? 'border-[#5b58ff] text-[#5b58ff]' : 'border-[#333] text-[#555] group-hover:border-[#555]'}`}>
+                <span className={`shrink-0 w-5 h-5 rounded-full border flex items-center justify-center transition-all duration-200 ${open === i ? 'border-[#e03030] text-[#e03030]' : 'border-[#333] text-[#555] group-hover:border-[#555]'}`}>
                   <svg className={`w-2.5 h-2.5 transition-transform duration-200 ${open === i ? 'rotate-45' : ''}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 10 10">
                     <line x1="5" y1="1" x2="5" y2="9" />
                     <line x1="1" y1="5" x2="9" y2="5" />

@@ -26,7 +26,7 @@ export default function BrandPartners() {
     <section className="py-20 border-y border-[#1a1a1a] overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <p className="text-[#5b58ff] text-[10px] font-bold uppercase tracking-[0.25em] mb-3">
+          <p className="text-[#e03030] text-[10px] font-bold uppercase tracking-[0.25em] mb-3">
             Dipercaya oleh 100+ klien
           </p>
           <h2 className="text-white text-3xl font-black uppercase leading-tight">

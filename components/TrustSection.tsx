@@ -90,14 +90,14 @@ export default function TrustSection() {
                 className="group flex items-center justify-between py-5 text-left cursor-pointer w-full"
               >
                 <div className="flex items-center gap-4">
-                  <span className={`text-[11px] font-bold tabular-nums transition-colors duration-200 ${active === t.id ? 'text-[#5b58ff]' : 'text-[#333]'}`}>
+                  <span className={`text-[11px] font-bold tabular-nums transition-colors duration-200 ${active === t.id ? 'text-[#e03030]' : 'text-[#333]'}`}>
                     0{i + 1}
                   </span>
                   <span className={`text-sm font-bold uppercase tracking-wider transition-colors duration-200 ${active === t.id ? 'text-white' : 'text-[#555] group-hover:text-[#999]'}`}>
                     Best {t.label}
                   </span>
                 </div>
-                <span className={`text-xs transition-colors duration-200 ${active === t.id ? 'text-[#5b58ff]' : 'text-[#333] group-hover:text-[#555]'}`}>
+                <span className={`text-xs transition-colors duration-200 ${active === t.id ? 'text-[#e03030]' : 'text-[#333] group-hover:text-[#555]'}`}>
                   {active === t.id ? '●' : '○'}
                 </span>
               </button>

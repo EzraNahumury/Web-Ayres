@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | Ayres Apparel",
   },
   description:
-    "Custom jersey berkualitas mulai Rp.70.000, produksi 1 hari jadi, tanpa minimum order. Melayani seluruh Indonesia.",
+    "Custom jersey berkualitas mulai Rp.70.000, deadline aman, pola Ayres beda kelas. Melayani seluruh Indonesia.",
   keywords: ["custom jersey", "jersey bola", "jersey futsal", "jersey olahraga", "Yogyakarta"],
   openGraph: {
     siteName: "Ayres Apparel",
@@ -45,7 +45,7 @@ export default function RootLayout({
         {/* Dot Grid background — fixed, full screen, behind everything */}
         <div className="fixed inset-0 z-0 pointer-events-none">
           <Particles
-            particleColors={["#5b58ff", "#a78bfa", "#818cf8", "#ffffff"]}
+            particleColors={["#e03030", "#a78bfa", "#818cf8", "#ffffff"]}
             particleCount={200}
             particleSpread={10}
             speed={0.1}

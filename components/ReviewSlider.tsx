@@ -91,7 +91,7 @@ export default function ReviewSlider() {
 
         {/* Reviewer */}
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-[#5b58ff]/20 border border-[#5b58ff]/30 flex items-center justify-center text-[#5b58ff] text-xs font-bold shrink-0">
+          <div className="w-8 h-8 rounded-full bg-[#e03030]/20 border border-[#e03030]/30 flex items-center justify-center text-[#e03030] text-xs font-bold shrink-0">
             {r.name[0].toUpperCase()}
           </div>
           <div>
@@ -106,12 +106,12 @@ export default function ReviewSlider() {
         <div className="flex gap-1.5">
           {reviews.map((_, i) => (
             <button key={i} onClick={() => setCurrent(i)}
-              className={`h-1 rounded-full transition-all duration-300 ${i === current ? 'w-6 bg-[#5b58ff]' : 'w-1.5 bg-[#2a2a2a] hover:bg-[#444]'}`} />
+              className={`h-1 rounded-full transition-all duration-300 ${i === current ? 'w-6 bg-[#e03030]' : 'w-1.5 bg-[#2a2a2a] hover:bg-[#444]'}`} />
           ))}
         </div>
         <div className="flex gap-2">
-          <button onClick={prev} className="w-8 h-8 rounded-full border border-[#2a2a2a] text-[#666] hover:border-[#5b58ff] hover:text-white flex items-center justify-center transition-all text-sm">←</button>
-          <button onClick={next} className="w-8 h-8 rounded-full bg-[#5b58ff] text-white hover:bg-[#4845dd] flex items-center justify-center transition-colors text-sm">→</button>
+          <button onClick={prev} className="w-8 h-8 rounded-full border border-[#2a2a2a] text-[#666] hover:border-[#e03030] hover:text-white flex items-center justify-center transition-all text-sm">←</button>
+          <button onClick={next} className="w-8 h-8 rounded-full bg-[#e03030] text-white hover:bg-[#c02828] flex items-center justify-center transition-colors text-sm">→</button>
         </div>
       </div>
     </div>
