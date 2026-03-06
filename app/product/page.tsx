@@ -251,15 +251,21 @@ function KatalogCard({
   );
 
   return (
-    <div className="group relative bg-[#0a0a0a] overflow-hidden hover:bg-[#0d0d0d] transition-colors duration-300 flex flex-col">
-      {/* Top accent */}
+    <div className="group relative border border-[#1e1e1e] hover:border-[#2a2a2a] transition-all duration-300 flex flex-col overflow-hidden">
+      {/* Ambient glow behind card */}
+      <div
+        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0"
+        style={{ background: `radial-gradient(ellipse at 50% 0%, ${accentColor}18 0%, transparent 60%)` }}
+      />
+
+      {/* Top accent line */}
       <div
         className="absolute top-0 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-500 z-10"
         style={{ background: `linear-gradient(90deg, ${accentColor}, #a78bfa)` }}
       />
 
       {/* Images */}
-      <div className="relative flex gap-1 bg-[#111] overflow-hidden" style={{ height: 560 }}>
+      <div className="relative flex gap-px overflow-hidden" style={{ height: 560, background: "#0a0a0a" }}>
         {item.images.map((src, i) => (
           <div
             key={i}
@@ -276,26 +282,36 @@ function KatalogCard({
           </div>
         ))}
 
-        {/* Package badge — over image */}
-        <div className="absolute top-4 left-4 z-10">
+        {/* Gradient overlay bottom */}
+        <div
+          className="absolute bottom-0 left-0 w-full h-20 z-10 pointer-events-none"
+          style={{ background: "linear-gradient(to top, #0a0a0a, transparent)" }}
+        />
+
+        {/* Package badge */}
+        <div className="absolute top-4 left-4 z-20">
           <span
-            className="text-white text-[9px] font-black uppercase tracking-[0.2em] px-3 py-1.5"
-            style={{ background: accentColor === "#e03030" ? "rgba(224,48,48,0.9)" : "rgba(167,139,250,0.9)" }}
+            className="text-white text-[9px] font-black uppercase tracking-[0.2em] px-3 py-1.5 border"
+            style={{
+              background: `${accentColor}22`,
+              borderColor: `${accentColor}55`,
+              color: accentColor,
+            }}
           >
             {item.package}
           </span>
         </div>
 
         {/* Pola count badge */}
-        <div className="absolute top-4 right-4 z-10 text-right">
-          <span className="text-white text-[9px] font-bold uppercase tracking-[0.15em] bg-black/70 px-3 py-1.5">
+        <div className="absolute top-4 right-4 z-20">
+          <span className="text-[#888] text-[9px] font-bold uppercase tracking-[0.15em] bg-black/60 border border-[#1e1e1e] px-3 py-1.5">
             {item.pola} Pola
           </span>
         </div>
       </div>
 
       {/* Info */}
-      <div className="flex flex-col gap-4 px-8 py-7 flex-1">
+      <div className="relative z-10 flex flex-col gap-4 px-8 py-7 flex-1 bg-[#0a0a0a]">
         {/* Name + divider */}
         <div>
           <h3
@@ -305,18 +321,18 @@ function KatalogCard({
             {item.name}
           </h3>
           <div
-            className="w-8 h-px group-hover:w-16 transition-all duration-500"
-            style={{ background: accentColor }}
+            className="w-8 h-[2px] group-hover:w-16 transition-all duration-500"
+            style={{ background: `linear-gradient(90deg, ${accentColor}, #a78bfa)` }}
           />
         </div>
 
         {/* Tagline */}
-        <p className="text-[#555] text-xs leading-relaxed italic group-hover:text-[#777] transition-colors duration-300">
+        <p className="text-[#444] text-xs leading-relaxed italic group-hover:text-[#666] transition-colors duration-300">
           &ldquo;{item.tagline}&rdquo;
         </p>
 
         {/* Footer */}
-        <div className="flex items-center justify-between pt-2 mt-auto border-t border-[#1a1a1a]">
+        <div className="flex items-center justify-between pt-4 mt-auto border-t border-[#1a1a1a]">
           <div className="flex items-center gap-4">
             <div>
               <p className="text-white text-xs font-black uppercase">{item.pola} Pola</p>
