@@ -1,36 +1,133 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ayres Apparel — Official Website
 
-## Getting Started
+Website resmi **Ayres Apparel**, produsen jersey custom berbasis di Bantul, Yogyakarta. Dibangun dengan Next.js 16 App Router, Tailwind CSS v4, dan berbagai komponen interaktif modern.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech Stack
+
+| Teknologi | Versi | Keterangan |
+|---|---|---|
+| Next.js | 16.1.6 | App Router, Server Components |
+| React | 19 | |
+| TypeScript | 5 | |
+| Tailwind CSS | 4 | |
+| Motion | 12 | Animasi (DecryptedText, transisi) |
+| GSAP | 3 | Animasi scroll & interaktif |
+| Three.js / R3F | 0.183 / 9 | Efek 3D |
+| OGL | 1 | CircularGallery WebGL |
+| Shadcn UI | 3 | Komponen UI dasar |
+
+---
+
+## Halaman
+
+| Route | Deskripsi |
+|---|---|
+| `/` | Beranda — hero, gallery jersey, stats, review, FAQ |
+| `/product` | Katalog jersey — 3D Card Carousel dengan lightbox viewer |
+| `/order` | Informasi pemesanan & size chart |
+| `/company` | Profil perusahaan, nilai, dan pencapaian |
+| `/contact` | Kontak & form inquiry |
+| `/news` | Artikel & berita terbaru |
+
+---
+
+## Struktur Proyek
+
+```
+app/
+├── page.tsx              # Beranda
+├── product/
+│   ├── page.tsx          # Halaman produk
+│   └── ProductCarousel.tsx  # 3D Card Carousel (client component)
+├── company/page.tsx
+├── order/page.tsx
+├── contact/
+├── news/
+└── layout.tsx
+
+components/
+├── Header.tsx            # Navigasi utama
+├── Footer.tsx
+├── DecryptedText.tsx     # Efek teks decrypt animasi
+├── YoutubePlayer.tsx     # YouTube embed + kembali ke thumbnail otomatis
+├── CircularGallery.tsx   # Gallery jersey WebGL (OGL)
+├── ReviewSlider.tsx      # Slider review pelanggan
+├── GlareHover.tsx        # Efek glare pada kartu jersey
+├── TrustSection.tsx      # Section kepercayaan brand
+├── BrandPartners.tsx     # Logo brand partner
+├── FAQ.tsx               # Accordion FAQ
+├── FeaturesStrip.tsx     # Strip fitur layanan
+├── GradientText.tsx      # Teks gradient animasi
+├── Particles.tsx         # Partikel background
+├── DotGrid.tsx           # Grid titik dekoratif
+└── ...
+
+public/
+├── gambar/               # Asset umum (logo, jersey, dll)
+└── katalogv2/            # Foto katalog produk
+    ├── katalog classic Adi Vira/
+    ├── katalog classic Cakra Vega/
+    ├── katalog pro Bima Sena/
+    └── katalog pro Garuda Vastra/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Fitur Utama
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3D Card Carousel (`/product`)
+- Menampilkan 3 katalog sekaligus dengan efek perspektif 3D
+- Card tengah sebagai fokus, card samping miring dan mengecil
+- Navigasi: klik card samping, swipe/drag, tombol panah, keyboard (← →)
+- Klik center card → **Lightbox viewer** full-screen dengan navigasi antar halaman desain
 
-## Learn More
+### DecryptedText
+- Efek teks "decrypt" dengan karakter acak yang terbuka satu per satu
+- Digunakan pada angka statistik: `2.600+` dan `35.000+`
+- Animasi terpicu saat elemen masuk viewport (`animateOn="view"`)
 
-To learn more about Next.js, take a look at the following resources:
+### YouTube Player
+- Thumbnail logo Ayres sebagai cover sebelum video diputar
+- Menggunakan YouTube IFrame API
+- **Otomatis kembali ke thumbnail** saat video selesai (event `onStateChange`)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Menjalankan Project
 
-## Deploy on Vercel
+```bash
+# Install dependencies
+npm install
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Development server
+npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Build production
+npm run build
+
+# Start production
+npm start
+```
+
+Buka [http://localhost:3000](http://localhost:3000) di browser.
+
+---
+
+## Katalog Produk
+
+| Nama | Package | Pola |
+|---|---|---|
+| Adi Vira | Classic | 3 |
+| Cakra Vega | Classic | 6 |
+| Bima Sena | Pro | 6 |
+| Garuda Vastra | Pro | 6 |
+
+---
+
+## Kontak
+
+**Ayres Apparel**
+Bantul, Yogyakarta, Indonesia
+WhatsApp: [+62 878-1831-0416](https://wa.me/6287818310416)
