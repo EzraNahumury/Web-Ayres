@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import DecryptedText from "@/components/DecryptedText";
 
 export const metadata: Metadata = {
   title: "Company",
@@ -74,7 +75,16 @@ export default function CompanyPage() {
                 { num: "35.000+", label: "Pcs Diproduksi" },
               ].map((s) => (
                 <div key={s.label} className="px-5 py-5 flex flex-col gap-1.5">
-                  <p className="text-white text-2xl font-black">{s.num}</p>
+                  <p className="text-white text-2xl font-black">
+                    <DecryptedText
+                      text={s.num}
+                      animateOn="view"
+                      sequential
+                      revealDirection="start"
+                      speed={40}
+                      characters="0123456789"
+                    />
+                  </p>
                   <p className="text-[#3a3a3a] text-[9px] uppercase tracking-[0.15em] font-semibold leading-tight">{s.label}</p>
                 </div>
               ))}

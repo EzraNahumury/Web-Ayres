@@ -434,31 +434,30 @@ function Lightbox({
           </svg>
         </button>
 
-        {/* Image */}
-        <div
-          className="flex-1 relative overflow-hidden rounded-2xl border border-[#1e1e1e] select-none"
-          style={{
-            maxHeight: "calc(100vh - 200px)",
-            aspectRatio: "3/4",
-            boxShadow: `0 0 80px 0 ${accent.glow}, 0 40px 100px rgba(0,0,0,0.9)`,
-          }}
-        >
-          <Image
-            key={pageIndex}
-            src={item.pages[pageIndex]}
-            alt={`${item.name} halaman ${pageIndex + 1}`}
-            fill
-            draggable={false}
-            className="object-contain select-none"
-            sizes="(max-width: 768px) 90vw, 700px"
-            priority
-          />
-
-          {/* Accent top bar */}
-          <div
-            className="absolute top-0 left-0 right-0 h-[2px]"
-            style={{ background: `linear-gradient(90deg, ${accent.color}, #a78bfa)` }}
-          />
+        {/* Image — ukuran mengikuti gambar asli */}
+        <div className="flex-1 flex items-center justify-center min-w-0">
+          <div className="relative inline-block">
+            {/* Accent top bar — lebar pas dengan gambar */}
+            <div
+              className="absolute top-0 left-0 right-0 h-[2px] z-10 rounded-t-2xl"
+              style={{ background: `linear-gradient(90deg, ${accent.color}, #a78bfa)` }}
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              key={pageIndex}
+              src={item.pages[pageIndex]}
+              alt={`${item.name} halaman ${pageIndex + 1}`}
+              draggable={false}
+              className="rounded-2xl border border-[#1e1e1e] select-none block"
+              style={{
+                maxHeight: "calc(100vh - 200px)",
+                maxWidth: "100%",
+                width: "auto",
+                height: "auto",
+                boxShadow: `0 0 80px 0 ${accent.glow}, 0 40px 100px rgba(0,0,0,0.9)`,
+              }}
+            />
+          </div>
         </div>
 
         {/* Next */}

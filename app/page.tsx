@@ -10,6 +10,7 @@ import ReviewSlider from "@/components/ReviewSlider";
 import YoutubePlayer from "@/components/YoutubePlayer";
 import FAQ from "@/components/FAQ";
 import BrandPartners from "@/components/BrandPartners";
+import DecryptedText from "@/components/DecryptedText";
 
 export const metadata: Metadata = {
   title: "Ayres Apparel – Tempatnya Custom Jersey Yang Indonesia Banget",
@@ -246,14 +247,14 @@ export default function HomePage() {
         <div className="w-full -mt-4" style={{ height: '460px' }}>
           <CircularGallery
             items={[
-              { image: '/gambar/Jersey-1.png', text: 'Jersey Custom' },
-              { image: '/gambar/Jersey-2.png', text: 'Full Color' },
-              { image: '/gambar/Jersey-3.png', text: 'Premium Quality' },
-              { image: '/gambar/Jersey-4.png', text: 'Ayres Apparel' },
-              { image: '/gambar/Jersey-5.png', text: 'Custom Jersey' },
-              { image: '/gambar/Jersey-6.png', text: 'Original Desain' },
-              { image: '/gambar/Jersey-7.png', text: 'Jersey Nusantara' },
-              { image: '/gambar/WhatsApp-Image-2024-07-22-at-08.13.26-4.jpeg', text: 'Jersey Timnas' },
+              { image: '/gambar/Jersey-1.png', text: '' },
+              { image: '/gambar/Jersey-2.png', text: '' },
+              { image: '/gambar/Jersey-3.png', text: '' },
+              { image: '/gambar/Jersey-4.png', text: '' },
+              { image: '/gambar/Jersey-5.png', text: '' },
+              { image: '/gambar/Jersey-6.png', text: '' },
+              { image: '/gambar/Jersey-7.png', text: '' },
+              { image: '/gambar/WhatsApp-Image-2024-07-22-at-08.13.26-4.jpeg', text: '' },
             ]}
             bend={2}
             textColor="#ffffff"
@@ -284,7 +285,16 @@ export default function HomePage() {
                 { num: "35.000+", label: "pcs jersey sudah di produksi" },
               ].map((s) => (
                 <div key={s.num}>
-                  <p className="text-5xl font-black text-white leading-none tracking-tight">{s.num}</p>
+                  <p className="text-5xl font-black text-white leading-none tracking-tight">
+                    <DecryptedText
+                      text={s.num}
+                      animateOn="view"
+                      sequential
+                      revealDirection="start"
+                      speed={40}
+                      characters="0123456789"
+                    />
+                  </p>
                   <p className="text-[#666] text-sm mt-1">{s.label}</p>
                 </div>
               ))}
