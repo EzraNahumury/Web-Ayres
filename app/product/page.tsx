@@ -32,11 +32,13 @@ export default function ProductPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-16 items-end">
-            <div>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+
+            {/* ── Left ── */}
+            <div className="flex flex-col gap-8">
               <h1
-                className="text-white font-black uppercase leading-[0.88] tracking-tight mb-6"
-                style={{ fontSize: "clamp(3.5rem, 7vw, 6rem)" }}
+                className="text-white font-black uppercase leading-[0.88] tracking-tight"
+                style={{ fontSize: "clamp(3.5rem, 6vw, 5.5rem)" }}
               >
                 Katalog<br />
                 <span
@@ -51,31 +53,82 @@ export default function ProductPage() {
                 <br />
                 Ayres.
               </h1>
-              <p className="text-[#484848] text-sm leading-relaxed max-w-sm">
+
+              <p className="text-[#484848] text-sm leading-relaxed max-w-xs">
                 Pilih pola jersey terbaik dari koleksi Classic dan Pro kami. Setiap desain lahir dari teknologi Patren Lab Ayres.
               </p>
+
+              {/* Stats row */}
+              <div className="flex items-center gap-0 border border-[#141414] divide-x divide-[#141414]">
+                {[
+                  { num: "4", label: "Katalog" },
+                  { num: "21", label: "Total Pola" },
+                  { num: "2", label: "Package" },
+                ].map((s) => (
+                  <div key={s.label} className="flex-1 px-5 py-4 flex flex-col gap-1">
+                    <p
+                      className="text-2xl font-black leading-none"
+                      style={{
+                        background: "linear-gradient(135deg, #e03030, #a78bfa)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                      }}
+                    >
+                      {s.num}
+                    </p>
+                    <p className="text-[#2a2a2a] text-[9px] uppercase tracking-[0.2em] font-bold">{s.label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="flex flex-col divide-y divide-[#141414] border border-[#141414]">
+            {/* ── Right — catalog cover grid ── */}
+            <div className="grid grid-cols-2 gap-3" style={{ height: 420 }}>
               {[
-                { num: "4", label: "Katalog Tersedia", sub: "Classic & Pro" },
-                { num: "21", label: "Total Pola", sub: "Pilihan desain" },
-                { num: "2", label: "Package Tier", sub: "Classic · Pro" },
-              ].map((s) => (
-                <div key={s.label} className="flex items-center gap-6 px-6 py-5">
-                  <p
-                    className="text-4xl font-black w-20 shrink-0"
-                    style={{
-                      background: "linear-gradient(135deg, #e03030, #a78bfa)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                    }}
-                  >
-                    {s.num}
-                  </p>
-                  <div>
-                    <p className="text-white text-xs font-bold uppercase tracking-wide">{s.label}</p>
-                    <p className="text-[#303030] text-[10px] uppercase tracking-[0.15em] mt-0.5">{s.sub}</p>
+                { name: "Adi Vira",      pkg: "Classic", cover: "/katalogv2/katalog classic Adi Vira/pembuka.jpeg",        color: "#e03030" },
+                { name: "Cakra Vega",   pkg: "Classic", cover: "/katalogv2/katalog classic Cakra Vega/pembuka.jpeg",       color: "#e03030" },
+                { name: "Bima Sena",    pkg: "Pro",     cover: "/katalogv2/katalog pro Bima Sena/pembuka.jpeg",            color: "#a78bfa" },
+                { name: "Garuda Vastra",pkg: "Pro",     cover: "/katalogv2/katalog pro Garuda Vastra/pembuka.jpeg",        color: "#a78bfa" },
+              ].map((item) => (
+                <div
+                  key={item.name}
+                  className="relative overflow-hidden rounded-xl group"
+                  style={{ minHeight: 0 }}
+                >
+                  <Image
+                    src={item.cover}
+                    alt={item.name}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.06]"
+                    sizes="(max-width: 768px) 50vw, 300px"
+                  />
+                  {/* Gradient overlay */}
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{ background: "linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.2) 50%, transparent 100%)" }}
+                  />
+                  {/* Hover color tint */}
+                  <div
+                    className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{ background: `${item.color}0d` }}
+                  />
+                  {/* Top accent line */}
+                  <div
+                    className="absolute top-0 left-0 right-0 h-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{ background: `linear-gradient(90deg, ${item.color}, #a78bfa)` }}
+                  />
+                  {/* Package badge */}
+                  <div className="absolute top-3 left-3">
+                    <span
+                      className="text-[8px] font-black uppercase tracking-[0.2em] px-2.5 py-1 rounded-full border"
+                      style={{ color: item.color, borderColor: `${item.color}55`, background: `${item.color}15` }}
+                    >
+                      {item.pkg}
+                    </span>
+                  </div>
+                  {/* Name */}
+                  <div className="absolute bottom-3 left-3 right-3">
+                    <p className="text-white text-xs font-black uppercase tracking-wide leading-none">{item.name}</p>
                   </div>
                 </div>
               ))}

@@ -376,8 +376,8 @@ function Lightbox({
     <div
       className="fixed inset-0 z-[100] flex flex-col items-center justify-center"
       style={{
-        background: "rgba(0,0,0,0.96)",
-        backdropFilter: "blur(12px)",
+        background: "rgba(0,0,0,0.82)",
+        backdropFilter: "blur(6px)",
         animation: "lbFadeIn 0.25s ease",
       }}
       onClick={onClose}
@@ -452,7 +452,6 @@ function Lightbox({
             className="object-contain select-none"
             sizes="(max-width: 768px) 90vw, 700px"
             priority
-            style={{ animation: "lbSlideUp 0.3s ease" }}
           />
 
           {/* Accent top bar */}
