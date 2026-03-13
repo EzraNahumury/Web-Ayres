@@ -226,7 +226,7 @@ export default function CompanyPage() {
             <div className="group relative shrink-0 w-56 overflow-hidden border border-[#1a1a1a] hover:border-[#e03030]/30 transition-all duration-300">
               <div className="absolute top-0 left-0 h-[2px] w-0 group-hover:w-full bg-gradient-to-r from-[#e03030] to-[#a78bfa] transition-all duration-500 z-10" />
               <Image
-                src="/gambar/jersey_001-removebg-preview.png"
+                src="/ceo/Profile Photo - Mas Arya Rahadhyan.jpg.jpeg"
                 alt="Arya Chandra Rahadhyan"
                 width={224}
                 height={280}
