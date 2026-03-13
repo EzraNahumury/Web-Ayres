@@ -110,9 +110,9 @@ export default function HomePage() {
               <div className="flex items-center gap-3 pt-1">
                 <div className="flex -space-x-2">
                   {[
-                    "/gambar/Jersey-3.png",
-                    "/gambar/Jersey-5.png",
-                    "/gambar/Jersey-7.png",
+                    "/foto product/1.jpg",
+                    "/foto product/2.jpg",
+                    "/foto product/3.jpg",
                   ].map((src, i) => (
                     <div key={i} className="w-8 h-8 rounded-full border-2 border-[#0a0a0a] overflow-hidden bg-[#1a1a1a]">
                       <Image src={src} alt="jersey" width={32} height={32} className="object-cover w-full h-full" />
@@ -140,7 +140,7 @@ export default function HomePage() {
                   glareColor="#ffffff" glareOpacity={0.3} glareAngle={-30}
                   glareSize={300} transitionDuration={700}>
                   <Image
-                    src="/gambar/Jersey-1.png"
+                    src="/foto product/4.jpg"
                     alt="Custom Jersey Ayres"
                     fill className="object-contain" priority
                     sizes="230px"
@@ -157,7 +157,7 @@ export default function HomePage() {
                   glareColor="#ffffff" glareOpacity={0.2} glareAngle={-30}
                   glareSize={300} transitionDuration={700}>
                   <Image
-                    src="/gambar/Jersey-2.png"
+                    src="/foto product/5.jpg"
                     alt="Custom Jersey Ayres 2"
                     fill className="object-contain"
                     sizes="175px"
@@ -174,7 +174,7 @@ export default function HomePage() {
                   glareColor="#ffffff" glareOpacity={0.2} glareAngle={-30}
                   glareSize={300} transitionDuration={700}>
                   <Image
-                    src="/gambar/Jersey-3.png"
+                    src="/foto product/6.jpg"
                     alt="Custom Jersey Ayres 3"
                     fill className="object-contain"
                     sizes="175px"
@@ -247,14 +247,34 @@ export default function HomePage() {
         <div className="w-full -mt-4" style={{ height: '460px' }}>
           <CircularGallery
             items={[
-              { image: '/gambar/Jersey-1.png', text: '' },
-              { image: '/gambar/Jersey-2.png', text: '' },
-              { image: '/gambar/Jersey-3.png', text: '' },
-              { image: '/gambar/Jersey-4.png', text: '' },
-              { image: '/gambar/Jersey-5.png', text: '' },
-              { image: '/gambar/Jersey-6.png', text: '' },
-              { image: '/gambar/Jersey-7.png', text: '' },
-              { image: '/gambar/WhatsApp-Image-2024-07-22-at-08.13.26-4.jpeg', text: '' },
+              { image: '/foto product/1.jpg', text: '' },
+              { image: '/foto product/2.jpg', text: '' },
+              { image: '/foto product/3.jpg', text: '' },
+              { image: '/foto product/4.jpg', text: '' },
+              { image: '/foto product/5.jpg', text: '' },
+              { image: '/foto product/6.jpg', text: '' },
+              { image: '/foto product/7.jpg', text: '' },
+              { image: '/foto product/8.jpg', text: '' },
+              { image: '/foto product/9.jpg', text: '' },
+              { image: '/foto product/10.jpg', text: '' },
+              { image: '/foto product/11.jpg', text: '' },
+              { image: '/foto product/12.jpg', text: '' },
+              { image: '/foto product/13.jpg', text: '' },
+              { image: '/foto product/14.jpg', text: '' },
+              { image: '/foto product/15.jpg', text: '' },
+              { image: '/foto product/17.jpg', text: '' },
+              { image: '/foto product/21.jpg', text: '' },
+              { image: '/foto product/22.jpg', text: '' },
+              { image: '/foto product/23.jpg', text: '' },
+              { image: '/foto product/24.jpg', text: '' },
+              { image: '/foto product/25.jpg', text: '' },
+              { image: '/foto product/30.jpg', text: '' },
+              { image: '/foto product/31.jpg', text: '' },
+              { image: '/foto product/32.jpg', text: '' },
+              { image: '/foto product/33.jpg', text: '' },
+              { image: '/foto product/34.jpg', text: '' },
+              { image: '/foto product/35.jpg', text: '' },
+              { image: '/foto product/36.jpg', text: '' },
             ]}
             bend={2}
             textColor="#ffffff"
