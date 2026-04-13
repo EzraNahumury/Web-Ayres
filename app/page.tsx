@@ -140,7 +140,7 @@ export default function HomePage() {
                   glareColor="#ffffff" glareOpacity={0.3} glareAngle={-30}
                   glareSize={300} transitionDuration={700}>
                   <Image
-                    src="/foto product/4.jpg"
+                    src="/JERSEY CUSTOMER/Mar28-02_01.jpg"
                     alt="Custom Jersey Ayres"
                     fill className="object-contain" priority
                     sizes="230px"
@@ -157,7 +157,7 @@ export default function HomePage() {
                   glareColor="#ffffff" glareOpacity={0.2} glareAngle={-30}
                   glareSize={300} transitionDuration={700}>
                   <Image
-                    src="/foto product/5.jpg"
+                    src="/JERSEY CUSTOMER/Apr04-02_03.jpg"
                     alt="Custom Jersey Ayres 2"
                     fill className="object-contain"
                     sizes="175px"
@@ -174,7 +174,7 @@ export default function HomePage() {
                   glareColor="#ffffff" glareOpacity={0.2} glareAngle={-30}
                   glareSize={300} transitionDuration={700}>
                   <Image
-                    src="/foto product/6.jpg"
+                    src="/JERSEY CUSTOMER/Mar30-01_01.jpg"
                     alt="Custom Jersey Ayres 3"
                     fill className="object-contain"
                     sizes="175px"
