@@ -21,7 +21,7 @@ export default function Header() {
 
         {/* Logo — kiri */}
         <Link href="/" className="shrink-0 flex items-center self-center">
-          <div className="relative flex items-center justify-center" style={{ width: 180, height: 48 }}>
+          <div className="relative top-[2px] flex items-center justify-center" style={{ width: 320, height: 80 }}>
             <Image
               src="/gambar/new logo.png"
               alt="Ayres Apparel"
@@ -34,12 +34,12 @@ export default function Header() {
         </Link>
 
         {/* Nav — tengah (desktop) */}
-        <nav className="hidden lg:flex items-center gap-7 flex-1 justify-center">
+        <nav className="hidden lg:flex items-center gap-9 flex-1 justify-center">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-[11px] font-bold tracking-wider text-[#aaaaaa] hover:text-white transition-colors whitespace-nowrap"
+              className="text-[13px] font-bold tracking-wider text-[#aaaaaa] hover:text-white transition-colors whitespace-nowrap"
             >
               {link.label}
             </Link>
