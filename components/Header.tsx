@@ -21,14 +21,14 @@ export default function Header() {
 
         {/* Logo — kiri */}
         <Link href="/" className="shrink-0 flex items-center self-center">
-          <div className="relative top-[2px] flex items-center justify-center w-[160px] h-[44px] md:w-[320px] md:h-[80px]">
+          <div className="relative top-[2px] flex items-center justify-start w-[160px] h-[44px] md:w-[320px] md:h-[80px]">
             <Image
               src="/gambar/new logo.png"
               alt="Ayres Apparel"
               fill
               priority
               className="object-contain brightness-0 invert"
-              style={{ objectPosition: 'center center' }}
+              style={{ objectPosition: 'left center' }}
             />
           </div>
         </Link>

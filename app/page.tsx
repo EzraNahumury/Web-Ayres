@@ -61,8 +61,8 @@ export default function HomePage() {
             <div className="flex flex-col gap-8">
 
               {/* Headline */}
-              <div className="flex flex-col gap-4">
-                <p className="text-[#e03030] text-xs font-bold tracking-[0.2em] uppercase">Custom Jersey &amp; Apparel</p>
+              <div className="flex flex-col gap-5 items-start">
+                <p className="text-white text-xs font-bold tracking-[0.2em] uppercase ml-0">Custom Jersey &amp; Apparel</p>
                 <h1 className="text-white font-black flex flex-col" style={{ lineHeight: 1.05, fontSize: 'clamp(2.8rem, 5vw, 4.2rem)' }}>
                   <span>Tempatnya</span>
                   <GradientText
