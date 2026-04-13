@@ -1,21 +1,15 @@
 'use client';
 
 const partners = [
-  { name: "Pertamina", src: "/gambar/Pertamina.png" },
-  { name: "Bank BNI", src: "/gambar/Bank-BNI.png" },
-  { name: "Honda", src: "/gambar/Honda.png" },
-  { name: "Korps Brimob", src: "/gambar/BRIMOB.png" },
-  { name: "TNI Angkatan Udara", src: "/gambar/AAU.png" },
-  { name: "Mitra Surabaya FC", src: "/gambar/Mitra-Surabaya-Liga-3.png" },
-  { name: "Biak United", src: "/gambar/Biak-United-Liga3.png" },
-  { name: "Jonnie's Bodega", src: "/gambar/Jonnie-Bodega-Malaysia.png" },
-  { name: "Wirasada Pratista", src: "/gambar/Wirasada-Pratista.png" },
-  { name: "Praja Wibawa 1950", src: "/gambar/Satpol-PP.png" },
-  { name: "Universitas Gadjah Mada", src: "/gambar/UGM.png" },
-  { name: "Universitas Negeri Yogyakarta", src: "/gambar/UNY.png" },
-  { name: "UNNES", src: "/gambar/UNNES.png" },
-  { name: "UPN Veteran", src: "/gambar/UPN.png" },
-  { name: "Universitas Sanata Dharma", src: "/gambar/USD.png" },
+  { name: "AAU", src: "/logo_partner/AAU.png" },
+  { name: "Dikpora", src: "/logo_partner/DIKPORA.png" },
+  { name: "Gembira Loka", src: "/logo_partner/GEMBIRALOKA.png" },
+  { name: "Honda", src: "/logo_partner/HONDA.png" },
+  { name: "KAI", src: "/logo_partner/kai.png" },
+  { name: "Paxel", src: "/logo_partner/paxel.png" },
+  { name: "Pertamina", src: "/logo_partner/pertamina.png" },
+  { name: "QHome", src: "/logo_partner/QHOME.png" },
+  { name: "RSUD", src: "/logo_partner/RSUD.jfif" },
 ];
 
 // Duplicate for seamless loop
