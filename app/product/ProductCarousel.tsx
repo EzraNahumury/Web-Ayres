@@ -68,21 +68,33 @@ const ACCENT = {
   Pro: { color: "#a78bfa", border: "#a78bfa66", glow: "#a78bfa22" },
 } as const;
 
-const CARD_W = 460;
-const CARD_H = 620;
-const SIDE_OFFSET = 400;
+const CARD_W_DESKTOP = 460;
+const CARD_H_DESKTOP = 620;
+const SIDE_OFFSET_DESKTOP = 400;
+const SIDE_ROTATE_Y_DESKTOP = 32;
+
+const CARD_W_MOBILE = 260;
+const CARD_H_MOBILE = 350;
+const SIDE_OFFSET_MOBILE = 210;
+const SIDE_ROTATE_Y_MOBILE = 18;
+
 const SIDE_SCALE = 0.78;
-const SIDE_ROTATE_Y = 32;
 
 type LightboxState = { open: false } | { open: true; pageIndex: number };
 
 export function ProductCarousel() {
   const [active, setActive] = useState(0);
   const [lightbox, setLightbox] = useState<LightboxState>({ open: false });
+  const [isMobile, setIsMobile] = useState(false);
   const dragX = useRef<number | null>(null);
   const total = katalog.length;
   const activeItem = katalog[active];
   const activeAccent = ACCENT[activeItem.package];
+
+  const CARD_W = isMobile ? CARD_W_MOBILE : CARD_W_DESKTOP;
+  const CARD_H = isMobile ? CARD_H_MOBILE : CARD_H_DESKTOP;
+  const SIDE_OFFSET = isMobile ? SIDE_OFFSET_MOBILE : SIDE_OFFSET_DESKTOP;
+  const SIDE_ROTATE_Y = isMobile ? SIDE_ROTATE_Y_MOBILE : SIDE_ROTATE_Y_DESKTOP;
 
   const go = (index: number) => setActive(((index % total) + total) % total);
 
@@ -90,6 +102,14 @@ export function ProductCarousel() {
     setLightbox({ open: true, pageIndex });
 
   const closeLightbox = useCallback(() => setLightbox({ open: false }), []);
+
+  // Responsive: detect mobile
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
 
   // Keyboard: arrows for carousel, ESC for lightbox
   useEffect(() => {

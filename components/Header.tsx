@@ -21,7 +21,7 @@ export default function Header() {
 
         {/* Logo — kiri */}
         <Link href="/" className="shrink-0 flex items-center self-center">
-          <div className="relative top-[2px] flex items-center justify-center" style={{ width: 320, height: 80 }}>
+          <div className="relative top-[2px] flex items-center justify-center w-[160px] h-[44px] md:w-[320px] md:h-[80px]">
             <Image
               src="/gambar/new logo.png"
               alt="Ayres Apparel"
@@ -49,7 +49,7 @@ export default function Header() {
 
         {/* Hamburger — mobile */}
         <button
-          className="lg:hidden flex flex-col gap-1.5 p-1"
+          className="lg:hidden shrink-0 flex flex-col gap-1.5 p-2"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >

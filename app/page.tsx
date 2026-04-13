@@ -351,10 +351,10 @@ export default function HomePage() {
           </div>
 
           {/* Video + scrollable reviews side by side */}
-          <div className="flex gap-6 items-stretch">
+          <div className="flex flex-col md:flex-row gap-6 items-stretch">
 
-            {/* YouTube embed — fixed kiri */}
-            <div className="shrink-0 relative rounded-xl overflow-hidden" style={{ width: 480, aspectRatio: '16/9' }}>
+            {/* YouTube embed — full width on mobile, fixed on desktop */}
+            <div className="shrink-0 relative rounded-xl overflow-hidden w-full md:w-[480px]" style={{ aspectRatio: '16/9' }}>
               <YoutubePlayer videoId="Rh99xrExmxA" />
             </div>
 

@@ -83,7 +83,7 @@ export default function ProductPage() {
             </div>
 
             {/* ── Right — catalog cover grid ── */}
-            <div className="grid grid-cols-2 gap-3" style={{ height: 420 }}>
+            <div className="grid grid-cols-2 gap-3 h-[280px] md:h-[420px]">
               {[
                 { name: "Adi Vira",      pkg: "Classic", cover: "/katalogv2/katalog classic Adi Vira/pembuka.jpeg",        color: "#e03030" },
                 { name: "Cakra Vega",   pkg: "Classic", cover: "/katalogv2/katalog classic Cakra Vega/pembuka.jpeg",       color: "#e03030" },
