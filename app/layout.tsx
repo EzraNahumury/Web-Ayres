@@ -21,12 +21,17 @@ const heebo = Heebo({
 
 export const metadata: Metadata = {
   title: {
-    default: "Ayres Apparel – Tempatnya Custom Jersey",
+    default: "Ayres Apparel",
     template: "%s | Ayres Apparel",
   },
   description:
     "Custom jersey berkualitas mulai Rp.70.000, deadline aman, pola Ayres beda kelas. Melayani seluruh Indonesia.",
   keywords: ["custom jersey", "jersey bola", "jersey futsal", "jersey olahraga", "Yogyakarta"],
+  icons: {
+    icon: "/gambar/new%20logo.png",
+    shortcut: "/gambar/new%20logo.png",
+    apple: "/gambar/new%20logo.png",
+  },
   openGraph: {
     siteName: "Ayres Apparel",
     locale: "id_ID",
