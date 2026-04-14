@@ -13,7 +13,7 @@ import BrandPartners from "@/components/BrandPartners";
 import DecryptedText from "@/components/DecryptedText";
 
 export const metadata: Metadata = {
-  title: "Ayres Apparel – Tempatnya Custom Jersey Yang Indonesia Banget",
+  title: "Ayres Apparel",
 };
 
 const partners = [
