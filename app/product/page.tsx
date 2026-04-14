@@ -55,7 +55,7 @@ export default function ProductPage() {
               </h1>
 
               <p className="text-[#484848] text-sm leading-relaxed max-w-xs">
-                Pilih pola jersey terbaik dari koleksi Classic dan Pro kami. Setiap desain lahir dari teknologi Patren Lab Ayres.
+                Pilih pola jersey terbaik dari koleksi Classic dan Pro kami. Setiap desain lahir dari teknologi Pattern Lab Ayres.
               </p>
 
               {/* Stats row */}

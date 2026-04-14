@@ -228,7 +228,7 @@ export default function HomePage() {
             <div className="flex flex-col divide-y divide-[#1a1a1a]">
               {[
                 { tag: "01", label: "Harga Mulai", text: "Rp 70.000 per jersey tanpa biaya setup dan tanpa minimum order." },
-                { tag: "02", label: "Patren Lab Technology", text: "Pola dirancang menggunakan teknologi lab khusus — presisi tinggi, nyaman dipakai, hasil beda kelas." },
+                { tag: "02", label: "Pattern Lab Technology", text: "Pola dirancang menggunakan teknologi lab khusus — presisi tinggi, nyaman dipakai, hasil beda kelas." },
                 { tag: "03", label: "Kualitas Internasional", text: "Ribuan jersey per bulan, setiap helai dijahit dengan standar premium." },
               ].map((item) => (
                 <div key={item.tag} className="group grid grid-cols-[2rem_1fr] gap-4 py-5">

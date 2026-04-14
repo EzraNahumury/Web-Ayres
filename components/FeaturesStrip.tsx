@@ -1,6 +1,6 @@
 const features = [
   { num: "Rp 70rb", label: "Harga Mulai", desc: "Jersey custom, kualitas tidak murahan." },
-  { num: "Patren Lab", label: "Technology", desc: "Pola presisi tinggi, hasil beda kelas." },
+  { num: "Pattern Lab", label: "Technology", desc: "Pola presisi tinggi, hasil beda kelas." },
   { num: "No MOQ", label: "Minimum Order", desc: "Satu biji pun kami kerjakan serius." },
   { num: "100%", label: "Bebas Desain", desc: "Logo, nama, nomor — semua terserah kamu." },
 ];

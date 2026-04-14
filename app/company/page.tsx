@@ -140,7 +140,7 @@ export default function CompanyPage() {
           <div className="grid grid-cols-2 gap-px bg-[#1a1a1a]">
             {[
               { num: "01", title: "Deadline Aman", desc: "Produksi cepat, tepat waktu, tanpa kompromi kualitas." },
-              { num: "02", title: "Patren Lab Technology", desc: "Pola presisi tinggi dari lab khusus, nyaman dan beda kelas." },
+              { num: "02", title: "Pattern Lab Technology", desc: "Pola presisi tinggi dari lab khusus, nyaman dan beda kelas." },
               { num: "03", title: "No Minimum Order", desc: "Satu biji pun kami kerjakan dengan standar yang sama." },
               { num: "04", title: "Harga Terjangkau", desc: "Mulai Rp 70.000, kualitas internasional tanpa harga selangit." },
             ].map((item) => (
