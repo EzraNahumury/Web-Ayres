@@ -5,7 +5,8 @@
       "Bash(node -e \"const fs=require\\('fs'\\);const b=fs.readFileSync\\('public/gambar/new logo.png'\\);console.log\\('bytes',b.length\\);console.log\\('dims',b.readUInt32BE\\(16\\),'x',b.readUInt32BE\\(20\\)\\);\")",
       "Bash(node -e \"const fs=require\\('fs'\\);for\\(const f of ['public/gambar/LOGO_AYRES-removebg-preview.png','public/gambar/new logo.png','public/gambar/logo-perusahaan.png']\\){const b=fs.readFileSync\\(f\\);console.log\\(f,b.readUInt32BE\\(16\\)+'x'+b.readUInt32BE\\(20\\)\\);}\")",
       "Bash(node -e \"try{require\\('sharp'\\);console.log\\('sharp available'\\)}catch\\(e\\){console.log\\('no sharp'\\)}\")",
-      "Bash(node -e ':*)"
+      "Bash(node -e ':*)",
+      "Bash(npm run *)"
     ]
   }
 }

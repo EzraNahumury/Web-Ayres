@@ -1,15 +1,11 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback, useMemo } from "react";
 import Image from "next/image";
+import { useTranslation } from "@/lib/i18n";
 
-const katalog = [
-  {
-    id: "adi-vira",
-    name: "Adi Vira",
-    package: "Classic" as const,
-    tagline: "Tampilan tim jadi lebih rapi dan profesional.",
-    pola: 3,
+const PAGES: Record<string, { cover: string; pages: string[] }> = {
+  "adi-vira": {
     cover: "/katalogv2/katalog classic Adi Vira/pembuka.jpeg",
     pages: [
       "/katalogv2/katalog classic Adi Vira/AdiVira-01.jpg.jpeg",
@@ -17,12 +13,7 @@ const katalog = [
       "/katalogv2/katalog classic Adi Vira/AdiVira-03.jpg.jpeg",
     ],
   },
-  {
-    id: "cakra-vega",
-    name: "Cakra Vega",
-    package: "Classic" as const,
-    tagline: "Membuat tim terlihat cepat dan agresif sejak awal laga.",
-    pola: 6,
+  "cakra-vega": {
     cover: "/katalogv2/katalog classic Cakra Vega/pembuka.jpeg",
     pages: [
       "/katalogv2/katalog classic Cakra Vega/Mar05-01_02.jpg.jpeg",
@@ -33,12 +24,7 @@ const katalog = [
       "/katalogv2/katalog classic Cakra Vega/Mar05-01_07.jpg.jpeg",
     ],
   },
-  {
-    id: "bima-sena",
-    name: "Bima Sena",
-    package: "Pro" as const,
-    tagline: "Memberi kesan tim kuat dan sulit ditaklukkan.",
-    pola: 6,
+  "bima-sena": {
     cover: "/katalogv2/katalog pro Bima Sena/pembuka.jpeg",
     pages: [
       "/katalogv2/katalog pro Bima Sena/Mar06-02_02.jpg.jpeg",
@@ -47,12 +33,7 @@ const katalog = [
       "/katalogv2/katalog pro Bima Sena/Mar06-02_05.jpg.jpeg",
     ],
   },
-  {
-    id: "garuda-vastra",
-    name: "Garuda Vastra",
-    package: "Pro" as const,
-    tagline: "Bikin tim kamu terlihat lebih gagah dan elegan dari tim lain.",
-    pola: 6,
+  "garuda-vastra": {
     cover: "/katalogv2/katalog pro Garuda Vastra/pembuka.jpeg",
     pages: [
       "/katalogv2/katalog pro Garuda Vastra/Mar06-02_06.jpg.jpeg",
@@ -61,12 +42,11 @@ const katalog = [
       "/katalogv2/katalog pro Garuda Vastra/Mar06-02_09.jpg.jpeg",
     ],
   },
-];
+};
 
-const ACCENT = {
-  Classic: { color: "#e03030", border: "#e0303066", glow: "#e0303022" },
-  Pro: { color: "#a78bfa", border: "#a78bfa66", glow: "#a78bfa22" },
-} as const;
+type Accent = { color: string; border: string; glow: string };
+const ACCENT_CLASSIC: Accent = { color: "#e03030", border: "#e0303066", glow: "#e0303022" };
+const ACCENT_PRO: Accent = { color: "#a78bfa", border: "#a78bfa66", glow: "#a78bfa22" };
 
 const CARD_W_DESKTOP = 460;
 const CARD_H_DESKTOP = 620;
@@ -80,16 +60,48 @@ const SIDE_ROTATE_Y_MOBILE = 18;
 
 const SIDE_SCALE = 0.78;
 
+type Item = {
+  id: string;
+  name: string;
+  package: string;
+  tagline: string;
+  pola: number;
+  cover: string;
+  pages: string[];
+  accent: Accent;
+};
+
 type LightboxState = { open: false } | { open: true; pageIndex: number };
 
 export function ProductCarousel() {
+  const t = useTranslation();
+  const p = t.product;
+
+  const katalog: Item[] = useMemo(
+    () =>
+      p.katalog.map((k, idx) => {
+        const info = PAGES[k.id];
+        return {
+          id: k.id,
+          name: k.name,
+          package: k.package,
+          tagline: k.tagline,
+          pola: k.pola,
+          cover: info.cover,
+          pages: info.pages,
+          accent: idx < 2 ? ACCENT_CLASSIC : ACCENT_PRO,
+        };
+      }),
+    [p.katalog]
+  );
+
   const [active, setActive] = useState(0);
   const [lightbox, setLightbox] = useState<LightboxState>({ open: false });
   const [isMobile, setIsMobile] = useState(false);
   const dragX = useRef<number | null>(null);
   const total = katalog.length;
   const activeItem = katalog[active];
-  const activeAccent = ACCENT[activeItem.package];
+  const activeAccent = activeItem.accent;
 
   const CARD_W = isMobile ? CARD_W_MOBILE : CARD_W_DESKTOP;
   const CARD_H = isMobile ? CARD_H_MOBILE : CARD_H_DESKTOP;
@@ -103,7 +115,6 @@ export function ProductCarousel() {
 
   const closeLightbox = useCallback(() => setLightbox({ open: false }), []);
 
-  // Responsive: detect mobile
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768);
     check();
@@ -111,7 +122,6 @@ export function ProductCarousel() {
     return () => window.removeEventListener('resize', check);
   }, []);
 
-  // Keyboard: arrows for carousel, ESC for lightbox
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === "Escape") { closeLightbox(); return; }
@@ -137,7 +147,6 @@ export function ProductCarousel() {
     return () => window.removeEventListener("keydown", handler);
   }, [total, lightbox.open, activeItem.pages.length, closeLightbox]);
 
-  // Lock body scroll when lightbox open
   useEffect(() => {
     document.body.style.overflow = lightbox.open ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
@@ -156,9 +165,8 @@ export function ProductCarousel() {
     const delta = x - dragX.current;
     dragX.current = null;
     if (Math.abs(delta) > 60) {
-      delta < 0
-        ? setActive((a) => (a + 1) % total)
-        : setActive((a) => ((a - 1) + total) % total);
+      if (delta < 0) setActive((a) => (a + 1) % total);
+      else setActive((a) => ((a - 1) + total) % total);
     }
   };
 
@@ -215,7 +223,8 @@ export function ProductCarousel() {
                     <KatalogCard
                       item={item}
                       isCenter={isCenter}
-                      accent={ACCENT[item.package]}
+                      patternsLabel={p.patternsBadge}
+                      viewAllLabel={p.lookAllDesigns}
                     />
                   </div>
                 );
@@ -229,7 +238,7 @@ export function ProductCarousel() {
           <button
             onClick={() => setActive((a) => ((a - 1) + total) % total)}
             className="w-11 h-11 rounded-full border border-[#222] flex items-center justify-center text-[#444] hover:border-[#555] hover:text-white transition-all duration-300"
-            aria-label="Previous"
+            aria-label={t.common.previous}
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -247,7 +256,7 @@ export function ProductCarousel() {
                     width: isActive ? 28 : 8,
                     height: 8,
                     borderRadius: 4,
-                    background: isActive ? ACCENT[item.package].color : "#222",
+                    background: isActive ? item.accent.color : "#222",
                     transition: "all 0.4s cubic-bezier(0.4,0,0.2,1)",
                   }}
                   aria-label={item.name}
@@ -259,7 +268,7 @@ export function ProductCarousel() {
           <button
             onClick={() => setActive((a) => (a + 1) % total)}
             className="w-11 h-11 rounded-full border border-[#222] flex items-center justify-center text-[#444] hover:border-[#555] hover:text-white transition-all duration-300"
-            aria-label="Next"
+            aria-label={t.common.next}
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -273,9 +282,8 @@ export function ProductCarousel() {
           className="max-w-[460px] mx-auto w-full px-4"
           style={{ animation: "carouselFadeUp 0.4s ease both" }}
         >
-          {/* Thumbnails — clickable */}
           <p className="text-[#2a2a2a] text-[9px] uppercase tracking-[0.25em] font-bold mb-3">
-            Halaman Katalog — klik untuk lihat
+            {p.thumbnailHint}
           </p>
           <div
             className="flex gap-2.5 overflow-x-auto pb-3 mb-5"
@@ -290,12 +298,11 @@ export function ProductCarousel() {
               >
                 <Image
                   src={src}
-                  alt={`${activeItem.name} halaman ${i + 1}`}
+                  alt={`${activeItem.name} ${i + 1}`}
                   fill
                   className="object-cover"
                   sizes="88px"
                 />
-                {/* Hover overlay */}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/thumb:opacity-100 transition-opacity duration-200 flex items-center justify-center">
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
@@ -311,25 +318,25 @@ export function ProductCarousel() {
           {/* Order row */}
           <div className="flex items-center gap-4 border-t border-[#141414] pt-5">
             <div>
-              <p className="text-white text-sm font-bold">{activeItem.pola} Pola Tersedia</p>
+              <p className="text-white text-sm font-bold">{activeItem.pola} {p.patternsAvailable}</p>
               <p
                 className="text-[10px] font-bold uppercase tracking-[0.15em]"
                 style={{ color: activeAccent.color }}
               >
-                {activeItem.package} Package
+                {activeItem.package} {p.packageSuffix}
               </p>
             </div>
             <div className="flex-1" />
             <a
               href={`https://wa.me/6287818310416?text=${encodeURIComponent(
-                `Halo Ayres Apparel, saya tertarik dengan katalog ${activeItem.name} (${activeItem.package} Package). Boleh info lebih lanjut?`
+                p.whatsappMsg.replace("{name}", activeItem.name).replace("{package}", activeItem.package)
               )}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-white text-[10px] font-black uppercase tracking-[0.12em] px-6 py-3 rounded-full hover:opacity-90 hover:scale-[1.03] transition-all duration-300"
               style={{ background: `linear-gradient(135deg, ${activeAccent.color}, #a78bfa)` }}
             >
-              Order Sekarang &rarr;
+              {p.orderCta}
             </a>
           </div>
         </div>
@@ -343,6 +350,9 @@ export function ProductCarousel() {
           pageIndex={lightbox.pageIndex}
           onClose={closeLightbox}
           onChangePage={(i) => setLightbox({ open: true, pageIndex: i })}
+          closeLabel={t.common.close}
+          prevLabel={t.common.previous}
+          nextLabel={t.common.next}
         />
       )}
 
@@ -371,25 +381,33 @@ function Lightbox({
   pageIndex,
   onClose,
   onChangePage,
+  closeLabel,
+  prevLabel,
+  nextLabel,
 }: {
-  item: (typeof katalog)[number];
-  accent: { color: string; border: string; glow: string };
+  item: Item;
+  accent: Accent;
   pageIndex: number;
   onClose: () => void;
   onChangePage: (i: number) => void;
+  closeLabel: string;
+  prevLabel: string;
+  nextLabel: string;
 }) {
   const total = item.pages.length;
   const prev = () => onChangePage((pageIndex - 1 + total) % total);
   const next = () => onChangePage((pageIndex + 1) % total);
 
-  // Swipe inside lightbox
   const dragX = useRef<number | null>(null);
   const startDrag = (x: number) => { dragX.current = x; };
   const endDrag = (x: number) => {
     if (dragX.current === null) return;
     const delta = x - dragX.current;
     dragX.current = null;
-    if (Math.abs(delta) > 50) delta < 0 ? next() : prev();
+    if (Math.abs(delta) > 50) {
+      if (delta < 0) next();
+      else prev();
+    }
   };
 
   return (
@@ -424,7 +442,7 @@ function Lightbox({
           <button
             onClick={onClose}
             className="w-10 h-10 rounded-full border border-[#2a2a2a] flex items-center justify-center text-[#555] hover:border-[#666] hover:text-white transition-all duration-200"
-            aria-label="Tutup"
+            aria-label={closeLabel}
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -443,21 +461,18 @@ function Lightbox({
         onTouchStart={(e) => startDrag(e.touches[0].clientX)}
         onTouchEnd={(e) => endDrag(e.changedTouches[0].clientX)}
       >
-        {/* Prev */}
         <button
           onClick={prev}
           className="flex-none w-12 h-12 rounded-full border border-[#222] flex items-center justify-center text-[#444] hover:border-[#555] hover:text-white transition-all duration-200"
-          aria-label="Previous"
+          aria-label={prevLabel}
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
 
-        {/* Image — ukuran mengikuti gambar asli */}
         <div className="flex-1 flex items-center justify-center min-w-0">
           <div className="relative inline-block">
-            {/* Accent top bar — lebar pas dengan gambar */}
             <div
               className="absolute top-0 left-0 right-0 h-[2px] z-10 rounded-t-2xl"
               style={{ background: `linear-gradient(90deg, ${accent.color}, #a78bfa)` }}
@@ -466,7 +481,7 @@ function Lightbox({
             <img
               key={pageIndex}
               src={item.pages[pageIndex]}
-              alt={`${item.name} halaman ${pageIndex + 1}`}
+              alt={`${item.name} ${pageIndex + 1}`}
               draggable={false}
               className="rounded-2xl border border-[#1e1e1e] select-none block"
               style={{
@@ -480,11 +495,10 @@ function Lightbox({
           </div>
         </div>
 
-        {/* Next */}
         <button
           onClick={next}
           className="flex-none w-12 h-12 rounded-full border border-[#222] flex items-center justify-center text-[#444] hover:border-[#555] hover:text-white transition-all duration-200"
-          aria-label="Next"
+          aria-label={nextLabel}
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -516,7 +530,7 @@ function Lightbox({
               >
                 <Image
                   src={src}
-                  alt={`halaman ${i + 1}`}
+                  alt={`${i + 1}`}
                   fill
                   className="object-cover"
                   sizes="60px"
@@ -534,12 +548,15 @@ function Lightbox({
 function KatalogCard({
   item,
   isCenter,
-  accent,
+  patternsLabel,
+  viewAllLabel,
 }: {
-  item: (typeof katalog)[number];
+  item: Item;
   isCenter: boolean;
-  accent: { color: string; border: string; glow: string };
+  patternsLabel: string;
+  viewAllLabel: string;
 }) {
+  const accent = item.accent;
   return (
     <div
       className="relative w-full h-full overflow-hidden rounded-2xl border border-[#1e1e1e] group/card"
@@ -602,11 +619,10 @@ function KatalogCard({
       {/* Pola badge */}
       <div className="absolute top-5 right-5 z-30">
         <span className="text-[#888] text-[9px] font-bold uppercase tracking-[0.15em] bg-black/50 border border-[#222] backdrop-blur-sm px-3 py-1.5 rounded-full">
-          {item.pola} Pola
+          {item.pola} {patternsLabel}
         </span>
       </div>
 
-      {/* "Lihat Design" hint on center hover */}
       {isCenter && (
         <div className="absolute inset-0 z-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none">
           <div
@@ -616,7 +632,7 @@ function KatalogCard({
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
             </svg>
-            Lihat Semua Design
+            {viewAllLabel}
           </div>
         </div>
       )}

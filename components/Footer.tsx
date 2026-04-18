@@ -1,13 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-
-const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "Company", href: "/company" },
-  { label: "Order", href: "/order" },
-  { label: "News", href: "/news" },
-  { label: "Contact", href: "/contact" },
-];
+import { useTranslation } from "@/lib/i18n";
 
 const socials = [
   {
@@ -55,6 +50,18 @@ const marketplaces = [
 ];
 
 export default function Footer() {
+  const t = useTranslation();
+  const navLinks = [
+    { label: t.nav.home, href: "/" },
+    { label: t.nav.company, href: "/company" },
+    { label: t.nav.order, href: "/order" },
+    { label: t.nav.news, href: "/news" },
+    { label: t.nav.contact, href: "/contact" },
+  ];
+
+  const year = new Date().getFullYear();
+  const copyright = t.footer.copyright.replace("{year}", String(year));
+
   return (
     <footer className="bg-[#080808] border-t border-[#1a1a1a] text-white">
 
@@ -71,10 +78,10 @@ export default function Footer() {
             className="object-contain brightness-0 invert"
           />
           <p className="text-[#444] text-sm leading-relaxed max-w-[220px]">
-            Tempatnya Custom Jersey Yang Indonesia Banget.
+            {t.footer.tagline}
           </p>
           <p className="text-[#e03030] text-[10px] font-bold uppercase tracking-[0.2em]">
-            POLA AYRES BEDA KELAS
+            {t.footer.motto}
           </p>
           <div className="flex gap-3 mt-1">
             {socials.map((s) => (
@@ -94,7 +101,7 @@ export default function Footer() {
 
         {/* Nav */}
         <div>
-          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#333] mb-5">Menu</p>
+          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#333] mb-5">{t.common.menu}</p>
           <nav className="flex flex-col gap-3">
             {navLinks.map((link) => (
               <Link
@@ -110,16 +117,13 @@ export default function Footer() {
 
         {/* Info */}
         <div>
-          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#333] mb-5">Informasi</p>
+          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#333] mb-5">{t.common.information}</p>
           <div className="flex flex-col gap-3 text-[#555] text-sm">
-            <p className="leading-relaxed">
-              Jl. Wonocatur No.427,<br />
-              Banguntapan, Kotagede,<br />
-              D.I. Yogyakarta
+            <p className="leading-relaxed whitespace-pre-line">
+              {t.footer.address}
             </p>
-            <p className="leading-relaxed">
-              Senin – Sabtu: 09.00 – 16.30<br />
-              Minggu: Tutup
+            <p className="leading-relaxed whitespace-pre-line">
+              {t.footer.hours}
             </p>
             <a href="mailto:admin@ayresapparel.com" className="hover:text-white transition-colors">
               admin@ayresapparel.com
@@ -132,7 +136,7 @@ export default function Footer() {
 
         {/* Marketplace */}
         <div>
-          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#333] mb-5">Tersedia di</p>
+          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#333] mb-5">{t.common.availableOn}</p>
           <div className="flex flex-col gap-3">
             {marketplaces.map((m) => (
               <a
@@ -161,10 +165,10 @@ export default function Footer() {
       <div className="border-t border-[#111] px-6 py-5">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
           <p className="text-[#333] text-xs">
-            © {new Date().getFullYear()} Ayres Apparel. All rights reserved.
+            {copyright}
           </p>
           <p className="text-[#2a2a2a] text-xs">
-            Custom Jersey · Bantul, Yogyakarta
+            {t.footer.subCopyright}
           </p>
         </div>
       </div>

@@ -1,57 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-
-const tabs = [
-  {
-    id: 'quality',
-    label: 'Quality',
-    problems: [
-      'Bahan kualitas buruk, panas, kasar, gampang sobek, cepat susut.',
-      'Sablon cepat pudar / luntur, harga tinggi, kualitas rendah.',
-      'Jahitan tidak rapi, mudah lepas setelah beberapa kali cuci.',
-      'Warna tidak sesuai desain yang dipesan.',
-      'Tidak ada garansi / tanggung jawab ketika barang cacat.',
-    ],
-  },
-  {
-    id: 'shipping',
-    label: 'Shipping',
-    problems: [
-      'Seller tidak amanah, pesanan tidak sesuai yang dijanjikan.',
-      'Tidak ada kepastian waktu atau selesai tidak tepat waktu.',
-      'Pengiriman lambat, paket sering hilang atau rusak di jalan.',
-      'Tidak ada tracking yang jelas setelah order dikirim.',
-      'Tidak ada konfirmasi ketika barang sudah selesai produksi.',
-    ],
-  },
-  {
-    id: 'pricing',
-    label: 'Pricing',
-    problems: [
-      'Harga tidak transparan, banyak biaya tersembunyi setelah order.',
-      'Harga mahal tapi kualitas tidak sebanding.',
-      'Tidak ada harga khusus untuk pemesanan dalam jumlah besar.',
-      'Biaya desain mahal, padahal desain sederhana.',
-      'Harga berubah-ubah setelah negosiasi dan deal.',
-    ],
-  },
-  {
-    id: 'service',
-    label: 'Service',
-    problems: [
-      'CS tidak responsif, lambat membalas pesan.',
-      'Tidak ada konsultasi desain, langsung disuruh kirim file.',
-      'Revisi desain dikenakan biaya tambahan.',
-      'Complain diabaikan, tidak ada solusi ketika ada masalah.',
-      'Tidak ada after-sales support setelah barang diterima.',
-    ],
-  },
-];
+import { useTranslation } from '@/lib/i18n';
 
 export default function TrustSection() {
-  const [active, setActive] = useState('quality');
-  const current = tabs.find((t) => t.id === active)!;
+  const t = useTranslation();
+  const tabs = t.trust.tabs;
+  const [active, setActive] = useState<string>(tabs[0].id);
+  const current = tabs.find((x) => x.id === active) ?? tabs[0];
 
   return (
     <section className="py-20 border-t border-[#1a1a1a]">
@@ -59,11 +15,11 @@ export default function TrustSection() {
 
         {/* Kiri: masalah — berubah sesuai tab aktif */}
         <div>
-          <h3 className="text-white font-black text-2xl uppercase leading-tight mb-2">
-            Urusan Produksi Jersey<br />Percayakan pada Ayres
+          <h3 className="text-white font-black text-2xl uppercase leading-tight mb-2 whitespace-pre-line">
+            {t.trust.heading}
           </h3>
           <p className="text-[#666] text-sm mb-6">
-            Mungkin kamu punya kekhawatiran seperti ini ketika pesan Jersey:
+            {t.trust.intro}
           </p>
           <ul className="flex flex-col gap-3">
             {current.problems.map((item) => (
@@ -78,27 +34,25 @@ export default function TrustSection() {
         {/* Kanan: tombol tab */}
         <div>
           <p className="text-[#888] text-sm mb-2">
-            Kami tidak memberikan <span className="text-white font-bold">JANJI</span>, tapi{' '}
-            <span className="text-white font-bold">BUKTI</span>. Kepuasan customer yang kami
-            utamakan. Di AYRES, kami pastikan kamu mendapat:
+            {t.trust.message}
           </p>
           <div className="flex flex-col divide-y divide-[#1a1a1a]">
-            {tabs.map((t, i) => (
+            {tabs.map((tab, i) => (
               <button
-                key={t.id}
-                onClick={() => setActive(t.id)}
+                key={tab.id}
+                onClick={() => setActive(tab.id)}
                 className="group flex items-center justify-between py-5 text-left cursor-pointer w-full"
               >
                 <div className="flex items-center gap-4">
-                  <span className={`text-[11px] font-bold tabular-nums transition-colors duration-200 ${active === t.id ? 'text-[#e03030]' : 'text-[#333]'}`}>
+                  <span className={`text-[11px] font-bold tabular-nums transition-colors duration-200 ${active === tab.id ? 'text-[#e03030]' : 'text-[#333]'}`}>
                     0{i + 1}
                   </span>
-                  <span className={`text-sm font-bold uppercase tracking-wider transition-colors duration-200 ${active === t.id ? 'text-white' : 'text-[#555] group-hover:text-[#999]'}`}>
-                    Best {t.label}
+                  <span className={`text-sm font-bold uppercase tracking-wider transition-colors duration-200 ${active === tab.id ? 'text-white' : 'text-[#555] group-hover:text-[#999]'}`}>
+                    {tab.label}
                   </span>
                 </div>
-                <span className={`text-xs transition-colors duration-200 ${active === t.id ? 'text-[#e03030]' : 'text-[#333] group-hover:text-[#555]'}`}>
-                  {active === t.id ? '●' : '○'}
+                <span className={`text-xs transition-colors duration-200 ${active === tab.id ? 'text-[#e03030]' : 'text-[#333] group-hover:text-[#555]'}`}>
+                  {active === tab.id ? '●' : '○'}
                 </span>
               </button>
             ))}

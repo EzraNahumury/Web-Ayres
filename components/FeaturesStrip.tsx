@@ -1,17 +1,17 @@
-const features = [
-  { num: "Rp 70rb", label: "Harga Mulai", desc: "Jersey custom, kualitas tidak murahan." },
-  { num: "Pattern Lab", label: "Technology", desc: "Pola presisi tinggi, hasil beda kelas." },
-  { num: "No MOQ", label: "Minimum Order", desc: "Satu biji pun kami kerjakan serius." },
-  { num: "100%", label: "Bebas Desain", desc: "Logo, nama, nomor — semua terserah kamu." },
-];
+"use client";
+
+import { useTranslation } from "@/lib/i18n";
 
 export default function FeaturesStrip() {
+  const t = useTranslation();
+  const features = t.features;
+
   return (
     <section className="pt-0 pb-16">
       <div className="max-w-5xl mx-auto px-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[#1a1a1a]">
-          {features.map((f) => (
-            <div key={f.num} className="group relative flex flex-col items-center text-center px-6 py-12 bg-[#0a0a0a] overflow-hidden transition-colors duration-300 hover:bg-[#0d0d0f]">
+          {features.map((f, i) => (
+            <div key={i} className="group relative flex flex-col items-center text-center px-6 py-12 bg-[#0a0a0a] overflow-hidden transition-colors duration-300 hover:bg-[#0d0d0f]">
 
               {/* subtle top accent line on hover */}
               <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#e03030] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

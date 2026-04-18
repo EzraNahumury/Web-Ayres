@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslation } from "@/lib/i18n";
+
 const socials = [
   {
     label: "Instagram",
@@ -24,6 +26,9 @@ const socials = [
 ];
 
 export default function ContactClient() {
+  const t = useTranslation();
+  const c = t.contact;
+
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
@@ -33,7 +38,11 @@ export default function ContactClient() {
     const subject = (form.elements.namedItem("subject") as HTMLInputElement)?.value;
     const message = (form.elements.namedItem("message") as HTMLTextAreaElement)?.value;
     const body = encodeURIComponent(
-      `Halo Ayres Apparel!\n\nNama: ${name}\nNo. WA: ${phone}\nEmail: ${email}\n\nPesan:\n${message}`
+      c.mailBody
+        .replace("{name}", name ?? "")
+        .replace("{phone}", phone ?? "")
+        .replace("{email}", email ?? "")
+        .replace("{message}", message ?? "")
     );
     window.location.href = `mailto:order@ayresapparel.com?subject=${encodeURIComponent(subject)}&body=${body}`;
   }
@@ -43,7 +52,6 @@ export default function ContactClient() {
 
       {/* ── Hero ─────────────────────────────────── */}
       <section className="relative bg-[#0a0a0a] border-b border-[#1a1a1a] pt-24 pb-20 overflow-hidden">
-        {/* Grid pattern */}
         <div className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
@@ -53,14 +61,14 @@ export default function ContactClient() {
           <div style={{ animation: 'fadeUp 0.7s ease both' }}>
             <div className="inline-flex items-center gap-2 mb-8">
               <span className="w-8 h-px bg-[#e03030]" />
-              <span className="text-[#e03030] text-[10px] font-bold uppercase tracking-[0.3em]">Hubungi Kami</span>
+              <span className="text-[#e03030] text-[10px] font-bold uppercase tracking-[0.3em]">{c.label}</span>
             </div>
             <h1 className="text-[clamp(3.5rem,9vw,6rem)] font-black uppercase leading-[0.88] mb-8">
-              Let's<br />
-              <span className="relative">Talk<span className="text-[#e03030]">.</span></span>
+              {c.heroH1a}<br />
+              <span className="relative">{c.heroH1b}<span className="text-[#e03030]">.</span></span>
             </h1>
             <p className="text-[#666] text-sm leading-relaxed mb-10 max-w-xs">
-              Konsultasi desain gratis, respon cepat. Tim kami siap membantu dari desain hingga pengiriman ke seluruh Indonesia.
+              {c.heroDesc}
             </p>
             <div className="flex gap-3">
               {socials.map((s, i) => (
@@ -78,14 +86,11 @@ export default function ContactClient() {
             <a href="https://wa.me/6287818310416" target="_blank" rel="noopener noreferrer"
               className="group relative overflow-hidden flex items-center justify-between px-7 py-7 border border-[#e03030]/30 hover:border-[#e03030]/60 transition-all duration-300"
               style={{ background: 'linear-gradient(135deg, #0f0e1e 0%, #13114a 50%, #0d0d20 100%)' }}>
-              {/* Glow top-left */}
               <div className="absolute -left-6 -top-6 w-32 h-32 opacity-30 pointer-events-none rounded-full"
                 style={{ background: 'radial-gradient(circle, #e03030, transparent 70%)' }} />
-              {/* Glow bottom-right */}
               <div className="absolute right-0 bottom-0 w-24 h-24 opacity-10 pointer-events-none rounded-full"
                 style={{ background: 'radial-gradient(circle, #f5a0a0, transparent 70%)' }} />
               <div className="flex items-center gap-5">
-                {/* WA Icon */}
                 <div className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
@@ -93,35 +98,35 @@ export default function ContactClient() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-white/60 text-[9px] font-bold uppercase tracking-[0.25em] mb-1">Chat Langsung via WhatsApp</p>
+                  <p className="text-white/60 text-[9px] font-bold uppercase tracking-[0.25em] mb-1">{c.waLabel}</p>
                   <p className="text-white text-2xl font-black tracking-tight">0878-1831-0416</p>
                 </div>
               </div>
               <div className="flex items-center gap-2 text-white/60 group-hover:text-white transition-colors">
-                <span className="text-[10px] font-bold uppercase tracking-widest hidden md:block">Chat Sekarang</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest hidden md:block">{c.waCta}</span>
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </div>
             </a>
             <div className="grid grid-cols-2 gap-3">
               <a href="mailto:order@ayresapparel.com"
                 className="group flex flex-col gap-1.5 border border-[#1a1a1a] bg-[#0d0d0d] hover:border-[#2a2a2a] px-6 py-5 transition-colors duration-200">
-                <p className="text-[#444] text-[9px] font-bold uppercase tracking-[0.2em]">Email Order</p>
+                <p className="text-[#444] text-[9px] font-bold uppercase tracking-[0.2em]">{c.emailOrder}</p>
                 <p className="text-[#999] text-xs font-medium group-hover:text-white transition-colors">order@ayresapparel.com</p>
               </a>
               <a href="mailto:pengaduan@ayresapparel.com"
                 className="group flex flex-col gap-1.5 border border-[#1a1a1a] bg-[#0d0d0d] hover:border-[#2a2a2a] px-6 py-5 transition-colors duration-200">
-                <p className="text-[#444] text-[9px] font-bold uppercase tracking-[0.2em]">Email Pengaduan</p>
+                <p className="text-[#444] text-[9px] font-bold uppercase tracking-[0.2em]">{c.emailComplaint}</p>
                 <p className="text-[#999] text-xs font-medium group-hover:text-white transition-colors">pengaduan@ayresapparel.com</p>
               </a>
             </div>
             <div className="border border-[#1a1a1a] bg-[#0d0d0d] px-6 py-5 flex items-center justify-between">
               <div>
-                <p className="text-[#444] text-[9px] font-bold uppercase tracking-[0.2em] mb-1.5">Jam Operasional</p>
-                <p className="text-[#999] text-xs">Senin – Sabtu &nbsp;·&nbsp; 09.00 – 16.30 WIB</p>
+                <p className="text-[#444] text-[9px] font-bold uppercase tracking-[0.2em] mb-1.5">{c.hoursLabel}</p>
+                <p className="text-[#999] text-xs">{c.hoursText}</p>
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-green-500 text-[10px] font-semibold">Buka</span>
+                <span className="text-green-500 text-[10px] font-semibold">{c.open}</span>
               </div>
             </div>
           </div>
@@ -134,54 +139,55 @@ export default function ContactClient() {
 
           {/* Form */}
           <div style={{ animation: 'fadeUp 0.6s ease 0.1s both' }}>
-            <h2 className="text-2xl font-black uppercase mb-8">Kirim Pesan</h2>
+            <h2 className="text-2xl font-black uppercase mb-8">{c.formH2}</h2>
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex flex-col gap-2">
-                  <label className="text-xs font-semibold text-[#888]">Nama <span className="text-[#e03030]">*</span></label>
-                  <input name="name" type="text" required placeholder="Nama kamu"
+                  <label className="text-xs font-semibold text-[#888]">{c.formName} <span className="text-[#e03030]">*</span></label>
+                  <input name="name" type="text" required placeholder={c.formNamePlaceholder}
                     className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#e03030] placeholder:text-[#2d2d2d] transition-colors" />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label className="text-xs font-semibold text-[#888]">No. WA</label>
-                  <input name="phone" type="tel" placeholder="08xx-xxxx-xxxx"
+                  <label className="text-xs font-semibold text-[#888]">{c.formPhone}</label>
+                  <input name="phone" type="tel" placeholder={c.formPhonePlaceholder}
                     className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#e03030] placeholder:text-[#2d2d2d] transition-colors" />
                 </div>
               </div>
               <div className="flex flex-col gap-2">
-                <label className="text-xs font-semibold text-[#888]">Email</label>
-                <input name="email" type="email" placeholder="email@kamu.com"
+                <label className="text-xs font-semibold text-[#888]">{c.formEmail}</label>
+                <input name="email" type="email" placeholder={c.formEmailPlaceholder}
                   className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#e03030] placeholder:text-[#2d2d2d] transition-colors" />
               </div>
               <div className="flex flex-col gap-2">
-                <label className="text-xs font-semibold text-[#888]">Subjek <span className="text-[#e03030]">*</span></label>
-                <input name="subject" type="text" required placeholder="Pesan jersey, konsultasi desain, dll."
+                <label className="text-xs font-semibold text-[#888]">{c.formSubject} <span className="text-[#e03030]">*</span></label>
+                <input name="subject" type="text" required placeholder={c.formSubjectPlaceholder}
                   className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#e03030] placeholder:text-[#2d2d2d] transition-colors" />
               </div>
               <div className="flex flex-col gap-2">
-                <label className="text-xs font-semibold text-[#888]">Pesan <span className="text-[#e03030]">*</span></label>
+                <label className="text-xs font-semibold text-[#888]">{c.formMessage} <span className="text-[#e03030]">*</span></label>
                 <textarea name="message" required rows={5}
-                  placeholder="Ceritakan kebutuhanmu — jumlah, bahan, desain, deadline..."
+                  placeholder={c.formMessagePlaceholder}
                   className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#e03030] placeholder:text-[#2d2d2d] transition-colors resize-none" />
               </div>
               <button type="submit"
                 className="group relative overflow-hidden w-full text-white font-bold text-xs uppercase tracking-widest py-4 transition-all duration-300 flex items-center justify-center gap-3 border border-[#e03030]/30 hover:border-[#e03030]/60"
                 style={{ background: 'linear-gradient(135deg, #0f0e1e 0%, #13114a 50%, #0d0d20 100%)' }}>
-                Kirim ke Email
+                {c.formSubmit}
                 <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
               </button>
-              <p className="text-[#2d2d2d] text-[10px] text-center">Pesan dikirim ke order@ayresapparel.com</p>
+              <p className="text-[#2d2d2d] text-[10px] text-center">{c.formFooter}</p>
             </form>
           </div>
 
           {/* Map */}
           <div className="flex flex-col gap-4" style={{ animation: 'fadeUp 0.6s ease 0.25s both' }}>
-            <h2 className="text-2xl font-black uppercase">Lokasi Kami</h2>
-            <p className="text-[#555] text-xs">Jl. Wonocatur No.427, Jeruklegi, Banguntapan, D.I. Yogyakarta</p>
+            <h2 className="text-2xl font-black uppercase">{c.mapH2}</h2>
+            <p className="text-[#555] text-xs">{c.mapAddress}</p>
             <div className="flex-1 overflow-hidden border border-[#1a1a1a]" style={{ minHeight: 400 }}>
               <iframe
+                title={c.mapH2}
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3131.6!2d110.4031070!3d-7.8067120!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a573253328fad%3A0x63a0000974d88ae4!2sAYRES%20APPAREL!5e0!3m2!1sen!2sid!4v1709000000000!5m2!1sen!2sid"
                 width="100%" height="100%"
                 style={{ border: 0, filter: 'invert(100%) hue-rotate(180deg)', display: 'block' }}
@@ -191,7 +197,7 @@ export default function ContactClient() {
             </div>
             <a href="https://www.google.com/maps/place/AYRES+APPAREL/@-7.806712,110.403107,17z" target="_blank" rel="noopener noreferrer"
               className="group flex items-center justify-center gap-2 border border-[#1a1a1a] py-3.5 text-[#666] text-xs font-semibold hover:border-[#e03030] hover:text-white transition-all duration-200">
-              Buka di Google Maps
+              {c.mapCta}
               <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
           </div>

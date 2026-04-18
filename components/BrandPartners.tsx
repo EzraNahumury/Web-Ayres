@@ -1,5 +1,7 @@
 'use client';
 
+import { useTranslation } from '@/lib/i18n';
+
 const partners = [
   { name: "AAU", src: "/logo_partner/AAU.png" },
   { name: "Dikpora", src: "/logo_partner/DIKPORA.png" },
@@ -16,19 +18,20 @@ const partners = [
 const track = [...partners, ...partners];
 
 export default function BrandPartners() {
+  const t = useTranslation();
   return (
     <section className="py-20 border-y border-[#1a1a1a] overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
           <p className="text-[#e03030] text-[10px] font-bold uppercase tracking-[0.25em] mb-3">
-            Dipercaya oleh 100+ klien
+            {t.brandPartners.label}
           </p>
           <h2 className="text-white text-3xl font-black uppercase leading-tight">
-            Our Brand Partners
+            {t.brandPartners.heading}
           </h2>
         </div>
         <p className="text-[#888] text-xs max-w-xs text-right hidden md:block">
-          Dari perusahaan BUMN, militer, hingga klub sepak bola profesional.
+          {t.brandPartners.desc}
         </p>
       </div>
 

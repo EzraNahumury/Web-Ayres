@@ -1,51 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-
-const reviews = [
-  {
-    name: 'Egyadnan Saputra',
-    meta: '1 ulasan',
-    stars: 5,
-    text: 'Wahh..warbyasah sih buat jersey disini, selain bisa puas milih bahan jersey dan desain, puas juga dgn pelayanan nya yg ramah2 dan ga ketinggalan hasil nya juga memuaskan bgt dgn cuttingan yg rapi dan hasil warna yg menyala bgt. Terimakasih Ayres Apparel',
-  },
-  {
-    name: 'Dikky Kusuma Wijaya',
-    meta: '5 ulasan · 1 foto',
-    stars: 5,
-    text: 'Jersey nya nyaman, proses cepat, pelayanan baik. Recomended 👍👍👍',
-  },
-  {
-    name: 'Panjerino Setiaji',
-    meta: '5 ulasan · 20 foto',
-    stars: 5,
-    text: 'Rekomended sekali kakak, jersey pesanan saya selesai dengan cepat. Pilihan bahannya lengkap, designnya juga keren2. Terimakasih Ayres Apparel 🤩 TOP 🔥',
-  },
-  {
-    name: 'A Priambudi',
-    meta: '1 ulasan',
-    stars: 5,
-    text: 'rekomen bikin jersey disini!!',
-  },
-  {
-    name: 'Narendra Irvan',
-    meta: '6 ulasan · 1 foto',
-    stars: 5,
-    text: 'Pelayanannya ramah dan bisa bikin jersey dalam waktu yang super cepat 🤙',
-  },
-  {
-    name: 'maya fadlilah asthanny',
-    meta: '1 ulasan',
-    stars: 5,
-    text: 'Adem banget bahan ny 🥹🥰 makasih udh bantuin bikin jersey! Next repeat order ya kak! ❤️',
-  },
-  {
-    name: 'angger p',
-    meta: 'Local Guide · 11 ulasan · 31 foto',
-    stars: 5,
-    text: 'cakep bangetttt jerseynyaaaaa. pelayanan cepat, baik sekali mimpinnya. worth it to buy bangetttt dengan harga segitu tapi jerseynya cakep abis',
-  },
-];
+import { useTranslation } from '@/lib/i18n';
 
 function Stars({ count }: { count: number }) {
   return (
@@ -60,6 +16,8 @@ function Stars({ count }: { count: number }) {
 }
 
 export default function ReviewSlider() {
+  const t = useTranslation();
+  const reviews = t.reviews.list;
   const [current, setCurrent] = useState(0);
   const prev = () => setCurrent((c) => (c === 0 ? reviews.length - 1 : c - 1));
   const next = () => setCurrent((c) => (c === reviews.length - 1 ? 0 : c + 1));
@@ -79,14 +37,14 @@ export default function ReviewSlider() {
               <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
               <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
             </svg>
-            <span className="text-[#555] text-xs">Google Review</span>
+            <span className="text-[#555] text-xs">{t.reviews.googleLabel}</span>
           </div>
-          <Stars count={r.stars} />
+          <Stars count={5} />
         </div>
 
         {/* Quote */}
         <p className="text-white text-sm leading-relaxed flex-1 mb-6">
-          "{r.text}"
+          &ldquo;{r.text}&rdquo;
         </p>
 
         {/* Reviewer */}

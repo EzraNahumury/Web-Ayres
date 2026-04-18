@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Particles from "@/components/Particles";
+import { LanguageProvider } from "@/lib/i18n";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -25,11 +26,11 @@ export const metadata: Metadata = {
     template: "%s | Ayres Apparel",
   },
   description:
-    "Custom jersey berkualitas mulai Rp.70.000, deadline aman, pola Ayres beda kelas. Melayani seluruh Indonesia.",
-  keywords: ["custom jersey", "jersey bola", "jersey futsal", "jersey olahraga", "Yogyakarta"],
+    "Premium custom jersey starting at Rp 70,000. Guaranteed deadlines, Ayres pattern a cut above. Serving all of Indonesia and beyond.",
+  keywords: ["custom jersey", "football jersey", "futsal jersey", "sports apparel", "Yogyakarta"],
   openGraph: {
     siteName: "Ayres Apparel",
-    locale: "id_ID",
+    locale: "en_US",
     type: "website",
   },
 };
@@ -40,27 +41,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="id" className={`${raleway.variable} ${heebo.variable}`}>
+    <html lang="en" className={`${raleway.variable} ${heebo.variable}`}>
       <body className={raleway.className}>
-        {/* Dot Grid background — fixed, full screen, behind everything */}
-        <div className="fixed inset-0 z-0 pointer-events-none">
-          <Particles
-            particleColors={["#e03030", "#a78bfa", "#818cf8", "#ffffff"]}
-            particleCount={200}
-            particleSpread={10}
-            speed={0.1}
-            particleBaseSize={80}
-            moveParticlesOnHover
-            alphaParticles={false}
-            disableRotation={false}
-            pixelRatio={1}
-          />
-        </div>
-        <div className="relative z-10">
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </div>
+        <LanguageProvider>
+          {/* Dot Grid background — fixed, full screen, behind everything */}
+          <div className="fixed inset-0 z-0 pointer-events-none">
+            <Particles
+              particleColors={["#e03030", "#a78bfa", "#818cf8", "#ffffff"]}
+              particleCount={200}
+              particleSpread={10}
+              speed={0.1}
+              particleBaseSize={80}
+              moveParticlesOnHover
+              alphaParticles={false}
+              disableRotation={false}
+              pixelRatio={1}
+            />
+          </div>
+          <div className="relative z-10">
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </div>
+        </LanguageProvider>
       </body>
     </html>
   );

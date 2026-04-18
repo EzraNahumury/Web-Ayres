@@ -1,24 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-
-const faqs = [
-  {
-    q: 'Apakah bisa custom desain?',
-    a: 'Selain pilihan desain yang keren-keren dari kami, kamu dan tim-mu bisa request desain yang sesuai dengan yang kamu mau / punya ya. Tanpa tambahan biaya lagi.',
-  },
-  {
-    q: 'Pengiriman dari kota mana dan gimana cara memastikan ongkirnya?',
-    a: 'Pengiriman dari Bantul, Yogyakarta. Untuk memastikan ongkir, customer service kami akan memberitahukan terlebih dahulu sebelum invoice dibuat.',
-  },
-  {
-    q: 'Apakah ada garansi jika ada barang yang cacat atau kendala pengiriman?',
-    a: 'Ya, kami memastikan quality control dalam proses produksi. Namun jika masih terdapat cacat produksi atau kendala pengiriman, kami akan usahakan memberikan solusi terbaik.',
-  },
-];
+import { useTranslation } from '@/lib/i18n';
 
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
+  const t = useTranslation();
+  const faqs = t.faq.items;
 
   return (
     <section className="py-20 border-t border-[#1a1a1a]">
@@ -26,8 +14,8 @@ export default function FAQ() {
 
         {/* Header */}
         <div className="mb-12 text-center">
-          <p className="text-[#e03030] text-[11px] font-bold uppercase tracking-[0.2em] mb-3">FAQ</p>
-          <h2 className="text-white text-3xl font-black uppercase">Pertanyaan yang Sering Ditanya</h2>
+          <p className="text-[#e03030] text-[11px] font-bold uppercase tracking-[0.2em] mb-3">{t.faq.label}</p>
+          <h2 className="text-white text-3xl font-black uppercase">{t.faq.heading}</h2>
         </div>
 
         {/* Items */}
