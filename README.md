@@ -112,59 +112,59 @@ public/
 
 ```mermaid
 flowchart TD
-  A[Browser visitor] --> B[Next.js App Router]
-  B --> C[RootLayout app/layout.tsx]
-  C --> D[LanguageProvider]
-  C --> E[Particles background]
-  D --> F[Header]
-  D --> G[Selected route content]
-  D --> H[Footer]
+  A["Browser visitor"] --> B["Next.js App Router"]
+  B --> C["RootLayout app/layout.tsx"]
+  C --> D["LanguageProvider"]
+  C --> E["Particles background"]
+  D --> F["Header"]
+  D --> G["Selected route content"]
+  D --> H["Footer"]
 
-  F --> I[Navigation links]
-  F --> J[Language switcher]
-  J --> K[localStorage ayres-lang]
-  J --> L[document.documentElement.lang]
+  F --> I["Navigation links"]
+  F --> J["Language switcher"]
+  J --> K["localStorage ayres-lang"]
+  J --> L["document.documentElement.lang"]
 
-  G --> M[translations.ts]
-  G --> N[Local images in public]
-  G --> O[Client interactions]
+  G --> M["translations.ts"]
+  G --> N["Local images in public"]
+  G --> O["Client interactions"]
 
-  O --> P[WhatsApp wa.me]
-  O --> Q[mailto order@ayresapparel.com]
-  O --> R[Google Maps embed/link]
-  O --> S[YouTube IFrame API]
+  O --> P["WhatsApp wa.me"]
+  O --> Q["mailto order@ayresapparel.com"]
+  O --> R["Google Maps embed/link"]
+  O --> S["YouTube IFrame API"]
 ```
 
 ## Diagram Flow Halaman
 
 ```mermaid
 flowchart LR
-  Home[/ /] --> HomeSections[Hero, features, gallery, stats, trust, reviews, partners, FAQ]
-  Product[/product] --> ProductFlow[Catalog covers, 3D carousel, lightbox, WhatsApp CTA]
-  Order[/order] --> OrderFlow[How to order, size guide, payment, corporate order]
-  Company[/company] --> CompanyFlow[Profile, stats, pillars, values, founder]
-  Contact[/contact] --> ContactFlow[Social links, WhatsApp, email form, Google Maps]
-  News[/news] --> NewsList[Listing posts from translations]
-  NewsList --> NewsDetail[/news/[slug]]
-  NewsDetail --> NewsArticle[SSG article content from newsArticles]
+  Home["/"] --> HomeSections["Hero, features, gallery, stats, trust, reviews, partners, FAQ"]
+  Product["/product"] --> ProductFlow["Catalog covers, 3D carousel, lightbox, WhatsApp CTA"]
+  Order["/order"] --> OrderFlow["How to order, size guide, payment, corporate order"]
+  Company["/company"] --> CompanyFlow["Profile, stats, pillars, values, founder"]
+  Contact["/contact"] --> ContactFlow["Social links, WhatsApp, email form, Google Maps"]
+  News["/news"] --> NewsList["Listing posts from translations"]
+  NewsList --> NewsDetail["/news/:slug"]
+  NewsDetail --> NewsArticle["SSG article content from newsArticles"]
 ```
 
 ## Diagram Flow Data Konten
 
 ```mermaid
 flowchart TD
-  T[translations.ts] --> HeaderCopy[Header/footer/navigation copy]
-  T --> PageCopy[Home/product/order/company/contact/news listing copy]
-  T --> ProductText[Product catalog names, package, tagline, WhatsApp text]
+  T["translations.ts"] --> HeaderCopy["Header/footer/navigation copy"]
+  T --> PageCopy["Home/product/order/company/contact/news listing copy"]
+  T --> ProductText["Product catalog names, package, tagline, WhatsApp text"]
 
-  NA[newsArticles.ts] --> NewsStatic[generateStaticParams from EN slugs]
-  NA --> NewsClient[NewsPostClient selects active language article]
+  NA["newsArticles.ts"] --> NewsStatic["generateStaticParams from EN slugs"]
+  NA --> NewsClient["NewsPostClient selects active language article"]
 
-  PC[ProductContent COVERS] --> ProductHero[Product hero cover grid]
-  PLC[ProductCarousel PAGES] --> ProductCarousel[Carousel covers and lightbox pages]
+  PC["ProductContent COVERS"] --> ProductHero["Product hero cover grid"]
+  PLC["ProductCarousel PAGES"] --> ProductCarousel["Carousel covers and lightbox pages"]
 
-  PUB[public assets] --> Images[next/image and img tags]
-  Images --> UI[Rendered website]
+  PUB["public assets"] --> Images["next/image and img tags"]
+  Images --> UI["Rendered website"]
 ```
 
 ## Flow Request dan Rendering
@@ -262,18 +262,18 @@ Flow:
 
 ```mermaid
 flowchart TD
-  A[/product] --> B[ProductContent]
-  B --> C[Read t.product.katalog]
-  B --> D[COVERS mapping]
-  C --> E[Hero stats and cover grid]
-  C --> F[ProductCarousel]
-  F --> G[PAGES mapping]
-  G --> H[3D carousel]
-  H --> I[Click side card changes active catalog]
-  H --> J[Click center card opens lightbox]
-  J --> K[Keyboard, arrows, swipe navigate pages]
-  H --> L[Order CTA]
-  L --> M[WhatsApp with encoded selected catalog message]
+  A["/product"] --> B["ProductContent"]
+  B --> C["Read t.product.katalog"]
+  B --> D["COVERS mapping"]
+  C --> E["Hero stats and cover grid"]
+  C --> F["ProductCarousel"]
+  F --> G["PAGES mapping"]
+  G --> H["3D carousel"]
+  H --> I["Click side card changes active catalog"]
+  H --> J["Click center card opens lightbox"]
+  J --> K["Keyboard, arrows, swipe navigate pages"]
+  H --> L["Order CTA"]
+  L --> M["WhatsApp with encoded selected catalog message"]
 ```
 
 Catalog yang tersedia:
@@ -306,14 +306,14 @@ Flow bisnis order yang didokumentasikan di UI:
 
 ```mermaid
 flowchart TD
-  A[Customer] --> B[Hubungi CS via WhatsApp/contact]
-  B --> C[Tentukan desain jersey]
-  C --> D[Bayar DP]
-  D --> E[Invoice dan nomor antrian]
-  E --> F[Produksi]
-  F --> G[Pelunasan]
-  G --> H[Pengiriman]
-  H --> I[Produk diterima]
+  A["Customer"] --> B["Hubungi CS via WhatsApp/contact"]
+  B --> C["Tentukan desain jersey"]
+  C --> D["Bayar DP"]
+  D --> E["Invoice dan nomor antrian"]
+  E --> F["Produksi"]
+  F --> G["Pelunasan"]
+  G --> H["Pengiriman"]
+  H --> I["Produk diterima"]
 ```
 
 Section:
@@ -362,13 +362,13 @@ Flow:
 
 ```mermaid
 flowchart TD
-  A[Visitor contact page] --> B{Action}
-  B --> C[Click WhatsApp]
-  B --> D[Click email order/complaint]
-  B --> E[Submit contact form]
-  B --> F[Open Google Maps]
-  E --> G[Build mailto URL from form fields]
-  G --> H[Open local email client]
+  A["Visitor contact page"] --> B{"Action"}
+  B --> C["Click WhatsApp"]
+  B --> D["Click email order/complaint"]
+  B --> E["Submit contact form"]
+  B --> F["Open Google Maps"]
+  E --> G["Build mailto URL from form fields"]
+  G --> H["Open local email client"]
 ```
 
 Catatan audit:
