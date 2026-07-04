@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useTranslation } from "@/lib/i18n";
 
 const socials = [
@@ -49,7 +50,9 @@ const marketplaces = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
   const t = useTranslation();
+  if (pathname?.startsWith("/admin")) return null;
   const navLinks = [
     { label: t.nav.home, href: "/" },
     { label: t.nav.company, href: "/company" },

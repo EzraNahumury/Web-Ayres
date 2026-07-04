@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useTranslation } from "@/lib/i18n";
 
 const socials = [
@@ -28,24 +29,6 @@ const socials = [
 export default function ContactClient() {
   const t = useTranslation();
   const c = t.contact;
-
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const name = (form.elements.namedItem("name") as HTMLInputElement)?.value;
-    const phone = (form.elements.namedItem("phone") as HTMLInputElement)?.value;
-    const email = (form.elements.namedItem("email") as HTMLInputElement)?.value;
-    const subject = (form.elements.namedItem("subject") as HTMLInputElement)?.value;
-    const message = (form.elements.namedItem("message") as HTMLTextAreaElement)?.value;
-    const body = encodeURIComponent(
-      c.mailBody
-        .replace("{name}", name ?? "")
-        .replace("{phone}", phone ?? "")
-        .replace("{email}", email ?? "")
-        .replace("{message}", message ?? "")
-    );
-    window.location.href = `mailto:order@ayresapparel.com?subject=${encodeURIComponent(subject)}&body=${body}`;
-  }
 
   return (
     <div className="bg-[#0a0a0a] text-white min-h-screen">
@@ -133,52 +116,49 @@ export default function ContactClient() {
         </div>
       </section>
 
-      {/* ── Form + Map ───────────────────────────── */}
+      {/* ── Reseller + Map ───────────────────────── */}
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="grid md:grid-cols-2 gap-12">
 
-          {/* Form */}
-          <div style={{ animation: 'fadeUp 0.6s ease 0.1s both' }}>
-            <h2 className="text-2xl font-black uppercase mb-8">{c.formH2}</h2>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs font-semibold text-[#888]">{c.formName} <span className="text-[#e03030]">*</span></label>
-                  <input name="name" type="text" required placeholder={c.formNamePlaceholder}
-                    className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#e03030] placeholder:text-[#2d2d2d] transition-colors" />
+          {/* Reseller */}
+          <div className="flex flex-col gap-4" style={{ animation: 'fadeUp 0.6s ease 0.1s both' }}>
+            <h2 className="text-2xl font-black uppercase">{c.resellerH2}</h2>
+            <p className="text-[#555] text-xs">{c.resellerIntro}</p>
+            <div className="relative flex-1 overflow-hidden border border-[#e03030]/30 px-7 py-8 md:px-9 md:py-10"
+              style={{ background: 'linear-gradient(135deg, #0f0e1e 0%, #13114a 50%, #0d0d20 100%)' }}>
+              <div className="absolute -left-8 -top-8 w-40 h-40 opacity-30 pointer-events-none rounded-full"
+                style={{ background: 'radial-gradient(circle, #e03030, transparent 70%)' }} />
+              <div className="absolute right-0 bottom-0 w-28 h-28 opacity-10 pointer-events-none rounded-full"
+                style={{ background: 'radial-gradient(circle, #f5a0a0, transparent 70%)' }} />
+              <div className="relative">
+                <div className="inline-flex items-center gap-2 mb-4">
+                  <span className="w-8 h-px bg-[#e03030]" />
+                  <span className="text-[#e03030] text-[10px] font-bold uppercase tracking-[0.3em]">{c.resellerLabel}</span>
                 </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs font-semibold text-[#888]">{c.formPhone}</label>
-                  <input name="phone" type="tel" placeholder={c.formPhonePlaceholder}
-                    className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#e03030] placeholder:text-[#2d2d2d] transition-colors" />
-                </div>
+                <p className="text-white text-[clamp(1.6rem,3.5vw,2.1rem)] font-black uppercase leading-[1.02] mb-6 max-w-sm">
+                  {c.resellerHeadline}<span className="text-[#e03030]">.</span>
+                </p>
+                <ul className="flex flex-col divide-y divide-white/10 mb-7">
+                  {c.resellerBenefits.map((b) => (
+                    <li key={b.title} className="flex items-start gap-4 py-4">
+                      <span className="w-1.5 h-1.5 bg-[#e03030] mt-1.5 shrink-0" />
+                      <div>
+                        <p className="text-white text-sm font-bold">{b.title}</p>
+                        <p className="text-white/50 text-xs leading-relaxed mt-1">{b.desc}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+                <Link href="/reseller"
+                  className="group flex items-center justify-center gap-3 bg-[#e03030] hover:bg-[#c22525] text-white font-bold text-xs uppercase tracking-widest py-4 transition-colors duration-200">
+                  {c.resellerCta}
+                  <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </Link>
+                <p className="text-white/30 text-[10px] text-center mt-4">{c.resellerFooter}</p>
               </div>
-              <div className="flex flex-col gap-2">
-                <label className="text-xs font-semibold text-[#888]">{c.formEmail}</label>
-                <input name="email" type="email" placeholder={c.formEmailPlaceholder}
-                  className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#e03030] placeholder:text-[#2d2d2d] transition-colors" />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label className="text-xs font-semibold text-[#888]">{c.formSubject} <span className="text-[#e03030]">*</span></label>
-                <input name="subject" type="text" required placeholder={c.formSubjectPlaceholder}
-                  className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#e03030] placeholder:text-[#2d2d2d] transition-colors" />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label className="text-xs font-semibold text-[#888]">{c.formMessage} <span className="text-[#e03030]">*</span></label>
-                <textarea name="message" required rows={5}
-                  placeholder={c.formMessagePlaceholder}
-                  className="bg-[#0e0e0e] border border-[#1e1e1e] px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#e03030] placeholder:text-[#2d2d2d] transition-colors resize-none" />
-              </div>
-              <button type="submit"
-                className="group relative overflow-hidden w-full text-white font-bold text-xs uppercase tracking-widest py-4 transition-all duration-300 flex items-center justify-center gap-3 border border-[#e03030]/30 hover:border-[#e03030]/60"
-                style={{ background: 'linear-gradient(135deg, #0f0e1e 0%, #13114a 50%, #0d0d20 100%)' }}>
-                {c.formSubmit}
-                <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </button>
-              <p className="text-[#2d2d2d] text-[10px] text-center">{c.formFooter}</p>
-            </form>
+            </div>
           </div>
 
           {/* Map */}

@@ -2,10 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { useLanguage, languages, languageLabels } from "@/lib/i18n";
 
 export default function Header() {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const { lang, setLang, t } = useLanguage();
@@ -28,6 +30,8 @@ export default function Header() {
     document.addEventListener("mousedown", onClick);
     return () => document.removeEventListener("mousedown", onClick);
   }, []);
+
+  if (pathname?.startsWith("/admin")) return null;
 
   return (
     <header className="sticky top-0 z-50 bg-[#0a0a0a] border-b border-[#1f1f1f]">

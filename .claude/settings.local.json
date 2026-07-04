@@ -6,7 +6,23 @@
       "Bash(node -e \"const fs=require\\('fs'\\);for\\(const f of ['public/gambar/LOGO_AYRES-removebg-preview.png','public/gambar/new logo.png','public/gambar/logo-perusahaan.png']\\){const b=fs.readFileSync\\(f\\);console.log\\(f,b.readUInt32BE\\(16\\)+'x'+b.readUInt32BE\\(20\\)\\);}\")",
       "Bash(node -e \"try{require\\('sharp'\\);console.log\\('sharp available'\\)}catch\\(e\\){console.log\\('no sharp'\\)}\")",
       "Bash(node -e ':*)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "PowerShell(Get-Process *)",
+      "PowerShell(npm config *)",
+      "PowerShell(Get-CimInstance *)",
+      "PowerShell($r = Invoke-WebRequest -Uri \"https://registry.npmjs.org/-/ping\" -UseBasicParsing -TimeoutSec 15; $r.StatusCode)",
+      "PowerShell(npm install *)",
+      "PowerShell(npx tsc --noEmit)",
+      "PowerShell(npm run *)",
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:3000/contact\" -UseBasicParsing -TimeoutSec 60; $r.StatusCode; if \\($r.Content -match 'Join Reseller|Program Reseller|resellerHeadline'\\) { \"RESELLER CONTENT FOUND\" } else { \"reseller content NOT found\" }; if \\($r.Content -match 'formSubmit|Send to Email|Kirim ke Email'\\) { \"OLD FORM STILL PRESENT\" } else { \"old form gone\" })",
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:3000/contact\" -UseBasicParsing -TimeoutSec 30; if \\($r.Content -match 'wa\\\\.me/6287818310416\\\\?text='\\) { \"WA CTA link OK\" } else { \"WA CTA link MISSING\" })",
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:3000/reseller\" -UseBasicParsing -TimeoutSec 60; $r.StatusCode; foreach \\($s in @\\('Form Pendaftaran Reseller Ayres','Data Pribadi','Data Usaha','Data Pendukung','Persetujuan','Sudah Berjualan Jersey','Toko Offline','Foto KTP'\\)\\) { if \\($r.Content -match [regex]::Escape\\($s\\)\\) { \"OK: $s\" } else { \"MISSING: $s\" } })",
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:3000/reseller\" -UseBasicParsing -TimeoutSec 30; foreach \\($s in @\\('Ayres Reseller Registration Form','Personal Data','Business Data','Supporting Data','Agreement','Already Selling Jerseys','Offline Store','ID Card \\(KTP\\) Photo','Send via WhatsApp'\\)\\) { if \\($r.Content -match [regex]::Escape\\($s\\)\\) { \"OK: $s\" } else { \"MISSING: $s\" } })",
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:3000/contact\" -UseBasicParsing -TimeoutSec 30; $r.StatusCode; if \\($r.Content -match 'href=\"/reseller\"'\\) { \"CTA links to /reseller\" } else { \"CTA link MISSING\" })",
+      "PowerShell(& \"C:\\\\xampp7\\\\mysql\\\\bin\\\\mysql.exe\" -u root -e \"source C:/Web-Ayres/db/schema.sql\"; & \"C:\\\\xampp7\\\\mysql\\\\bin\\\\mysql.exe\" -u root -e \"USE ayres_apparel; SHOW TABLES; DESCRIBE reseller_registrations;\")",
+      "PowerShell($payload = @{ fullName = \"Test Claude\"; waNumber = \"081234567890\"; email = \"test@test.com\"; city = \"Bantul\"; province = \"DIY\"; address = \"Jl. Test No. 1\"; bizName = \"Toko Test\"; bizStatus = \"already_selling\"; channels = @\\(\"whatsapp\",\"instagram\"\\); marketArea = \"Yogyakarta\"; igUsername = \"@test\"; ttUsername = \"\"; agreeDataTrue = $true; agreeTerms = $true; agreeMarketing = $false } | ConvertTo-Json; $r = Invoke-WebRequest -Uri \"http://localhost:3000/api/reseller\" -Method POST -ContentType \"application/json\" -Body $payload -UseBasicParsing -TimeoutSec 60; \"STATUS: $\\($r.StatusCode\\)\"; $r.Content)",
+      "PowerShell(& \"C:\\\\xampp7\\\\mysql\\\\bin\\\\mysql.exe\" -u root -e \"SELECT id, full_name, wa_number, business_status, sales_channels, agree_terms, agree_marketing, created_at FROM ayres_apparel.reseller_registrations;\")",
+      "PowerShell($bad = @{ fullName = \"X\"; agreeDataTrue = $true } | ConvertTo-Json; try { $r = Invoke-WebRequest -Uri \"http://localhost:3000/api/reseller\" -Method POST -ContentType \"application/json\" -Body $bad -UseBasicParsing -TimeoutSec 30; \"STATUS: $\\($r.StatusCode\\)\" } catch { \"STATUS: $\\($_.Exception.Response.StatusCode.value__\\)\" })"
     ]
   }
 }
