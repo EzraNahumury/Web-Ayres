@@ -42,3 +42,6 @@ next-env.d.ts
 
 # reseller uploads (sensitive - KTP photos)
 /uploads
+
+# DB dumps (contain registrant personal data)
+/db/*_dump.sql
