@@ -43,6 +43,7 @@ export default function ResellerClient() {
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
   const [error, setError] = useState(false);
+  const [overseas, setOverseas] = useState(false);
   const [province, setProvince] = useState("");
   const [city, setCity] = useState("");
   const [channels, setChannels] = useState<boolean[]>(Array(CHANNEL_VALUES.length).fill(false));
@@ -89,8 +90,13 @@ export default function ResellerClient() {
     fd.append("fullName", val("fullName"));
     fd.append("waNumber", val("waNumber"));
     fd.append("email", val("email"));
-    fd.append("city", val("city"));
-    fd.append("province", val("province"));
+    fd.append("location", overseas ? "overseas" : "domestic");
+    if (overseas) {
+      fd.append("country", val("country"));
+    } else {
+      fd.append("city", val("city"));
+      fd.append("province", val("province"));
+    }
     fd.append("address", val("address"));
     fd.append("bizName", val("bizName"));
     fd.append("bizStatus", (f.elements.namedItem("bizStatus") as RadioNodeList)?.value ?? "");
@@ -208,36 +214,60 @@ export default function ResellerClient() {
             <label className="text-xs font-semibold text-white">{r.email}</label>
             <input name="email" type="email" maxLength={150} placeholder={r.emailPh} className={inputClass} />
           </div>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="flex flex-col gap-2">
-              <label className="text-xs font-semibold text-white">{r.province} <span className="text-[#e03030]">*</span></label>
-              <div className="relative">
-                <select name="province" required value={province}
-                  onChange={(e) => { setProvince(e.target.value); setCity(""); }}
-                  className={`${selectClass} ${province ? "text-white" : "text-[#555]"}`}>
-                  <option value="" disabled>{r.provincePh}</option>
-                  {wilayah.map((w) => (
-                    <option key={w.province} value={w.province} className="bg-[#0e0e0e] text-white">{w.province}</option>
-                  ))}
-                </select>
-                <SelectChevron />
-              </div>
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="text-xs font-semibold text-white">{r.city} <span className="text-[#e03030]">*</span></label>
-              <div className="relative">
-                <select name="city" required value={city} disabled={!province}
-                  onChange={(e) => setCity(e.target.value)}
-                  className={`${selectClass} ${city ? "text-white" : "text-[#555]"}`}>
-                  <option value="" disabled>{r.cityPh}</option>
-                  {cities.map((c) => (
-                    <option key={c} value={c} className="bg-[#0e0e0e] text-white">{c}</option>
-                  ))}
-                </select>
-                <SelectChevron />
-              </div>
+          {/* Location: domestic / overseas */}
+          <div className="flex flex-col gap-2">
+            <span className="text-xs font-semibold text-white">{r.location} <span className="text-[#e03030]">*</span></span>
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                { label: r.locationDomestic, active: !overseas, onClick: () => setOverseas(false) },
+                { label: r.locationOverseas, active: overseas, onClick: () => setOverseas(true) },
+              ].map((opt) => (
+                <button key={opt.label} type="button" onClick={opt.onClick}
+                  className={`flex items-center gap-3 border px-4 py-3.5 text-sm text-left transition-colors bg-[#0e0e0e] ${opt.active ? "border-[#e03030] text-white" : "border-[#1e1e1e] text-[#999] hover:border-[#2a2a2a]"}`}>
+                  <span className={`w-3.5 h-3.5 rounded-full border-2 shrink-0 ${opt.active ? "border-[#e03030] bg-[#e03030]" : "border-[#444]"}`} />
+                  {opt.label}
+                </button>
+              ))}
             </div>
           </div>
+
+          {overseas ? (
+            <div className="flex flex-col gap-2">
+              <label className="text-xs font-semibold text-white">{r.country} <span className="text-[#e03030]">*</span></label>
+              <input name="country" type="text" required maxLength={100} placeholder={r.countryPh} className={inputClass} />
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="flex flex-col gap-2">
+                <label className="text-xs font-semibold text-white">{r.province} <span className="text-[#e03030]">*</span></label>
+                <div className="relative">
+                  <select name="province" required value={province}
+                    onChange={(e) => { setProvince(e.target.value); setCity(""); }}
+                    className={`${selectClass} ${province ? "text-white" : "text-[#555]"}`}>
+                    <option value="" disabled>{r.provincePh}</option>
+                    {wilayah.map((w) => (
+                      <option key={w.province} value={w.province} className="bg-[#0e0e0e] text-white">{w.province}</option>
+                    ))}
+                  </select>
+                  <SelectChevron />
+                </div>
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-xs font-semibold text-white">{r.city} <span className="text-[#e03030]">*</span></label>
+                <div className="relative">
+                  <select name="city" required value={city} disabled={!province}
+                    onChange={(e) => setCity(e.target.value)}
+                    className={`${selectClass} ${city ? "text-white" : "text-[#555]"}`}>
+                    <option value="" disabled>{r.cityPh}</option>
+                    {cities.map((c) => (
+                      <option key={c} value={c} className="bg-[#0e0e0e] text-white">{c}</option>
+                    ))}
+                  </select>
+                  <SelectChevron />
+                </div>
+              </div>
+            </div>
+          )}
           <div className="flex flex-col gap-2">
             <label className="text-xs font-semibold text-white">{r.address} <span className="text-[#e03030]">*</span></label>
             <textarea name="address" required rows={3} maxLength={2000} placeholder={r.addressPh} className={`${inputClass} resize-none`} />

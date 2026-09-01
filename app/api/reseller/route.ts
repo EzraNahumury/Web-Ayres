@@ -51,9 +51,22 @@ export async function POST(req: Request) {
   const fullName = str(fd.get("fullName"), 150);
   const waNumber = str(fd.get("waNumber"), 30);
   const email = str(fd.get("email"), 150);
-  const city = str(fd.get("city"), 100);
-  const province = str(fd.get("province"), 100);
   const address = str(fd.get("address"), 2000);
+
+  // Location: domestic uses province + city dropdowns; overseas uses a free-text
+  // country. City/province are NOT NULL, so overseas rows store "Overseas" as the
+  // province and the country name as the city.
+  const overseas = fd.get("location") === "overseas";
+  let city: string | null;
+  let province: string | null;
+  if (overseas) {
+    const country = str(fd.get("country"), 100);
+    province = country ? "Overseas" : null;
+    city = country;
+  } else {
+    city = str(fd.get("city"), 100);
+    province = str(fd.get("province"), 100);
+  }
   const bizName = str(fd.get("bizName"), 150);
   const marketArea = str(fd.get("marketArea"), 150);
   const igUsername = str(fd.get("igUsername"), 100);
